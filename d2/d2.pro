@@ -43,4 +43,3 @@ FORMS    += \
     projectdesc.ui \
     adminwindow.ui
 
-LIBS    += -lsqlite3

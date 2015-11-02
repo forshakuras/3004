@@ -3,10 +3,10 @@
 #include <QMessageBox>
 #include "choosewindow.h"
 #include "adminwindow.h"
-#include <sqlite3.h>
 #include <iostream>
 #include "student_obj.h"
 #include "studentpre_obj.h"
+#include <QtSql>
 
 using namespace std;
 
@@ -38,29 +38,19 @@ void Entrywindow::on_Loginbutton_clicked()
 {
     if(ui->studentCheckBox->isChecked()){
 
+        QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
+        db.setDatabaseName("d2.sql");
 
-        sqlite3 *db;
-        int rc;
-        string userinput = ui->lineEdit->text().toStdString();
-        string strSql;
-        char* errmsg;
+//        if(db.open()){
+//            string strSql="select * from sqlite_master WHERE name LIKE 'students'";
+//            db.exec(strSql.c_str());
+//            cout << msg << endl;
+//            cout << "success" << endl;
+//        }else{
+//            cout << "fault" << endl;
+//        }
 
 
-        rc = sqlite3_open("cupidDB.db",&db);
-        if(rc == SQLITE_OK){
-            strSql="select * from sqlite_master WHERE name LIKE 'students';";
-            cout << strSql << endl;
-            cout << strSql.c_str() << endl;
-            int msg = sqlite3_exec(db,strSql.c_str(),NULL,NULL,&errmsg);
-            cout << msg +"msg" << endl;
-            cout << errmsg << endl;
-            cout << "success" << endl;
-
-        }else{
-            cout << "fault" << endl;
-        }
-
-        sqlite3_close(db);
 
 
         choose = new chooseWindow(this);
