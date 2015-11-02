@@ -48,7 +48,7 @@ void Entrywindow::on_Loginbutton_clicked()
 
         rc = sqlite3_open("cupidDB.db",&db);
         if(rc == SQLITE_OK){
-            strSql="select * from students where values" + userinput;
+            strSql="select * from sqlite_master WHERE name LIKE 'students';";
             cout << strSql << endl;
             cout << strSql.c_str() << endl;
             int msg = sqlite3_exec(db,strSql.c_str(),NULL,NULL,&errmsg);
