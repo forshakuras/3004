@@ -56,3 +56,37 @@ void DB_Utility::DBSearch_Project(string tableName,string title, project_obj* re
 
 }
 
+void DB_Utility::DBSearchAll_Projects(string tableName, vector<project_obj*>* projectList)
+{
+    string strSql = "select * from "+ tableName;
+    if(db.open()){
+        QSqlQuery data;
+        if(data.exec(QString::fromStdString(strSql))){
+            while(data.next()){
+                project_obj* newProject = new project_obj();
+                newProject->setId(data.value(0).toInt());
+                newProject->setTitle(data.value(1).toString().toStdString());
+                newProject->setMaxStudents(data.value(2).toInt());
+                newProject->setCurrentStudent(data.value(3).toInt());
+                newProject->setIdealNumberStudents(data.value(4).toInt());
+                newProject->setDescription(data.value(5).toString().toStdString());
+                newProject->setGpa(data.value(6).toFloat());
+                newProject->setPmSkill(data.value(7).toInt());
+                newProject->setDatabase(data.value(8).toInt());
+                newProject->setJava(data.value(9).toInt());
+                newProject->setCCpp(data.value(10).toInt());
+                newProject->setJsHtml(data.value(11).toInt());
+                newProject->setPython(data.value(12).toInt());
+                newProject->setDebug(data.value(13).toInt());
+                newProject->setDocument(data.value(14).toInt());
+                newProject->setMobile(data.value(15).toInt());
+                newProject->setNetwork(data.value(16).toInt());
+                newProject->setUi(data.value(17).toInt());
+                newProject->setAlgor(data.value(18).toInt());
+                projectList->push_back(newProject);
+            }
+        }else{
+            cout << db.lastError().text().toStdString() << endl;
+        }
+    }
+}

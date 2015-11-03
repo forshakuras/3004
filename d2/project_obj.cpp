@@ -133,6 +133,14 @@ int     project_obj::getJava(){
     return java;
 }
 
+void    project_obj::setCCpp(int i){
+    cCpp=i;
+}
+
+int     project_obj::getCCpp(){
+    return cCpp;
+}
+
 void    project_obj::setJsHtml(int i){
     jsHtml=i;
 }

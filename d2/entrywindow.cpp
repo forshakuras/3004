@@ -6,7 +6,8 @@
 #include <iostream>
 #include "student_obj.h"
 #include "studentpre_obj.h"
-#include <QtSql>
+#include "db_utility.h"
+#include <vector>
 
 using namespace std;
 
@@ -38,20 +39,13 @@ void Entrywindow::on_Loginbutton_clicked()
 {
     if(ui->studentCheckBox->isChecked()){
 
-        QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
-        db.setDatabaseName("d2.sql");
 
-//        if(db.open()){
-//            string strSql="select * from sqlite_master WHERE name LIKE 'students'";
-//            db.exec(strSql.c_str());
-//            cout << msg << endl;
-//            cout << "success" << endl;
-//        }else{
-//            cout << "fault" << endl;
+
+//        vector<project_obj*> data2;
+//        db.DBSearchAll_Projects("projects",&data2);
+//        for(int i=0; i<data2.size();i++){
+//            cout << data2[i]->getTitle() << endl;
 //        }
-
-
-
 
         choose = new chooseWindow(this);
         choose ->show();
