@@ -13,20 +13,20 @@
   <property name="windowTitle">
    <string>Profile</string>
   </property>
-  <widget class="QLabel" name="label">
+  <widget class="QLabel" name="nameLabel">
    <property name="geometry">
     <rect>
      <x>20</x>
      <y>25</y>
      <width>51</width>
-     <height>17</height>
+     <height>16</height>
     </rect>
    </property>
    <property name="text">
     <string>Name:</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_2">
+  <widget class="QLabel" name="idLabel">
    <property name="geometry">
     <rect>
      <x>20</x>
@@ -98,7 +98,7 @@
     <string>PPID(5 is best, 0 is worst)</string>
    </property>
   </widget>
-  <widget class="QDoubleSpinBox" name="GPABOX">
+  <widget class="QDoubleSpinBox" name="gpaSpin">
    <property name="geometry">
     <rect>
      <x>210</x>
@@ -264,10 +264,10 @@
     </rect>
    </property>
    <property name="text">
-    <string>Alogrithm Design:</string>
+    <string>Algorithm Design:</string>
    </property>
   </widget>
-  <widget class="QSpinBox" name="spinBox">
+  <widget class="QSpinBox" name="pmSpin">
    <property name="geometry">
     <rect>
      <x>210</x>
@@ -283,7 +283,7 @@
     <number>5</number>
    </property>
   </widget>
-  <widget class="QSpinBox" name="spinBox_2">
+  <widget class="QSpinBox" name="dbSpin">
    <property name="geometry">
     <rect>
      <x>210</x>
@@ -299,7 +299,7 @@
     <number>5</number>
    </property>
   </widget>
-  <widget class="QSpinBox" name="spinBox_3">
+  <widget class="QSpinBox" name="javaSpin">
    <property name="geometry">
     <rect>
      <x>210</x>
@@ -315,7 +315,7 @@
     <number>5</number>
    </property>
   </widget>
-  <widget class="QSpinBox" name="spinBox_4">
+  <widget class="QSpinBox" name="cSpin">
    <property name="geometry">
     <rect>
      <x>210</x>
@@ -331,7 +331,7 @@
     <number>5</number>
    </property>
   </widget>
-  <widget class="QSpinBox" name="spinBox_5">
+  <widget class="QSpinBox" name="jsSpin">
    <property name="geometry">
     <rect>
      <x>210</x>
@@ -347,7 +347,7 @@
     <number>5</number>
    </property>
   </widget>
-  <widget class="QSpinBox" name="spinBox_6">
+  <widget class="QSpinBox" name="pythonSpin">
    <property name="geometry">
     <rect>
      <x>210</x>
@@ -363,7 +363,7 @@
     <number>5</number>
    </property>
   </widget>
-  <widget class="QSpinBox" name="spinBox_7">
+  <widget class="QSpinBox" name="debuggingSpin">
    <property name="geometry">
     <rect>
      <x>210</x>
@@ -379,7 +379,7 @@
     <number>5</number>
    </property>
   </widget>
-  <widget class="QSpinBox" name="spinBox_8">
+  <widget class="QSpinBox" name="docSpin">
    <property name="geometry">
     <rect>
      <x>210</x>
@@ -395,7 +395,7 @@
     <number>5</number>
    </property>
   </widget>
-  <widget class="QSpinBox" name="spinBox_9">
+  <widget class="QSpinBox" name="mobileSpin">
    <property name="geometry">
     <rect>
      <x>210</x>
@@ -411,7 +411,7 @@
     <number>5</number>
    </property>
   </widget>
-  <widget class="QSpinBox" name="spinBox_10">
+  <widget class="QSpinBox" name="networkingSpin">
    <property name="geometry">
     <rect>
      <x>210</x>
@@ -427,7 +427,7 @@
     <number>5</number>
    </property>
   </widget>
-  <widget class="QSpinBox" name="spinBox_11">
+  <widget class="QSpinBox" name="uiSpin">
    <property name="geometry">
     <rect>
      <x>210</x>
@@ -443,7 +443,7 @@
     <number>5</number>
    </property>
   </widget>
-  <widget class="QSpinBox" name="spinBox_12">
+  <widget class="QSpinBox" name="algSpin">
    <property name="geometry">
     <rect>
      <x>210</x>
@@ -485,7 +485,7 @@
     <enum>Qt::Vertical</enum>
    </property>
   </widget>
-  <widget class="QDoubleSpinBox" name="doubleSpinBox">
+  <widget class="QDoubleSpinBox" name="gpaSpinPref">
    <property name="geometry">
     <rect>
      <x>310</x>
@@ -498,7 +498,7 @@
     <double>12.000000000000000</double>
    </property>
   </widget>
-  <widget class="QSpinBox" name="spinBox_13">
+  <widget class="QSpinBox" name="pmPrefSpin">
    <property name="geometry">
     <rect>
      <x>310</x>
@@ -511,7 +511,7 @@
     <number>5</number>
    </property>
   </widget>
-  <widget class="QSpinBox" name="spinBox_14">
+  <widget class="QSpinBox" name="dbSpinPref">
    <property name="geometry">
     <rect>
      <x>310</x>
@@ -524,7 +524,7 @@
     <number>5</number>
    </property>
   </widget>
-  <widget class="QSpinBox" name="spinBox_15">
+  <widget class="QSpinBox" name="javaSpinPref">
    <property name="geometry">
     <rect>
      <x>310</x>
@@ -537,7 +537,7 @@
     <number>5</number>
    </property>
   </widget>
-  <widget class="QSpinBox" name="spinBox_16">
+  <widget class="QSpinBox" name="cSpinPref">
    <property name="geometry">
     <rect>
      <x>310</x>
@@ -550,7 +550,7 @@
     <number>5</number>
    </property>
   </widget>
-  <widget class="QSpinBox" name="spinBox_17">
+  <widget class="QSpinBox" name="jsSpinPref">
    <property name="geometry">
     <rect>
      <x>310</x>
@@ -563,7 +563,7 @@
     <number>5</number>
    </property>
   </widget>
-  <widget class="QSpinBox" name="spinBox_18">
+  <widget class="QSpinBox" name="pythonSpinPref">
    <property name="geometry">
     <rect>
      <x>310</x>
@@ -576,7 +576,7 @@
     <number>5</number>
    </property>
   </widget>
-  <widget class="QSpinBox" name="spinBox_19">
+  <widget class="QSpinBox" name="debuggingSpinPref">
    <property name="geometry">
     <rect>
      <x>310</x>
@@ -589,7 +589,7 @@
     <number>5</number>
    </property>
   </widget>
-  <widget class="QSpinBox" name="spinBox_20">
+  <widget class="QSpinBox" name="docSpinPref">
    <property name="geometry">
     <rect>
      <x>310</x>
@@ -602,7 +602,7 @@
     <number>5</number>
    </property>
   </widget>
-  <widget class="QSpinBox" name="spinBox_21">
+  <widget class="QSpinBox" name="mobileSpinPref">
    <property name="geometry">
     <rect>
      <x>310</x>
@@ -615,7 +615,7 @@
     <number>5</number>
    </property>
   </widget>
-  <widget class="QSpinBox" name="spinBox_22">
+  <widget class="QSpinBox" name="networkingSpinPref">
    <property name="geometry">
     <rect>
      <x>310</x>
@@ -628,7 +628,7 @@
     <number>5</number>
    </property>
   </widget>
-  <widget class="QSpinBox" name="spinBox_23">
+  <widget class="QSpinBox" name="uiSpinPref">
    <property name="geometry">
     <rect>
      <x>310</x>
@@ -641,7 +641,7 @@
     <number>5</number>
    </property>
   </widget>
-  <widget class="QSpinBox" name="spinBox_24">
+  <widget class="QSpinBox" name="algSpinPref">
    <property name="geometry">
     <rect>
      <x>310</x>
