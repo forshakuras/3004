@@ -26,20 +26,20 @@ void DB_Utility::DBSearch_Student(string tableName,string student_number,student
             while(data.next()){
                 returnObj->setFirstName(data.value(0).toString().toStdString());
                 returnObj->setLastName(data.value(1).toString().toStdString());
-                returnObj->setGpa(data.value(2).toString().toStdString());
-                returnObj->setPmSkill(data.value(3).toString().toStdString());
-                returnObj->setDatabase(data.value(4).toString().toStdString());
-                returnObj->setJava(data.value(5).toString().toStdString());
-                returnObj->setCCpp(data.value(6).toString().toStdString());
-                returnObj->setJsHtml(data.value(7).toString().toStdString());
-                returnObj->setPython(data.value(8).toString().toStdString());
-                returnObj->setDebug(data.value(9).toString().toStdString());
-                returnObj->setDocument(data.value(10).toString().toStdString());
-                returnObj->setMobile(data.value(11).toString().toStdString());
-                returnObj->setNetwork(data.value(12).toString().toStdString());
-                returnObj->setUi(data.value(13).toString().toStdString());
-                returnObj->setAlgor(data.value(14).toString().toStdString());
-                returnObj->setStudent_number(data.value(15).toString().toStdString());
+                returnObj->setGpa(data.value(2).toFloat());
+                returnObj->setPmSkill(data.value(3).toInt());
+                returnObj->setDatabase(data.value(4).toInt());
+                returnObj->setJava(data.value(5).toInt());
+                returnObj->setCCpp(data.value(6).toInt());
+                returnObj->setJsHtml(data.value(7).toInt());
+                returnObj->setPython(data.value(8).toInt());
+                returnObj->setDebug(data.value(9).toInt());
+                returnObj->setDocument(data.value(10).toInt());
+                returnObj->setMobile(data.value(11).toInt());
+                returnObj->setNetwork(data.value(12).toInt());
+                returnObj->setUi(data.value(13).toInt());
+                returnObj->setAlgor(data.value(14).toInt());
+                returnObj->setStudent_number(data.value(15).toInt());
 //                cout << "inside"+ data.value(0).toString().toStdString() << endl;
             }
         }else{
@@ -56,7 +56,3 @@ void DB_Utility::DBSearch_Project(string tableName,string title, project_obj* re
 
 }
 
-void DB_Utility::DBSearchAll_Projects()
-{
-
-}
