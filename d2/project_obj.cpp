@@ -10,25 +10,25 @@
 
 project_obj::project_obj()
 {
-    int     id=0;
-    string  title="";
-    int     maxStudents=0;
-    int     currentStudents=0;
-    int     idealNumberStudents=0;
-    string  description="";
-    float   gpa=0;
-    int     pmSkill=0;
-    int     database=0;
-    int     java=0;
-    int     cCpp=0;
-    int     jsHtml=0;
-    int     python=0;
-    int     debuggingTesting=0;
-    int     documentation=0;
-    int     mobile=0;
-    int     networking=0;
-    int     ui=0;
-    int     algorithm=0;
+    id=0;
+    title="";
+    maxStudents=0;
+    currentStudents=0;
+    idealNumberStudents=0;
+    description="";
+    gpa=0;
+    pmSkill=0;
+    database=0;
+    java=0;
+    cCpp=0;
+    jsHtml=0;
+    python=0;
+    debuggingTesting=0;
+    documentation=0;
+    mobile=0;
+    networking=0;
+    ui=0;
+    algorithm=0;
 }
 
 project_obj::project_obj(int id, string title, int maxStudents, int idealNumberStudents, string description, float gpa, int pmSkill, int database, int java, int cCpp, int jsHtml, int python, int debuggingTesting, int documentation, int mobile, int networking, int ui, int algorithm)

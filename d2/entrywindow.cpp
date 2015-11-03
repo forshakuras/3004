@@ -46,7 +46,7 @@ void Entrywindow::on_Loginbutton_clicked()
     if(ui->studentCheckBox->isChecked()){
         student_obj *data = new student_obj();
         db.DBSearch_Student("students",ui->lineEdit->text().toStdString(),data);
-            if(data->getStudent_number()<0){
+            if(data->getStudent_number() == 0){
                 QMessageBox msgBox;
                 msgBox.setWindowTitle("Warning");
                 msgBox.setText("Invaliad Username, please try again !");
@@ -61,7 +61,7 @@ void Entrywindow::on_Loginbutton_clicked()
     }else if(ui->adminCheckBox->isChecked()){
         admin_obj *temp = new admin_obj();
         db.DBSearch_Admin("admin",ui->lineEdit->text().toStdString(),temp);
-        if(temp->getAdminNum() == 16){
+        if(temp->getAdminNum() == 0){
             QMessageBox msgBox;
             msgBox.setWindowTitle("Warning");
             msgBox.setText("Invaliad Username, please try again !");

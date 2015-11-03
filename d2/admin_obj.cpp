@@ -2,9 +2,9 @@
 
 admin_obj::admin_obj()
 {
-    string  firstName="";
-    string  lastName="";
-    int     admin_number=0;
+    firstName="";
+    lastName="";
+    admin_number=0;
 }
 
 
