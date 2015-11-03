@@ -55,7 +55,8 @@ SOURCES       = main.cpp \
 		student_obj.cpp \
 		studentpre_obj.cpp \
 		entrywindow.cpp \
-		db_utility.cpp moc_entrywindow.cpp \
+		db_utility.cpp \
+		admin_obj.cpp moc_entrywindow.cpp \
 		moc_choosewindow.cpp \
 		moc_profilewindow.cpp \
 		moc_projectwindow.cpp \
@@ -72,6 +73,7 @@ OBJECTS       = main.o \
 		studentpre_obj.o \
 		entrywindow.o \
 		db_utility.o \
+		admin_obj.o \
 		moc_entrywindow.o \
 		moc_choosewindow.o \
 		moc_profilewindow.o \
@@ -311,7 +313,7 @@ qmake_all: FORCE
 
 dist: 
 	@test -d .tmp/d21.0.0 || mkdir -p .tmp/d21.0.0
-	$(COPY_FILE) --parents $(SOURCES) $(DIST) .tmp/d21.0.0/ && $(COPY_FILE) --parents entrywindow.h choosewindow.h profilewindow.h projectwindow.h projectdesc.h adminwindow.h project_obj.h student_obj.h studentpre_obj.h db_utility.h .tmp/d21.0.0/ && $(COPY_FILE) --parents main.cpp choosewindow.cpp profilewindow.cpp projectwindow.cpp projectdesc.cpp adminwindow.cpp project_obj.cpp student_obj.cpp studentpre_obj.cpp entrywindow.cpp db_utility.cpp .tmp/d21.0.0/ && $(COPY_FILE) --parents entrywindow.ui choosewindow.ui profilewindow.ui projectwindow.ui projectdesc.ui adminwindow.ui .tmp/d21.0.0/ && (cd `dirname .tmp/d21.0.0` && $(TAR) d21.0.0.tar d21.0.0 && $(COMPRESS) d21.0.0.tar) && $(MOVE) `dirname .tmp/d21.0.0`/d21.0.0.tar.gz . && $(DEL_FILE) -r .tmp/d21.0.0
+	$(COPY_FILE) --parents $(SOURCES) $(DIST) .tmp/d21.0.0/ && $(COPY_FILE) --parents entrywindow.h choosewindow.h profilewindow.h projectwindow.h projectdesc.h adminwindow.h project_obj.h student_obj.h studentpre_obj.h db_utility.h admin_obj.h .tmp/d21.0.0/ && $(COPY_FILE) --parents main.cpp choosewindow.cpp profilewindow.cpp projectwindow.cpp projectdesc.cpp adminwindow.cpp project_obj.cpp student_obj.cpp studentpre_obj.cpp entrywindow.cpp db_utility.cpp admin_obj.cpp .tmp/d21.0.0/ && $(COPY_FILE) --parents entrywindow.ui choosewindow.ui profilewindow.ui projectwindow.ui projectdesc.ui adminwindow.ui .tmp/d21.0.0/ && (cd `dirname .tmp/d21.0.0` && $(TAR) d21.0.0.tar d21.0.0 && $(COMPRESS) d21.0.0.tar) && $(MOVE) `dirname .tmp/d21.0.0`/d21.0.0.tar.gz . && $(DEL_FILE) -r .tmp/d21.0.0
 
 
 clean:compiler_clean 
@@ -2027,24 +2029,7 @@ choosewindow.o: choosewindow.cpp choosewindow.h \
 		adminwindow.h \
 		/usr/include/qt5/QtWidgets/QMainWindow \
 		/usr/include/qt5/QtWidgets/qmainwindow.h \
-		ui_choosewindow.h \
-		/usr/include/qt5/QtCore/QVariant \
-		/usr/include/qt5/QtWidgets/QAction \
-		/usr/include/qt5/QtWidgets/qaction.h \
-		/usr/include/qt5/QtWidgets/qactiongroup.h \
-		/usr/include/qt5/QtWidgets/QApplication \
-		/usr/include/qt5/QtWidgets/qapplication.h \
-		/usr/include/qt5/QtWidgets/qdesktopwidget.h \
-		/usr/include/qt5/QtGui/qguiapplication.h \
-		/usr/include/qt5/QtGui/qinputmethod.h \
-		/usr/include/qt5/QtWidgets/QButtonGroup \
-		/usr/include/qt5/QtWidgets/qbuttongroup.h \
-		/usr/include/qt5/QtWidgets/QFrame \
-		/usr/include/qt5/QtWidgets/QHeaderView \
-		/usr/include/qt5/QtWidgets/qheaderview.h \
-		/usr/include/qt5/QtWidgets/QPushButton \
-		/usr/include/qt5/QtWidgets/qpushbutton.h \
-		/usr/include/qt5/QtWidgets/qabstractbutton.h
+		ui_choosewindow.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o choosewindow.o choosewindow.cpp
 
 profilewindow.o: profilewindow.cpp profilewindow.h \
@@ -2157,54 +2142,7 @@ profilewindow.o: profilewindow.cpp profilewindow.h \
 		/usr/include/qt5/QtCore/qfiledevice.h \
 		/usr/include/qt5/QtGui/qvector2d.h \
 		/usr/include/qt5/QtGui/qtouchdevice.h \
-		ui_profilewindow.h \
-		/usr/include/qt5/QtCore/QVariant \
-		/usr/include/qt5/QtWidgets/QAction \
-		/usr/include/qt5/QtWidgets/qaction.h \
-		/usr/include/qt5/QtGui/qicon.h \
-		/usr/include/qt5/QtWidgets/qactiongroup.h \
-		/usr/include/qt5/QtWidgets/QApplication \
-		/usr/include/qt5/QtWidgets/qapplication.h \
-		/usr/include/qt5/QtCore/qcoreapplication.h \
-		/usr/include/qt5/QtCore/qeventloop.h \
-		/usr/include/qt5/QtWidgets/qdesktopwidget.h \
-		/usr/include/qt5/QtGui/qguiapplication.h \
-		/usr/include/qt5/QtGui/qinputmethod.h \
-		/usr/include/qt5/QtWidgets/QButtonGroup \
-		/usr/include/qt5/QtWidgets/qbuttongroup.h \
-		/usr/include/qt5/QtWidgets/QDoubleSpinBox \
-		/usr/include/qt5/QtWidgets/qspinbox.h \
-		/usr/include/qt5/QtWidgets/qabstractspinbox.h \
-		/usr/include/qt5/QtGui/qvalidator.h \
-		/usr/include/qt5/QtCore/qregularexpression.h \
-		/usr/include/qt5/QtWidgets/QFrame \
-		/usr/include/qt5/QtWidgets/qframe.h \
-		/usr/include/qt5/QtWidgets/QHeaderView \
-		/usr/include/qt5/QtWidgets/qheaderview.h \
-		/usr/include/qt5/QtWidgets/qabstractitemview.h \
-		/usr/include/qt5/QtWidgets/qabstractscrollarea.h \
-		/usr/include/qt5/QtCore/qabstractitemmodel.h \
-		/usr/include/qt5/QtCore/qitemselectionmodel.h \
-		/usr/include/qt5/QtWidgets/qabstractitemdelegate.h \
-		/usr/include/qt5/QtWidgets/qstyleoption.h \
-		/usr/include/qt5/QtWidgets/qslider.h \
-		/usr/include/qt5/QtWidgets/qabstractslider.h \
-		/usr/include/qt5/QtWidgets/qstyle.h \
-		/usr/include/qt5/QtWidgets/qtabbar.h \
-		/usr/include/qt5/QtWidgets/qtabwidget.h \
-		/usr/include/qt5/QtWidgets/qrubberband.h \
-		/usr/include/qt5/QtWidgets/QLabel \
-		/usr/include/qt5/QtWidgets/qlabel.h \
-		/usr/include/qt5/QtWidgets/QLineEdit \
-		/usr/include/qt5/QtWidgets/qlineedit.h \
-		/usr/include/qt5/QtGui/qtextcursor.h \
-		/usr/include/qt5/QtGui/qtextformat.h \
-		/usr/include/qt5/QtGui/qpen.h \
-		/usr/include/qt5/QtGui/qtextoption.h \
-		/usr/include/qt5/QtWidgets/QPushButton \
-		/usr/include/qt5/QtWidgets/qpushbutton.h \
-		/usr/include/qt5/QtWidgets/qabstractbutton.h \
-		/usr/include/qt5/QtWidgets/QSpinBox
+		ui_profilewindow.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o profilewindow.o profilewindow.cpp
 
 projectwindow.o: projectwindow.cpp projectwindow.h \
@@ -2317,42 +2255,7 @@ projectwindow.o: projectwindow.cpp projectwindow.h \
 		/usr/include/qt5/QtCore/qfiledevice.h \
 		/usr/include/qt5/QtGui/qvector2d.h \
 		/usr/include/qt5/QtGui/qtouchdevice.h \
-		ui_projectwindow.h \
-		/usr/include/qt5/QtCore/QVariant \
-		/usr/include/qt5/QtWidgets/QAction \
-		/usr/include/qt5/QtWidgets/qaction.h \
-		/usr/include/qt5/QtGui/qicon.h \
-		/usr/include/qt5/QtWidgets/qactiongroup.h \
-		/usr/include/qt5/QtWidgets/QApplication \
-		/usr/include/qt5/QtWidgets/qapplication.h \
-		/usr/include/qt5/QtCore/qcoreapplication.h \
-		/usr/include/qt5/QtCore/qeventloop.h \
-		/usr/include/qt5/QtWidgets/qdesktopwidget.h \
-		/usr/include/qt5/QtGui/qguiapplication.h \
-		/usr/include/qt5/QtGui/qinputmethod.h \
-		/usr/include/qt5/QtWidgets/QButtonGroup \
-		/usr/include/qt5/QtWidgets/qbuttongroup.h \
-		/usr/include/qt5/QtWidgets/QHeaderView \
-		/usr/include/qt5/QtWidgets/qheaderview.h \
-		/usr/include/qt5/QtWidgets/qabstractitemview.h \
-		/usr/include/qt5/QtWidgets/qabstractscrollarea.h \
-		/usr/include/qt5/QtWidgets/qframe.h \
-		/usr/include/qt5/QtCore/qabstractitemmodel.h \
-		/usr/include/qt5/QtCore/qitemselectionmodel.h \
-		/usr/include/qt5/QtWidgets/qabstractitemdelegate.h \
-		/usr/include/qt5/QtWidgets/qstyleoption.h \
-		/usr/include/qt5/QtWidgets/qabstractspinbox.h \
-		/usr/include/qt5/QtGui/qvalidator.h \
-		/usr/include/qt5/QtCore/qregularexpression.h \
-		/usr/include/qt5/QtWidgets/qslider.h \
-		/usr/include/qt5/QtWidgets/qabstractslider.h \
-		/usr/include/qt5/QtWidgets/qstyle.h \
-		/usr/include/qt5/QtWidgets/qtabbar.h \
-		/usr/include/qt5/QtWidgets/qtabwidget.h \
-		/usr/include/qt5/QtWidgets/qrubberband.h \
-		/usr/include/qt5/QtWidgets/QPushButton \
-		/usr/include/qt5/QtWidgets/qpushbutton.h \
-		/usr/include/qt5/QtWidgets/qabstractbutton.h
+		ui_projectwindow.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o projectwindow.o projectwindow.cpp
 
 projectdesc.o: projectdesc.cpp projectdesc.h \
@@ -2465,52 +2368,7 @@ projectdesc.o: projectdesc.cpp projectdesc.h \
 		/usr/include/qt5/QtCore/qfiledevice.h \
 		/usr/include/qt5/QtGui/qvector2d.h \
 		/usr/include/qt5/QtGui/qtouchdevice.h \
-		ui_projectdesc.h \
-		/usr/include/qt5/QtCore/QVariant \
-		/usr/include/qt5/QtWidgets/QAction \
-		/usr/include/qt5/QtWidgets/qaction.h \
-		/usr/include/qt5/QtGui/qicon.h \
-		/usr/include/qt5/QtWidgets/qactiongroup.h \
-		/usr/include/qt5/QtWidgets/QApplication \
-		/usr/include/qt5/QtWidgets/qapplication.h \
-		/usr/include/qt5/QtCore/qcoreapplication.h \
-		/usr/include/qt5/QtCore/qeventloop.h \
-		/usr/include/qt5/QtWidgets/qdesktopwidget.h \
-		/usr/include/qt5/QtGui/qguiapplication.h \
-		/usr/include/qt5/QtGui/qinputmethod.h \
-		/usr/include/qt5/QtWidgets/QButtonGroup \
-		/usr/include/qt5/QtWidgets/qbuttongroup.h \
-		/usr/include/qt5/QtWidgets/QFrame \
-		/usr/include/qt5/QtWidgets/qframe.h \
-		/usr/include/qt5/QtWidgets/QHeaderView \
-		/usr/include/qt5/QtWidgets/qheaderview.h \
-		/usr/include/qt5/QtWidgets/qabstractitemview.h \
-		/usr/include/qt5/QtWidgets/qabstractscrollarea.h \
-		/usr/include/qt5/QtCore/qabstractitemmodel.h \
-		/usr/include/qt5/QtCore/qitemselectionmodel.h \
-		/usr/include/qt5/QtWidgets/qabstractitemdelegate.h \
-		/usr/include/qt5/QtWidgets/qstyleoption.h \
-		/usr/include/qt5/QtWidgets/qabstractspinbox.h \
-		/usr/include/qt5/QtGui/qvalidator.h \
-		/usr/include/qt5/QtCore/qregularexpression.h \
-		/usr/include/qt5/QtWidgets/qslider.h \
-		/usr/include/qt5/QtWidgets/qabstractslider.h \
-		/usr/include/qt5/QtWidgets/qstyle.h \
-		/usr/include/qt5/QtWidgets/qtabbar.h \
-		/usr/include/qt5/QtWidgets/qtabwidget.h \
-		/usr/include/qt5/QtWidgets/qrubberband.h \
-		/usr/include/qt5/QtWidgets/QLabel \
-		/usr/include/qt5/QtWidgets/qlabel.h \
-		/usr/include/qt5/QtWidgets/QLineEdit \
-		/usr/include/qt5/QtWidgets/qlineedit.h \
-		/usr/include/qt5/QtGui/qtextcursor.h \
-		/usr/include/qt5/QtGui/qtextformat.h \
-		/usr/include/qt5/QtGui/qpen.h \
-		/usr/include/qt5/QtGui/qtextoption.h \
-		/usr/include/qt5/QtWidgets/QTextBrowser \
-		/usr/include/qt5/QtWidgets/qtextbrowser.h \
-		/usr/include/qt5/QtWidgets/qtextedit.h \
-		/usr/include/qt5/QtGui/qtextdocument.h
+		ui_projectdesc.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o projectdesc.o projectdesc.cpp
 
 adminwindow.o: adminwindow.cpp adminwindow.h \
@@ -2775,29 +2633,6 @@ adminwindow.o: adminwindow.cpp adminwindow.h \
 		profilewindow.h \
 		projectwindow.h \
 		ui_adminwindow.h \
-		/usr/include/qt5/QtCore/QVariant \
-		/usr/include/qt5/QtWidgets/QAction \
-		/usr/include/qt5/QtWidgets/qaction.h \
-		/usr/include/qt5/QtWidgets/qactiongroup.h \
-		/usr/include/qt5/QtWidgets/QApplication \
-		/usr/include/qt5/QtWidgets/qapplication.h \
-		/usr/include/qt5/QtWidgets/qdesktopwidget.h \
-		/usr/include/qt5/QtGui/qguiapplication.h \
-		/usr/include/qt5/QtGui/qinputmethod.h \
-		/usr/include/qt5/QtWidgets/QButtonGroup \
-		/usr/include/qt5/QtWidgets/qbuttongroup.h \
-		/usr/include/qt5/QtWidgets/QHeaderView \
-		/usr/include/qt5/QtWidgets/qheaderview.h \
-		/usr/include/qt5/QtWidgets/QListView \
-		/usr/include/qt5/QtWidgets/QMenuBar \
-		/usr/include/qt5/QtWidgets/qmenubar.h \
-		/usr/include/qt5/QtWidgets/qmenu.h \
-		/usr/include/qt5/QtWidgets/QPushButton \
-		/usr/include/qt5/QtWidgets/qpushbutton.h \
-		/usr/include/qt5/QtWidgets/qabstractbutton.h \
-		/usr/include/qt5/QtWidgets/QStatusBar \
-		/usr/include/qt5/QtWidgets/qstatusbar.h \
-		/usr/include/qt5/QtWidgets/QWidget \
 		/usr/include/qt5/QtGui/QStandardItemModel \
 		/usr/include/qt5/QtGui/qstandarditemmodel.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o adminwindow.o adminwindow.cpp
@@ -3073,36 +2908,12 @@ entrywindow.o: entrywindow.cpp entrywindow.h \
 		/usr/include/qt5/QtWidgets/QMainWindow \
 		/usr/include/qt5/QtWidgets/qmainwindow.h \
 		ui_entrywindow.h \
-		/usr/include/qt5/QtCore/QVariant \
-		/usr/include/qt5/QtWidgets/QAction \
-		/usr/include/qt5/QtWidgets/qaction.h \
-		/usr/include/qt5/QtWidgets/qactiongroup.h \
-		/usr/include/qt5/QtWidgets/QApplication \
-		/usr/include/qt5/QtWidgets/qapplication.h \
-		/usr/include/qt5/QtWidgets/qdesktopwidget.h \
-		/usr/include/qt5/QtGui/qguiapplication.h \
-		/usr/include/qt5/QtGui/qinputmethod.h \
-		/usr/include/qt5/QtWidgets/QButtonGroup \
-		/usr/include/qt5/QtWidgets/qbuttongroup.h \
-		/usr/include/qt5/QtWidgets/QCheckBox \
-		/usr/include/qt5/QtWidgets/qcheckbox.h \
-		/usr/include/qt5/QtWidgets/qabstractbutton.h \
-		/usr/include/qt5/QtWidgets/QHeaderView \
-		/usr/include/qt5/QtWidgets/qheaderview.h \
-		/usr/include/qt5/QtWidgets/QLabel \
-		/usr/include/qt5/QtWidgets/qlabel.h \
-		/usr/include/qt5/QtWidgets/QLineEdit \
-		/usr/include/qt5/QtWidgets/qlineedit.h \
-		/usr/include/qt5/QtGui/qtextcursor.h \
-		/usr/include/qt5/QtGui/qtextformat.h \
-		/usr/include/qt5/QtGui/qpen.h \
-		/usr/include/qt5/QtGui/qtextoption.h \
-		/usr/include/qt5/QtWidgets/QPushButton \
-		/usr/include/qt5/QtWidgets/qpushbutton.h \
 		/usr/include/qt5/QtWidgets/QMessageBox \
 		/usr/include/qt5/QtWidgets/qmessagebox.h \
 		student_obj.h \
-		studentpre_obj.h
+		studentpre_obj.h \
+		db_utility.h \
+		project_obj.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o entrywindow.o entrywindow.cpp
 
 db_utility.o: db_utility.cpp db_utility.h \
@@ -3360,6 +3171,9 @@ db_utility.o: db_utility.cpp db_utility.h \
 		/usr/include/qt5/QtSql/qsqltablemodel.h \
 		/usr/include/qt5/QtSql/qtsqlversion.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o db_utility.o db_utility.cpp
+
+admin_obj.o: admin_obj.cpp admin_obj.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o admin_obj.o admin_obj.cpp
 
 moc_entrywindow.o: moc_entrywindow.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_entrywindow.o moc_entrywindow.cpp

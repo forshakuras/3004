@@ -10,7 +10,10 @@
 
 
 using namespace std;
-int x=50;
+
+
+
+
 Entrywindow::Entrywindow(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::Entrywindow)
