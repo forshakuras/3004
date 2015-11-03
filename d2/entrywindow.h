@@ -9,6 +9,7 @@
 #include "adminwindow.h"
 #include "student_obj.h"
 #include "studentpre_obj.h"
+#include "admin_obj.h"
 
 class chooseWindow;
 class AdminWIndow;

@@ -40,10 +40,11 @@ void Entrywindow::on_Signupbutton_clicked()
 void Entrywindow::on_Loginbutton_clicked()
 {
 
-    student_obj *data = new student_obj();
+
     DB_Utility db;
 
     if(ui->studentCheckBox->isChecked()){
+        student_obj *data = new student_obj();
         db.DBSearch_Student("students",ui->lineEdit->text().toStdString(),data);
             if(data->getStudent_number()<0){
                 QMessageBox msgBox;
@@ -58,6 +59,17 @@ void Entrywindow::on_Loginbutton_clicked()
         choose ->show();
         hide();
     }else if(ui->adminCheckBox->isChecked()){
+        admin_obj *temp = new admin_obj();
+        db.DBSearch_Admin("admin",ui->lineEdit->text().toStdString(),temp);
+        if(temp->getAdminNum() == 16){
+            QMessageBox msgBox;
+            msgBox.setWindowTitle("Warning");
+            msgBox.setText("Invaliad Username, please try again !");
+            msgBox.exec();
+            db.DBClose();
+            free(temp);
+            return;
+        }
         admin = new AdminWIndow(this);
         admin ->show();
         hide();
