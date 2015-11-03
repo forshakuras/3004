@@ -51,11 +51,6 @@ void DB_Utility::DBSearch_Student(string tableName,string student_number,student
 //    cout << "test:"+returnObj->getFirstName() << endl;
 }
 
-void DB_Utility::DBSearch_Project(string tableName,string title, project_obj* returnObj)
-{
-    string strSql = "select * from "+ tableName + " where title = "+ title;
-
-}
 
 void DB_Utility::DBSearchAll_Projects(string tableName, vector<project_obj*>* projectList)
 {
@@ -91,3 +86,86 @@ void DB_Utility::DBSearchAll_Projects(string tableName, vector<project_obj*>* pr
         }
     }
 }
+
+void DB_Utility::DBSearch_Admin(string tableName, string admin_number, admin_obj* admin)
+{
+    string strSql = "select * from "+ tableName + " where admin_number = "+ admin_number;
+    if(db.open()){
+        QSqlQuery data;
+        if(data.exec(QString::fromStdString(strSql))){
+             while(data.next()){
+                 admin->setFirstName(data.value(0).toString().toStdString());
+                 admin->setLastName(data.value(1).toString().toStdString());
+                 admin->setAdminNum(data.value(2).toInt());
+             }
+        }else{
+            cout << db.lastError().text().toStdString() << endl;
+        }
+    }
+}
+
+void DB_Utility::DBSearch_Project(string tableName, string title, project_obj* newProject)
+{
+    string strSql = "select * from "+ tableName + " where title = "+ title;
+    if(db.open()){
+        QSqlQuery data;
+        if(data.exec(QString::fromStdString(strSql))){
+             while(data.next()){
+                 newProject->setId(data.value(0).toInt());
+                 newProject->setTitle(data.value(1).toString().toStdString());
+                 newProject->setMaxStudents(data.value(2).toInt());
+                 newProject->setCurrentStudent(data.value(3).toInt());
+                 newProject->setIdealNumberStudents(data.value(4).toInt());
+                 newProject->setDescription(data.value(5).toString().toStdString());
+                 newProject->setGpa(data.value(6).toFloat());
+                 newProject->setPmSkill(data.value(7).toInt());
+                 newProject->setDatabase(data.value(8).toInt());
+                 newProject->setJava(data.value(9).toInt());
+                 newProject->setCCpp(data.value(10).toInt());
+                 newProject->setJsHtml(data.value(11).toInt());
+                 newProject->setPython(data.value(12).toInt());
+                 newProject->setDebug(data.value(13).toInt());
+                 newProject->setDocument(data.value(14).toInt());
+                 newProject->setMobile(data.value(15).toInt());
+                 newProject->setNetwork(data.value(16).toInt());
+                 newProject->setUi(data.value(17).toInt());
+                 newProject->setAlgor(data.value(18).toInt());
+             }
+        }
+    }else{
+        cout << db.lastError().text().toStdString() << endl;
+    }
+}
+
+void DB_Utility::DBSearchAll_Students(string tableName, vector<student_obj*>* studentList)
+{
+    string strSql = "select * from "+ tableName;
+    if(db.open()){
+        QSqlQuery data;
+        if(data.exec(QString::fromStdString(strSql))){
+            while(data.next()){
+                student_obj* newStudent = new student_obj();
+                newStudent->setFirstName(data.value(0).toString().toStdString());
+                newStudent->setLastName(data.value(1).toString().toStdString());
+                newStudent->setGpa(data.value(2).toFloat());
+                newStudent->setPmSkill(data.value(3).toInt());
+                newStudent->setDatabase(data.value(4).toInt());
+                newStudent->setJava(data.value(5).toInt());
+                newStudent->setCCpp(data.value(6).toInt());
+                newStudent->setJsHtml(data.value(7).toInt());
+                newStudent->setPython(data.value(8).toInt());
+                newStudent->setDebug(data.value(9).toInt());
+                newStudent->setDocument(data.value(10).toInt());
+                newStudent->setMobile(data.value(11).toInt());
+                newStudent->setNetwork(data.value(12).toInt());
+                newStudent->setUi(data.value(13).toInt());
+                newStudent->setAlgor(data.value(14).toInt());
+                newStudent->setStudent_number(data.value(15).toInt());
+                studentList->push_back(newStudent);
+            }
+        }
+    }else{
+        cout << db.lastError().text().toStdString() << endl;
+    }
+}
+

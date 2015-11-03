@@ -1,10 +1,11 @@
 #include "choosewindow.h"
 #include "ui_choosewindow.h"
 
-chooseWindow::chooseWindow(QWidget *parent) :
+chooseWindow::chooseWindow(QWidget *parent,student_obj *student) :
     QDialog(parent),
     ui(new Ui::chooseWindow)
 {
+    cout <<student->getJava()<<endl;
     ui->setupUi(this);
 }
 

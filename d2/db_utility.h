@@ -6,6 +6,7 @@
 #include <QtSql>
 #include <iostream>
 #include <vector>
+#include "admin_obj.h"
 
 using namespace std;
 
@@ -28,7 +29,7 @@ public:
     void DBRemove_Project(string,project_obj*);
     void DBModify_Student(string,student_obj*);
     void DBModify_Project(string,project_obj*);
-    //void DBSearch_Admin(string, string, admin);
+    void DBSearch_Admin(string, string, admin_obj*);
 };
 
 #endif // DB_UTILITY_H
