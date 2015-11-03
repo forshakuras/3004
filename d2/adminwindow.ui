@@ -60,7 +60,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Logout</string>
+     <string>Sign out</string>
     </property>
    </widget>
    <widget class="QPushButton" name="Removeproject">

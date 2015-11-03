@@ -11,8 +11,8 @@ AdminWIndow::AdminWIndow(QWidget *parent) :
     QStandardItem* Items = new QStandardItem("Avatar");
     Items->setEditable(false);
     stdModel->appendRow(Items);
-    QStandardItem* Item = new QStandardItem("Avatar");
-    Items->setEditable(false);
+    QStandardItem* Item = new QStandardItem("Avatar2");
+    Item->setEditable(false);
     stdModel->appendRow(Item);
 
     ui->listView->setModel(stdModel);
