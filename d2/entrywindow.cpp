@@ -48,6 +48,7 @@ void Entrywindow::on_Loginbutton_clicked()
         msgBox.setWindowTitle("Warning");
         msgBox.setText("Invaliad Username, please try again !");
         msgBox.exec();
+        db.DBClose();
         free(data);
         return;
     }
