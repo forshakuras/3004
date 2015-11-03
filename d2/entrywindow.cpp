@@ -10,7 +10,7 @@
 
 
 using namespace std;
-vector<project_obj*> data;
+
 
 
 
@@ -45,7 +45,9 @@ void Entrywindow::on_Loginbutton_clicked()
 
     if(ui->studentCheckBox->isChecked()){
         student_obj *data = new student_obj();
+        studentpre_obj *pref = new studentpre_obj();
         db.DBSearch_Student("students",ui->lineEdit->text().toStdString(),data);
+        db.DBSearch_Studentpref("students",ui->lineEdit->text().toStdString(),pref);
             if(data->getStudent_number() == 0){
                 QMessageBox msgBox;
                 msgBox.setWindowTitle("Warning");
@@ -55,7 +57,7 @@ void Entrywindow::on_Loginbutton_clicked()
                 free(data);
                 return;
             }
-        choose = new chooseWindow(this,data);
+        choose = new chooseWindow(this,data,pref);
         choose ->show();
         hide();
     }else if(ui->adminCheckBox->isChecked()){

@@ -20,6 +20,7 @@ public:
     DB_Utility();
     void DBClose();
     void DBSearch_Student(string, string, student_obj*); //search a student with student ID; (tableName, student_number, student_obj* for saving the search result)
+    void DBSearch_Studentpref(string,string,studentpre_obj*);
     void DBSearch_Project(string, string, project_obj*); //search a project with project title; (tableName, title, student_obj* for saving the search result)
     void DBSearchAll_Students(string, vector<student_obj*>*);
     void DBSearchAll_Projects(string, vector<project_obj*>*);

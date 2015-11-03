@@ -20,7 +20,7 @@ class chooseWindow : public QDialog
     Q_OBJECT
 
 public:
-    explicit chooseWindow(QWidget *parent = 0,student_obj *student=0);
+    explicit chooseWindow(QWidget *parent = 0,student_obj *student=0, studentpre_obj *preference = 0);
     ~chooseWindow();
 
 
@@ -32,6 +32,7 @@ private slots:
 
 private:
     student_obj *temp;
+    studentpre_obj *pref;
     Ui::chooseWindow *ui;
     projectWindow *project;
     Profilewindow *profile;
