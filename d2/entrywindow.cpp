@@ -12,7 +12,7 @@
 
 
 using namespace std;
-
+vector<project_obj*> data;
 
 Entrywindow::Entrywindow(QWidget *parent) :
     QDialog(parent),

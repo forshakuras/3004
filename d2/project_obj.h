@@ -15,6 +15,7 @@ using namespace std;
 
 class project_obj
 {
+
 private:
     int     id;
     string  title;
