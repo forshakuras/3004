@@ -55,9 +55,11 @@ void Entrywindow::on_Loginbutton_clicked()
                 msgBox.exec();
                 db.DBClose();
                 free(data);
+                free(pref);
                 return;
             }
         choose = new chooseWindow(this,data,pref);
+
         choose ->show();
         hide();
     }else if(ui->adminCheckBox->isChecked()){
