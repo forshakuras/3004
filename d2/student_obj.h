@@ -49,6 +49,8 @@ public:
     int     getDatabase();
     void    setJava(int);
     int     getJava();
+    void    setCCpp(int);
+    int     getCCpp();
     void    setJsHtml(int);
     int     getJsHtml();
     void    setPython(int);

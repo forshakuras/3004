@@ -105,6 +105,14 @@ int     student_obj::getJava(){
     return java;
 }
 
+void    student_obj::setCCpp(int i){
+    cCpp=i;
+}
+
+int     student_obj::getCCpp(){
+    return cCpp;
+}
+
 void    student_obj::setJsHtml(int i){
     jsHtml=i;
 }
