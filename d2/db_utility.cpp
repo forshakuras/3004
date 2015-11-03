@@ -8,6 +8,7 @@ DB_Utility::DB_Utility()
         cout<< "Database open successful!" << endl;
     }else{
         cout<< "Database open fault!" << endl;
+        exit(0);
     }
 }
 

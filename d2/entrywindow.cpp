@@ -7,6 +7,7 @@
 #include "student_obj.h"
 #include "studentpre_obj.h"
 #include <QtSql>
+#include "db_utility.h"
 
 using namespace std;
 
@@ -36,23 +37,22 @@ void Entrywindow::on_Signupbutton_clicked()
 
 void Entrywindow::on_Loginbutton_clicked()
 {
+
+    student_obj *data = new student_obj();
+    DB_Utility db;
+    db.DBSearch_Student("students",ui->lineEdit->text().toStdString(),data);
+    if(data->getStudent_number()<0){
+        QMessageBox msgBox;
+        msgBox.setWindowTitle("Warning");
+        msgBox.setText("Invaliad Username, please try again !");
+        msgBox.exec();
+        free(data);
+        return;
+    }
+
+
+
     if(ui->studentCheckBox->isChecked()){
-
-        QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
-        db.setDatabaseName("d2.sql");
-
-//        if(db.open()){
-//            string strSql="select * from sqlite_master WHERE name LIKE 'students'";
-//            db.exec(strSql.c_str());
-//            cout << msg << endl;
-//            cout << "success" << endl;
-//        }else{
-//            cout << "fault" << endl;
-//        }
-
-
-
-
         choose = new chooseWindow(this);
         choose ->show();
         hide();
