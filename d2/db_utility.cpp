@@ -197,3 +197,49 @@ void DB_Utility::DBSearchAll_Students(string tableName, vector<student_obj*>* st
     }
 }
 
+void DB_Utility::DBModify_Student(string tableName,student_obj* newStudent)
+{
+
+    string strSql = "update "+ tableName + " set" +
+            " firstName= "+newStudent->getFirstName()+
+            " lastName="+newStudent->getLastName()+
+            " gpa="+floatToString(newStudent->getGpa())+
+            " pmSkill="+intToString(newStudent->getPmSkill())+
+            " database="+intToString(newStudent->getDatabase())+
+            " java="+intToString(newStudent->getJava())+
+            " cCpp="+intToString(newStudent->getCCpp())+
+            " jsHtml="+intToString(newStudent->getJsHtml())+
+            " python="+intToString(newStudent->getPython())+
+            " debuggingTesting="+intToString(newStudent->getDebug())+
+            " documentation="+intToString(newStudent->getDocument())+
+            " mobile="+intToString(newStudent->getMobile())+
+            " networking="+intToString(newStudent->getNetwork())+
+            " ui="+intToString(newStudent->getUi())+
+            " algorithm="+intToString(newStudent->getAlgor())+
+            " where student_number="+intToString(newStudent->getStudent_number())
+            ;
+
+    if(db.open()){
+        QSqlQuery data;
+        if(data.exec(QString::fromStdString(strSql))){
+            cout << data.value(0).toString().toStdString() << endl;
+        }
+    }else{
+        cout << db.lastError().text().toStdString() << endl;
+    }
+}
+
+string DB_Utility::floatToString(float x)
+{
+    stringstream ss (stringstream::in | stringstream::out);
+    ss << x;
+    return ss.str();
+}
+
+string DB_Utility::intToString(int x)
+{
+    stringstream ss;
+    ss << x;
+    return ss.str();
+}
+

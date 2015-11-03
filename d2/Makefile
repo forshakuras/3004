@@ -595,12 +595,12 @@ moc_entrywindow.cpp: /usr/include/qt5/QtWidgets/QDialog \
 		/usr/include/qt5/QtCore/QFileInfo \
 		choosewindow.h \
 		profilewindow.h \
+		studentpre_obj.h \
+		student_obj.h \
 		projectwindow.h \
 		/usr/include/qt5/QtGui/QStandardItemModel \
 		/usr/include/qt5/QtGui/qstandarditemmodel.h \
 		db_utility.h \
-		student_obj.h \
-		studentpre_obj.h \
 		project_obj.h \
 		admin_obj.h \
 		projectdesc.h \
@@ -721,14 +721,14 @@ moc_choosewindow.cpp: /usr/include/qt5/QtWidgets/QDialog \
 		/usr/include/qt5/QtGui/qvector2d.h \
 		/usr/include/qt5/QtGui/qtouchdevice.h \
 		profilewindow.h \
+		studentpre_obj.h \
+		student_obj.h \
 		projectwindow.h \
 		/usr/include/qt5/QtGui/QStandardItemModel \
 		/usr/include/qt5/QtGui/qstandarditemmodel.h \
 		/usr/include/qt5/QtCore/qabstractitemmodel.h \
 		/usr/include/qt5/QtGui/qicon.h \
 		db_utility.h \
-		student_obj.h \
-		studentpre_obj.h \
 		project_obj.h \
 		/usr/include/qt5/QtSql/QtSql \
 		/usr/include/qt5/QtSql/QtSqlDepends \
@@ -992,6 +992,8 @@ moc_profilewindow.cpp: /usr/include/qt5/QtWidgets/QDialog \
 		/usr/include/qt5/QtCore/qfiledevice.h \
 		/usr/include/qt5/QtGui/qvector2d.h \
 		/usr/include/qt5/QtGui/qtouchdevice.h \
+		studentpre_obj.h \
+		student_obj.h \
 		profilewindow.h
 	/usr/lib/i386-linux-gnu/qt5/bin/moc $(DEFINES) $(INCPATH) -I/usr/include/c++/4.8 -I/usr/include/i386-linux-gnu/c++/4.8 -I/usr/include/c++/4.8/backward -I/usr/lib/gcc/i686-linux-gnu/4.8/include -I/usr/local/include -I/usr/lib/gcc/i686-linux-gnu/4.8/include-fixed -I/usr/include/i386-linux-gnu -I/usr/include profilewindow.h -o moc_profilewindow.cpp
 
@@ -1630,12 +1632,12 @@ moc_adminwindow.cpp: /usr/include/qt5/QtWidgets/QMainWindow \
 		/usr/include/qt5/QtCore/QFileInfo \
 		choosewindow.h \
 		profilewindow.h \
+		studentpre_obj.h \
+		student_obj.h \
 		projectwindow.h \
 		/usr/include/qt5/QtGui/QStandardItemModel \
 		/usr/include/qt5/QtGui/qstandarditemmodel.h \
 		db_utility.h \
-		student_obj.h \
-		studentpre_obj.h \
 		project_obj.h \
 		admin_obj.h \
 		projectdesc.h \
@@ -1933,12 +1935,12 @@ main.o: main.cpp entrywindow.h \
 		/usr/include/qt5/QtCore/QFileInfo \
 		choosewindow.h \
 		profilewindow.h \
+		studentpre_obj.h \
+		student_obj.h \
 		projectwindow.h \
 		/usr/include/qt5/QtGui/QStandardItemModel \
 		/usr/include/qt5/QtGui/qstandarditemmodel.h \
 		db_utility.h \
-		student_obj.h \
-		studentpre_obj.h \
 		project_obj.h \
 		admin_obj.h \
 		projectdesc.h \
@@ -2063,14 +2065,14 @@ choosewindow.o: choosewindow.cpp choosewindow.h \
 		/usr/include/qt5/QtGui/qvector2d.h \
 		/usr/include/qt5/QtGui/qtouchdevice.h \
 		profilewindow.h \
+		studentpre_obj.h \
+		student_obj.h \
 		projectwindow.h \
 		/usr/include/qt5/QtGui/QStandardItemModel \
 		/usr/include/qt5/QtGui/qstandarditemmodel.h \
 		/usr/include/qt5/QtCore/qabstractitemmodel.h \
 		/usr/include/qt5/QtGui/qicon.h \
 		db_utility.h \
-		student_obj.h \
-		studentpre_obj.h \
 		project_obj.h \
 		/usr/include/qt5/QtSql/QtSql \
 		/usr/include/qt5/QtSql/QtSqlDepends \
@@ -2334,6 +2336,8 @@ profilewindow.o: profilewindow.cpp profilewindow.h \
 		/usr/include/qt5/QtCore/qfiledevice.h \
 		/usr/include/qt5/QtGui/qvector2d.h \
 		/usr/include/qt5/QtGui/qtouchdevice.h \
+		studentpre_obj.h \
+		student_obj.h \
 		ui_profilewindow.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o profilewindow.o profilewindow.cpp
 
@@ -2975,12 +2979,12 @@ adminwindow.o: adminwindow.cpp adminwindow.h \
 		/usr/include/qt5/QtCore/QFileInfo \
 		choosewindow.h \
 		profilewindow.h \
+		studentpre_obj.h \
+		student_obj.h \
 		projectwindow.h \
 		/usr/include/qt5/QtGui/QStandardItemModel \
 		/usr/include/qt5/QtGui/qstandarditemmodel.h \
 		db_utility.h \
-		student_obj.h \
-		studentpre_obj.h \
 		project_obj.h \
 		admin_obj.h \
 		projectdesc.h \
@@ -3253,12 +3257,12 @@ entrywindow.o: entrywindow.cpp entrywindow.h \
 		/usr/include/qt5/QtCore/QFileInfo \
 		choosewindow.h \
 		profilewindow.h \
+		studentpre_obj.h \
+		student_obj.h \
 		projectwindow.h \
 		/usr/include/qt5/QtGui/QStandardItemModel \
 		/usr/include/qt5/QtGui/qstandarditemmodel.h \
 		db_utility.h \
-		student_obj.h \
-		studentpre_obj.h \
 		project_obj.h \
 		admin_obj.h \
 		projectdesc.h \

@@ -5,6 +5,7 @@
 #include "project_obj.h"
 #include <QtSql>
 #include <iostream>
+#include <sstream>
 #include <vector>
 #include "admin_obj.h"
 
@@ -31,6 +32,8 @@ public:
     void DBModify_Student(string,student_obj*);
     void DBModify_Project(string,project_obj*);
     void DBSearch_Admin(string, string, admin_obj*);
+    string floatToString(float);
+    string intToString(int);
 };
 
 #endif // DB_UTILITY_H
