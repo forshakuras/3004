@@ -20,9 +20,8 @@ projectWindow::projectWindow(QWidget *parent) :
         Item->setEditable(false);
         Item->setSelectable(true);
         stdModel->appendRow(Item);
-      //  connect(stdModel, SIGNAL(doubleClicked(const QModelIndex &index)), this, SLOT(doubleClicked(const QModelIndex &index2)));
     }
-   // ui->listView->setSelectionMode(QAbstractItemView::ExtendedSelection);
+
 
 }
 
@@ -36,5 +35,4 @@ void projectWindow::on_listView_doubleClicked(const QModelIndex &index)
     int row = ui->listView->currentIndex().row();
     desc = new projectDesc(this, data[row]);
     desc->show();
-    cout << data[row]->getTitle() <<endl;
 }

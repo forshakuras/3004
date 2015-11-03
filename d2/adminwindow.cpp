@@ -1,21 +1,26 @@
 #include "adminwindow.h"
 #include "ui_adminwindow.h"
-#include <QStandardItemModel>
+
+
 
 AdminWIndow::AdminWIndow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::AdminWIndow)
 {
     ui->setupUi(this);
-    QStandardItemModel *stdModel = new QStandardItemModel(this);
-    QStandardItem* Items = new QStandardItem("Avatar");
-    Items->setEditable(false);
-    stdModel->appendRow(Items);
-    QStandardItem* Item = new QStandardItem("Avatar2");
-    Item->setEditable(false);
-    stdModel->appendRow(Item);
 
+    DB_Utility db;
+
+    db.DBSearchAll_Projects("projects",&proj);
+    QStandardItemModel *stdModel = new QStandardItemModel(this);
     ui->listView->setModel(stdModel);
+    for(int i=0; i<proj.size();i++){
+        QStandardItem* Item = new QStandardItem(QString::fromStdString(proj[i]->getTitle()));
+        Item->setEditable(false);
+        Item->setSelectable(true);
+        stdModel->appendRow(Item);
+    }
+
 
 }
 
@@ -30,4 +35,11 @@ void AdminWIndow::on_pushButton_3_clicked()
     entry = new Entrywindow(this);
     entry->show();
     hide();
+}
+
+void AdminWIndow::on_listView_doubleClicked(const QModelIndex &index)
+{
+    int row = ui->listView->currentIndex().row();
+    projdesc = new projectDesc(this, proj[row]);
+    projdesc->show();
 }
