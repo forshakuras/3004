@@ -7,10 +7,11 @@ projectWindow::projectWindow(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::projectWindow)
 {
+
     ui->setupUi(this);
 
     DB_Utility db;
-    vector<project_obj*> data;
+
     db.DBSearchAll_Projects("projects",&data);
     QStandardItemModel *stdModel = new QStandardItemModel(this);
     ui->listView->setModel(stdModel);
@@ -18,11 +19,10 @@ projectWindow::projectWindow(QWidget *parent) :
         QStandardItem* Item = new QStandardItem(QString::fromStdString(data[i]->getTitle()));
         Item->setEditable(false);
         Item->setSelectable(true);
-
         stdModel->appendRow(Item);
-        connect(stdModel, SIGNAL(doubleClicked(const QModelIndex &index)), this, SLOT(doubleClicked(const QModelIndex &index2)));
+      //  connect(stdModel, SIGNAL(doubleClicked(const QModelIndex &index)), this, SLOT(doubleClicked(const QModelIndex &index2)));
     }
-    ui->listView->setSelectionMode(QAbstractItemView::ExtendedSelection);
+   // ui->listView->setSelectionMode(QAbstractItemView::ExtendedSelection);
 
 }
 
@@ -33,6 +33,8 @@ projectWindow::~projectWindow()
 
 void projectWindow::on_listView_doubleClicked(const QModelIndex &index)
 {
-
-    cout << "asda"<<endl;
+    int row = ui->listView->currentIndex().row();
+    desc = new projectDesc(this, data[row]);
+    desc->show();
+    cout << data[row]->getTitle() <<endl;
 }

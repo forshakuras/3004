@@ -6,7 +6,7 @@
 #include <QStandardItemModel>
 #include "db_utility.h"
 #include "project_obj.h"
-
+#include "projectdesc.h"
 
 namespace Ui {
 class projectWindow;
@@ -25,6 +25,8 @@ private slots:
 
 private:
     Ui::projectWindow *ui;
+    projectDesc *desc;
+    vector<project_obj*> data;
 };
 
 #endif // PROJECTWINDOW_H
