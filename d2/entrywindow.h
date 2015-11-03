@@ -7,6 +7,8 @@
 #include <QFileInfo>
 #include "choosewindow.h"
 #include "adminwindow.h"
+#include "student_obj.h"
+#include "studentpre_obj.h"
 
 class chooseWindow;
 class AdminWIndow;

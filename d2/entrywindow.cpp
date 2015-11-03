@@ -4,16 +4,13 @@
 #include "choosewindow.h"
 #include "adminwindow.h"
 #include <iostream>
-#include "student_obj.h"
-#include "studentpre_obj.h"
 #include "db_utility.h"
 #include <vector>
 #include <QtSql>
 
 
 using namespace std;
-
-
+int x=50;
 Entrywindow::Entrywindow(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::Entrywindow)
@@ -45,7 +42,6 @@ void Entrywindow::on_Loginbutton_clicked()
 
     if(ui->studentCheckBox->isChecked()){
         db.DBSearch_Student("students",ui->lineEdit->text().toStdString(),data);
-        cout<<data->getJava()<< endl;
             if(data->getStudent_number()<0){
                 QMessageBox msgBox;
                 msgBox.setWindowTitle("Warning");
@@ -55,7 +51,7 @@ void Entrywindow::on_Loginbutton_clicked()
                 free(data);
                 return;
             }
-        choose = new chooseWindow(this);
+        choose = new chooseWindow(this,data);
         choose ->show();
         hide();
     }else if(ui->adminCheckBox->isChecked()){
