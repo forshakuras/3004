@@ -26,3 +26,10 @@ void chooseWindow::on_projectButton_clicked()
     project ->show();
 
 }
+
+void chooseWindow::on_signoutBUtton_clicked()
+{
+    entry = new Entrywindow(this);
+    entry->show();
+    hide();
+}

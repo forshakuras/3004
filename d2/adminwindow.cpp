@@ -24,3 +24,10 @@ AdminWIndow::~AdminWIndow()
 {
     delete ui;
 }
+
+void AdminWIndow::on_pushButton_3_clicked()
+{
+    entry = new Entrywindow(this);
+    entry->show();
+    hide();
+}

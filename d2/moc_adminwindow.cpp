@@ -19,8 +19,8 @@
 
 QT_BEGIN_MOC_NAMESPACE
 struct qt_meta_stringdata_AdminWIndow_t {
-    QByteArrayData data[1];
-    char stringdata[13];
+    QByteArrayData data[3];
+    char stringdata[38];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -29,9 +29,12 @@ struct qt_meta_stringdata_AdminWIndow_t {
     )
 static const qt_meta_stringdata_AdminWIndow_t qt_meta_stringdata_AdminWIndow = {
     {
-QT_MOC_LITERAL(0, 0, 11)
+QT_MOC_LITERAL(0, 0, 11),
+QT_MOC_LITERAL(1, 12, 23),
+QT_MOC_LITERAL(2, 36, 0)
     },
-    "AdminWIndow\0"
+    "AdminWIndow\0on_pushButton_3_clicked\0"
+    "\0"
 };
 #undef QT_MOC_LITERAL
 
@@ -41,21 +44,31 @@ static const uint qt_meta_data_AdminWIndow[] = {
        7,       // revision
        0,       // classname
        0,    0, // classinfo
-       0,    0, // methods
+       1,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
        0,       // signalCount
 
+ // slots: name, argc, parameters, tag, flags
+       1,    0,   19,    2, 0x08,
+
+ // slots: parameters
+    QMetaType::Void,
+
        0        // eod
 };
 
 void AdminWIndow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
-    Q_UNUSED(_o);
-    Q_UNUSED(_id);
-    Q_UNUSED(_c);
+    if (_c == QMetaObject::InvokeMetaMethod) {
+        AdminWIndow *_t = static_cast<AdminWIndow *>(_o);
+        switch (_id) {
+        case 0: _t->on_pushButton_3_clicked(); break;
+        default: ;
+        }
+    }
     Q_UNUSED(_a);
 }
 
@@ -83,6 +96,15 @@ int AdminWIndow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     _id = QMainWindow::qt_metacall(_c, _id, _a);
     if (_id < 0)
         return _id;
+    if (_c == QMetaObject::InvokeMetaMethod) {
+        if (_id < 1)
+            qt_static_metacall(this, _c, _id, _a);
+        _id -= 1;
+    } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
+        if (_id < 1)
+            *reinterpret_cast<int*>(_a[0]) = -1;
+        _id -= 1;
+    }
     return _id;
 }
 QT_END_MOC_NAMESPACE

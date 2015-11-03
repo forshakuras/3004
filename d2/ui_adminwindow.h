@@ -76,7 +76,7 @@ public:
         AdminWIndow->setWindowTitle(QApplication::translate("AdminWIndow", "Administrator", 0));
         Createproject->setText(QApplication::translate("AdminWIndow", "Create Project", 0));
         Editproject->setText(QApplication::translate("AdminWIndow", "Edit Project", 0));
-        pushButton_3->setText(QApplication::translate("AdminWIndow", "Logout", 0));
+        pushButton_3->setText(QApplication::translate("AdminWIndow", "Sign out", 0));
         Removeproject->setText(QApplication::translate("AdminWIndow", "Remove Project", 0));
     } // retranslateUi
 

@@ -5,6 +5,8 @@
 
 #include "profilewindow.h"
 #include "projectwindow.h"
+#include "entrywindow.h"
+class Entrywindow;
 
 namespace Ui {
 class chooseWindow;
@@ -21,15 +23,19 @@ public:
 
 private slots:
     void on_profileButton_clicked();
-
-
-private slots:
     void on_projectButton_clicked();
+
+    void on_signoutBUtton_clicked();
+
 private:
     Ui::chooseWindow *ui;
     projectWindow *project;
     Profilewindow *profile;
+    Entrywindow *entry;
 
 };
 
 #endif // CHOOSEWINDOW_H
+
+
+

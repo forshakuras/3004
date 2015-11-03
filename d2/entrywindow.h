@@ -8,6 +8,9 @@
 #include "choosewindow.h"
 #include "adminwindow.h"
 
+class chooseWindow;
+class AdminWIndow;
+
 namespace Ui {
 class Entrywindow;
 }
