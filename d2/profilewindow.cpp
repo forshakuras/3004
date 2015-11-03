@@ -1,13 +1,13 @@
 #include "profilewindow.h"
 #include "ui_profilewindow.h"
 
-Profilewindow::Profilewindow(QWidget *parent, student_obj *student) :
+Profilewindow::Profilewindow(QWidget *parent, student_obj *student, studentpre_obj *studentPref) :
     QDialog(parent),
     ui(new Ui::Profilewindow)
 {
     ui->setupUi(this);
     stu = student;
-
+    stuPref=studentPref;
     ui->name->setText(QString::fromStdString(stu->getFirstName() + stu->getLastName()));
     ui->id->setText(QString::number(stu->getStudent_number()));
     ui->gpaSpin->setValue(stu->getGpa());

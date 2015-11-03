@@ -44,18 +44,22 @@ void Entrywindow::on_Loginbutton_clicked()
     DB_Utility db;
 
     if(ui->studentCheckBox->isChecked()){
-        student_obj *data = new student_obj();
-        db.DBSearch_Student("students",ui->lineEdit->text().toStdString(),data);
-            if(data->getStudent_number() == 0){
-                QMessageBox msgBox;
-                msgBox.setWindowTitle("Warning");
-                msgBox.setText("Invaliad Username, please try again !");
-                msgBox.exec();
-                db.DBClose();
-                free(data);
-                return;
-            }
-        choose = new chooseWindow(this,data);
+        student_obj *student = new student_obj();
+        studentpre_obj *studentPref = new studentpre_obj();
+        db.DBSearch_Student("students",ui->lineEdit->text().toStdString(),student);
+        //db.DBSearch_Student("studentPreferences",ui->lineEdit->text().toStdString(),studentPref);
+        if(student->getStudent_number() == 0){
+            cout<<studentPref->getAlgor()<<endl;
+            QMessageBox msgBox;
+            msgBox.setWindowTitle("Warning");
+            msgBox.setText("Invaliad Username, please try again !");
+            msgBox.exec();
+            db.DBClose();
+            return;
+        }
+        choose = new chooseWindow(this,student,studentPref);
+        free(student);
+        free(studentPref);
         choose ->show();
         hide();
     }else if(ui->adminCheckBox->isChecked()){

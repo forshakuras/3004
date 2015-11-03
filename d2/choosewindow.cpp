@@ -1,12 +1,13 @@
 #include "choosewindow.h"
 #include "ui_choosewindow.h"
 
-chooseWindow::chooseWindow(QWidget *parent,student_obj *student) :
+chooseWindow::chooseWindow(QWidget *parent,student_obj *student,studentpre_obj *studentPref) :
     QDialog(parent),
     ui(new Ui::chooseWindow)
 {
     ui->setupUi(this);
     temp = student;
+    temp1=studentPref;
 }
 
 chooseWindow::~chooseWindow()
@@ -17,7 +18,7 @@ chooseWindow::~chooseWindow()
 
 void chooseWindow::on_profileButton_clicked()
 {
-    profile = new Profilewindow(this, temp);
+    profile = new Profilewindow(this, temp,temp1);
     profile->show();
 }
 

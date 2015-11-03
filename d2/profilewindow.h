@@ -14,7 +14,7 @@ class Profilewindow : public QDialog
     Q_OBJECT
 
 public:
-    explicit Profilewindow(QWidget *parent = 0, student_obj *student = 0);
+    explicit Profilewindow(QWidget *parent = 0, student_obj *student = 0,studentpre_obj *studentPref=0);
     ~Profilewindow();
 
 private slots:
@@ -23,6 +23,7 @@ private slots:
 private:
     Ui::Profilewindow *ui;
     student_obj *stu;
+    studentpre_obj *stuPref;
 
 };
 
