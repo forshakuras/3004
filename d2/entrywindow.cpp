@@ -17,7 +17,7 @@ Entrywindow::Entrywindow(QWidget *parent) :
 {
 
     ui->setupUi(this);
-    QPixmap pix("/home/admin/d2/carleton.jpg");
+    QPixmap pix((QDir::currentPath() + QString("/carleton.jpg")));
     ui->label_carleton->setScaledContents(true);
     ui->label_carleton->setPixmap(pix);
 
