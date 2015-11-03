@@ -6,8 +6,13 @@
 #include <iostream>
 #include "student_obj.h"
 #include "studentpre_obj.h"
+<<<<<<< HEAD
 #include "db_utility.h"
 #include <vector>
+=======
+#include <QtSql>
+#include "db_utility.h"
+>>>>>>> 35f1a37c9caef40e7260dffb052ed4fc33952fc9
 
 using namespace std;
 
@@ -37,8 +42,24 @@ void Entrywindow::on_Signupbutton_clicked()
 
 void Entrywindow::on_Loginbutton_clicked()
 {
-    if(ui->studentCheckBox->isChecked()){
 
+<<<<<<< HEAD
+=======
+    student_obj *data = new student_obj();
+    DB_Utility db;
+
+    db.DBSearch_Student("students",ui->lineEdit->text().toStdString(),data);
+
+    if(data->getStudent_number()<0){
+        QMessageBox msgBox;
+        msgBox.setWindowTitle("Warning");
+        msgBox.setText("Invaliad Username, please try again !");
+        msgBox.exec();
+        db.DBClose();
+        free(data);
+        return;
+    }
+>>>>>>> 35f1a37c9caef40e7260dffb052ed4fc33952fc9
 
 
 //        vector<project_obj*> data2;
@@ -47,6 +68,7 @@ void Entrywindow::on_Loginbutton_clicked()
 //            cout << data2[i]->getTitle() << endl;
 //        }
 
+    if(ui->studentCheckBox->isChecked()){
         choose = new chooseWindow(this);
         choose ->show();
         hide();
