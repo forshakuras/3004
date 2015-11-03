@@ -31,7 +31,7 @@ private slots:
     void on_signoutBUtton_clicked();
 
 private:
-    student_obj *data;
+    student_obj *temp;
     Ui::chooseWindow *ui;
     projectWindow *project;
     Profilewindow *profile;

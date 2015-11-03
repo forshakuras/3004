@@ -5,8 +5,8 @@ chooseWindow::chooseWindow(QWidget *parent,student_obj *student) :
     QDialog(parent),
     ui(new Ui::chooseWindow)
 {
-    cout <<student->getJava()<<endl;
     ui->setupUi(this);
+    temp = student;
 }
 
 chooseWindow::~chooseWindow()
@@ -17,7 +17,7 @@ chooseWindow::~chooseWindow()
 
 void chooseWindow::on_profileButton_clicked()
 {
-    profile = new Profilewindow(this);
+    profile = new Profilewindow(this, temp);
     profile->show();
 }
 

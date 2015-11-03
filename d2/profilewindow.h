@@ -2,7 +2,8 @@
 #define PROFILEWINDOW_H
 
 #include <QDialog>
-
+#include "studentpre_obj.h"
+#include "student_obj.h"
 
 namespace Ui {
 class Profilewindow;
@@ -13,7 +14,7 @@ class Profilewindow : public QDialog
     Q_OBJECT
 
 public:
-    explicit Profilewindow(QWidget *parent = 0);
+    explicit Profilewindow(QWidget *parent = 0, student_obj *student = 0);
     ~Profilewindow();
 
 private slots:
@@ -21,6 +22,7 @@ private slots:
 
 private:
     Ui::Profilewindow *ui;
+    student_obj *stu;
 
 };
 
