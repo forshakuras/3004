@@ -14,6 +14,7 @@
 using namespace std;
 
 
+
 Entrywindow::Entrywindow(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::Entrywindow)
