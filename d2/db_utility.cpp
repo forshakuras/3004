@@ -234,7 +234,7 @@ void DB_Utility::DBAdd_Project(string tableName, project_obj* newProject)
             " '"+ intToString(newProject->getIdealNumberStudents())+ "',"
             " '"+ intToString(newProject->getMaxStudents())+ "',"
             " '"+ intToString(newProject->getCurrentStudent())+ "',"
-            " '"+ intToString(newProject->getGpa())+ "',"
+            " '"+ floatToString(newProject->getGpa())+ "',"
             " '"+ intToString(newProject->getPmSkill())+ "',"
             " '"+ intToString(newProject->getDatabase())+ "',"
             " '"+ intToString(newProject->getJava())+ "',"
@@ -254,6 +254,34 @@ void DB_Utility::DBAdd_Project(string tableName, project_obj* newProject)
      }else{
             cout << db.lastError().text().toStdString() << endl;
      }
+}
+
+void DB_Utility::DBAdd_Student(string tableName, student_obj *newStudent)
+{
+    string strSql = "insert into "+ tableName + "(firstName,lastName,gpa,pmSkill,database,java,cCpp,jsHtml,python,debuggingTesting,documentation,mobile,networking,ui,algorithm,student_number) values "+
+            "( '"+newStudent->getFirstName() +"',"
+            " '"+ newStudent->getLastName()+"',"
+            " '"+ floatToString(newStudent->getGpa())+"',"
+            " '"+ intToString(newStudent->getPmSkill())+ "',"
+            " '"+ intToString(newStudent->getDatabase())+ "',"
+            " '"+ intToString(newStudent->getJava())+ "',"
+            " '"+ intToString(newStudent->getCCpp())+ "',"
+            " '"+ intToString(newStudent->getJsHtml())+ "',"
+            " '"+ intToString(newStudent->getPython())+ "',"
+            " '"+ intToString(newStudent->getDebug())+ "',"
+            " '"+ intToString(newStudent->getDocument())+ "',"
+            " '"+ intToString(newStudent->getMobile())+ "',"
+            " '"+ intToString(newStudent->getNetwork())+ "',"
+            " '"+ intToString(newStudent->getUi())+ "',"
+            " '"+ intToString(newStudent->getAlgor())+ "',"
+            " '"+ intToString(newStudent->getStudent_number())+ "'"
+            ")";
+    if(db.open()){
+           QSqlQuery data;
+           data.exec(QString::fromStdString(strSql));
+    }else{
+           cout << db.lastError().text().toStdString() << endl;
+    }
 }
 
 
@@ -319,6 +347,29 @@ void DB_Utility::DBSearch_StudentFromProjectList(vector<int>* studentNum, projec
     }
 }
 
+void DB_Utility::DBRemove_Student(string tableName, student_obj *student)
+{
+    string strSql = "delete from "+tableName+" where student_number ="+ intToString(student->getStudent_number());
+    if(db.open()){
+        QSqlQuery data;
+        data.exec(QString::fromStdString(strSql));
+    }else{
+        cout << db.lastError().text().toStdString() << endl;
+    }
+}
+
+void DB_Utility::DBRemove_Project(string tableName, project_obj *project)
+{
+    string strSql = "delete from "+tableName+" where title = '"+project->getTitle()+"'";
+    if(db.open()){
+        QSqlQuery data;
+        data.exec(QString::fromStdString(strSql));
+    }else{
+        cout << db.lastError().text().toStdString() << endl;
+    }
+     cout<< strSql << endl;
+}
+
 
 string DB_Utility::floatToString(float x)
 {
@@ -326,6 +377,7 @@ string DB_Utility::floatToString(float x)
     ss << x;
     return ss.str();
 }
+
 
 string DB_Utility::intToString(int x)
 {
