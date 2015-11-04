@@ -8,6 +8,7 @@
 #include "project_obj.h"
 #include "studentpre_obj.h"
 #include "projectdesc.h"
+#include <QMessageBox>
 
 namespace Ui {
 class projectWindow;
