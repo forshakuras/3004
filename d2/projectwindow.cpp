@@ -3,12 +3,14 @@
 
 
 
-projectWindow::projectWindow(QWidget *parent) :
+projectWindow::projectWindow(QWidget *parent, student_obj *student, studentpre_obj *preference) :
     QDialog(parent),
     ui(new Ui::projectWindow)
 {
 
     ui->setupUi(this);
+    user = student;
+    userpref = preference;
 
     DB_Utility db;
 
@@ -35,4 +37,11 @@ void projectWindow::on_listView_doubleClicked(const QModelIndex &index)
     int row = ui->listView->currentIndex().row();
     desc = new projectDesc(this, data[row]);
     desc->show();
+}
+
+void projectWindow::on_joinProj_clicked()
+{
+   DB_Utility db;
+   int row = ui->listView->currentIndex().row();
+   db.DBAdd_StudentToProject(user,data[row]);
 }
