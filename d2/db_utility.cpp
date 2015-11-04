@@ -225,6 +225,36 @@ void DB_Utility::DBModify_Student(string tableName, student_obj* newStudent)
     }
 }
 
+void DB_Utility::DBModify_Project(string tableName, project_obj * newProject)
+{
+    string strSql = "update "+ tableName + " set" +
+            " title='"+newProject->getTitle()+ "',"
+            " maxStudent='"+intToString(newProject->getMaxStudents())+"',"
+            " currentStudent='"+intToString(newProject->getCurrentStudent())+ "',"
+            " idealNumberStudents="+intToString(newProject->getIdealNumberStudents())+ "',"
+            " gpa='"+floatToString(newProject->getGpa())+ "',"
+            " pmSkill='"+intToString(newProject->getPmSkill())+ "',"
+            " database='"+intToString(newProject->getDatabase())+ "',"
+            " java='"+intToString(newProject->getJava())+ "',"
+            " cCpp='"+intToString(newProject->getCCpp())+ "',"
+            " jsHtml='"+intToString(newProject->getJsHtml())+ "',"
+            " python='"+intToString(newProject->getPython())+ "',"
+            " debuggingTesting='"+intToString(newProject->getDebug())+ "',"
+            " documentation='"+intToString(newProject->getDocument())+ "',"
+            " mobile='"+intToString(newProject->getMobile())+ "',"
+            " networking='"+intToString(newProject->getNetwork())+ "',"
+            " ui='"+intToString(newProject->getUi())+ "',"
+            " algorithm='"+intToString(newProject->getAlgor())+"'"
+            " where projectId='"+intToString(newProject->getId())+"'"
+            ;
+    if(db.open()){
+        QSqlQuery data;
+        data.exec(QString::fromStdString(strSql));
+    }else{
+        cout << db.lastError().text().toStdString() << endl;
+    }
+}
+
 
 void DB_Utility::DBAdd_Project(string tableName, project_obj* newProject)
 {
