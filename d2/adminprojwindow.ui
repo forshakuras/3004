@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>827</width>
+    <width>834</width>
     <height>658</height>
    </rect>
   </property>
@@ -159,7 +159,7 @@
     <rect>
      <x>0</x>
      <y>150</y>
-     <width>601</width>
+     <width>611</width>
      <height>20</height>
     </rect>
    </property>
@@ -491,7 +491,19 @@
     </rect>
    </property>
   </widget>
-<<<<<<< HEAD
+  <widget class="QPushButton" name="cancelButton">
+   <property name="geometry">
+    <rect>
+     <x>420</x>
+     <y>610</y>
+     <width>111</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Cancel</string>
+   </property>
+  </widget>
   <widget class="Line" name="line_2">
    <property name="geometry">
     <rect>
@@ -509,9 +521,9 @@
    <property name="geometry">
     <rect>
      <x>680</x>
-     <y>50</y>
+     <y>70</y>
      <width>101</width>
-     <height>41</height>
+     <height>31</height>
     </rect>
    </property>
    <property name="text">
@@ -521,24 +533,11 @@
   <widget class="QListView" name="memberlist">
    <property name="geometry">
     <rect>
-     <x>620</x>
-     <y>100</y>
+     <x>625</x>
+     <y>120</y>
      <width>201</width>
-     <height>521</height>
+     <height>501</height>
     </rect>
-=======
-  <widget class="QPushButton" name="cancelButton">
-   <property name="geometry">
-    <rect>
-     <x>420</x>
-     <y>610</y>
-     <width>111</width>
-     <height>27</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Cancel</string>
->>>>>>> 350d5601746209d4a11076f292d097fbd545e579
    </property>
   </widget>
  </widget>
