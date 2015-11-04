@@ -41,4 +41,11 @@ void AdminWIndow::on_listView_doubleClicked(const QModelIndex &index)
     int row = ui->listView->currentIndex().row();
     adProjWindow = new AdminProjWindow(this,proj[row]);
     adProjWindow->show();
+    hide();
+}
+
+void AdminWIndow::on_Createproject_clicked()
+{
+    cpWindow=new CreateProject(this);
+    cpWindow->show();
 }

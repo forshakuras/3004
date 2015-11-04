@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>Administrator's Project</string>
   </property>
   <widget class="QLabel" name="label_16">
    <property name="geometry">
@@ -350,10 +350,10 @@
     <string>GPA(out of 12.00):</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton">
+  <widget class="QPushButton" name="saveButton">
    <property name="geometry">
     <rect>
-     <x>150</x>
+     <x>70</x>
      <y>610</y>
      <width>111</width>
      <height>27</height>
@@ -419,10 +419,10 @@
     </rect>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_2">
+  <widget class="QPushButton" name="deleteButton">
    <property name="geometry">
     <rect>
-     <x>320</x>
+     <x>240</x>
      <y>610</y>
      <width>111</width>
      <height>27</height>
@@ -491,6 +491,7 @@
     </rect>
    </property>
   </widget>
+<<<<<<< HEAD
   <widget class="Line" name="line_2">
    <property name="geometry">
     <rect>
@@ -525,6 +526,19 @@
      <width>201</width>
      <height>521</height>
     </rect>
+=======
+  <widget class="QPushButton" name="cancelButton">
+   <property name="geometry">
+    <rect>
+     <x>420</x>
+     <y>610</y>
+     <width>111</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Cancel</string>
+>>>>>>> 350d5601746209d4a11076f292d097fbd545e579
    </property>
   </widget>
  </widget>
