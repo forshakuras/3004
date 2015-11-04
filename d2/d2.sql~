@@ -152,8 +152,8 @@ create table if not exists studentList(
       );
 begin transaction;
 insert into studentList(student_number,projectId) values (100890425,1);
-insert into studentList(student_number,projectId) values (100111119,1);
-insert into studentList(student_number,projectId) values (100111118,1);
+insert into studentList(student_number,projectId) values (100111111,1);
+insert into studentList(student_number,projectId) values (100111222,1);
 insert into studentList(student_number,projectId) values (100111333,2);
 insert into studentList(student_number,projectId) values (100111444,2);
 insert into studentList(student_number,projectId) values (100111555,3);
