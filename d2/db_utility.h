@@ -34,7 +34,7 @@ public:
     void DBModify_Project(string,project_obj*);
     void DBSearch_Admin(string, string, admin_obj*);
     void DBAdd_StudentToProject(student_obj*, project_obj*);
-    void DBSearch_StudentFromProjectList(student_obj*,project_obj*);
+    void DBSearch_StudentFromProjectList(vector<int>*,project_obj*);
     string floatToString(float);
     string intToString(int);
 };

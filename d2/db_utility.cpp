@@ -297,6 +297,27 @@ void DB_Utility::DBAdd_StudentToProject(student_obj *student, project_obj *proje
     }
 }
 
+void DB_Utility::DBSearch_StudentFromProjectList(vector<int>* studentNum, project_obj *project)
+{
+    string strSql = "select * from studentList where projectId = "+ intToString(project->getId());
+    cout << strSql << endl;
+    if(db.open()){
+        QSqlQuery data;
+        student_obj *temp;
+        int i=1;
+        if(data.exec(QString::fromStdString(strSql))){
+            while(data.next()){
+                cout << i << endl;
+                cout << data.value(1).toString().toStdString() << endl;
+                int num = data.value(1).toInt();
+                studentNum->push_back(num);
+                i++;
+            }
+        }
+    }else{
+        cout << db.lastError().text().toStdString() << endl;
+    }
+}
 
 
 string DB_Utility::floatToString(float x)
