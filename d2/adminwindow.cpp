@@ -10,6 +10,8 @@ AdminWIndow::AdminWIndow(QWidget *parent) :
     ui->setupUi(this);
     DB_Utility db;
 
+    cpWindow = new CreateProject();
+
     db.DBSearchAll_Projects("projects",&proj);
     QStandardItemModel *stdModel = new QStandardItemModel(this);
     ui->listView->setModel(stdModel);
@@ -41,4 +43,9 @@ void AdminWIndow::on_listView_doubleClicked(const QModelIndex &index)
     int row = ui->listView->currentIndex().row();
     adProjWindow = new AdminProjWindow(this,proj[row]);
     adProjWindow->show();
+}
+
+void AdminWIndow::on_Createproject_clicked()
+{
+    cpWindow->show();
 }

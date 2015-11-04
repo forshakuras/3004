@@ -7,6 +7,7 @@
 #include <QStandardItemModel>
 #include "projectdesc.h"
 #include "adminprojwindow.h"
+#include "createproject.h"
 
 class Entrywindow;
 namespace Ui {
@@ -26,12 +27,18 @@ private slots:
 
     void on_listView_doubleClicked(const QModelIndex &index);
 
+    void on_Createproject_clicked();
+
 private:
     Ui::AdminWIndow *ui;
     AdminProjWindow *adProjWindow;
     Entrywindow *entry;
     projectDesc *projdesc;
     vector<project_obj*> proj;
+    CreateProject *cpWindow;
+
 };
 
 #endif // ADMINWINDOW_H
+
+

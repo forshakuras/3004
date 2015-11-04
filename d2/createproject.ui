@@ -78,7 +78,7 @@
     <string>Networking:</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="firstName">
+  <widget class="QLineEdit" name="projectId">
    <property name="geometry">
     <rect>
      <x>150</x>
