@@ -1,7 +1,7 @@
 #include "profilewindow.h"
 #include "ui_profilewindow.h"
 
-
+using namespace std;
 Profilewindow::Profilewindow(QWidget *parent, student_obj *student, studentpre_obj *preference) :
 
     QDialog(parent),
@@ -13,7 +13,8 @@ Profilewindow::Profilewindow(QWidget *parent, student_obj *student, studentpre_o
     pref = preference;
 //---------------------------set quantification valu-------------------------
 
-    ui->name->setText(QString::fromStdString(stu->getFirstName() + stu->getLastName()));
+    ui->firstName->setText(QString::fromStdString(stu->getFirstName()));
+    ui->lastName->setText(QString::fromStdString(stu->getLastName()));
     ui->id->setText(QString::number(stu->getStudent_number()));
     ui->gpaSpin->setValue(stu->getGpa());
     ui->pmSpin->setValue(stu->getPmSkill());
@@ -50,7 +51,24 @@ Profilewindow::~Profilewindow()
     delete ui;
 }
 
-void Profilewindow::on_pushButton_clicked()
+void Profilewindow::on_saveButton_clicked()
 {
+    stu->setStudent_number(ui->id->text().toInt());
+    stu->setFirstName(ui->firstName->text().toStdString());
+    stu->setLastName(ui->lastName->text().toStdString());
+    stu->setGpa(ui->gpaSpin->value());
+    stu->setPmSkill(ui->pmSpin->value());
+    stu->setDatabase(ui->dbSpin->value());
+    stu->setJava(ui->javaSpin->value());
+    stu->setCCpp(ui->cSpin->value());
+    stu->setJsHtml(ui->jsSpin->value());
+    stu->setPython(ui->pythonSpin->value());
+    stu->setDebug(ui->debuggingSpin->value());
+    stu->setDocument(ui->docSpin->value());
+    stu->setMobile(ui->mobileSpin->value());
+    stu->setNetwork(ui->networkingSpin->value());
+    stu->setUi(ui->uiSpin->value());
+    stu->setAlgor(ui->algSpin->value());
+    cout<<stu->getAlgor()<<endl;
 
 }
