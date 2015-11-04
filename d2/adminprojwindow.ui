@@ -353,7 +353,7 @@
   <widget class="QPushButton" name="saveButton">
    <property name="geometry">
     <rect>
-     <x>150</x>
+     <x>70</x>
      <y>610</y>
      <width>111</width>
      <height>27</height>
@@ -422,7 +422,7 @@
   <widget class="QPushButton" name="deleteButton">
    <property name="geometry">
     <rect>
-     <x>320</x>
+     <x>240</x>
      <y>610</y>
      <width>111</width>
      <height>27</height>
@@ -489,6 +489,19 @@
      <width>71</width>
      <height>27</height>
     </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="cancelButton">
+   <property name="geometry">
+    <rect>
+     <x>420</x>
+     <y>610</y>
+     <width>111</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Cancel</string>
    </property>
   </widget>
  </widget>
