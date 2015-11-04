@@ -20,7 +20,11 @@ AdminProjWindow::AdminProjWindow(QWidget *parent,project_obj *project) :
     ui->networkSpin->setValue(projob->getNetwork());
     ui->uiSpin->setValue(projob->getUi());
     ui->algSpin->setValue(projob->getAlgor());
-
+    ui->id->setText(QString::number(projob->getId()));
+    ui->idealSpin->setValue(projob->getIdealNumberStudents());
+    ui->maxSpin->setValue(projob->getMaxStudents());
+    ui->projDesc->setText(QString::fromStdString(projob->getDescription()));
+    ui->projName->setText(QString::fromStdString(projob->getTitle()));
 }
 
 AdminProjWindow::~AdminProjWindow()
