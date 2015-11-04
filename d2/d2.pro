@@ -24,8 +24,8 @@ SOURCES += main.cpp\
     entrywindow.cpp \
     db_utility.cpp \
     admin_obj.cpp \
-    adminprojectwindow.cpp \
-    createproject.cpp
+    createproject.cpp \
+    adminprojwindow.cpp
 
 
 HEADERS  += \
@@ -40,8 +40,8 @@ HEADERS  += \
     studentpre_obj.h \
     db_utility.h \
     admin_obj.h \
-    adminprojectwindow.h\
-    createproject.h
+    createproject.h \
+    adminprojwindow.h
 
 FORMS    += \
     entrywindow.ui \
@@ -50,6 +50,6 @@ FORMS    += \
     projectwindow.ui \
     projectdesc.ui \
     adminwindow.ui \
-    adminprojectwindow.ui \
-    createproject.ui
+    createproject.ui \
+    adminprojwindow.ui
 
