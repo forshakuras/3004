@@ -307,8 +307,6 @@ void DB_Utility::DBSearch_StudentFromProjectList(vector<int>* studentNum, projec
         int i=1;
         if(data.exec(QString::fromStdString(strSql))){
             while(data.next()){
-                cout << i << endl;
-                cout << data.value(1).toString().toStdString() << endl;
                 int num = data.value(1).toInt();
                 studentNum->push_back(num);
                 i++;
