@@ -465,7 +465,7 @@
     </rect>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit">
+  <widget class="QLineEdit" name="id">
    <property name="enabled">
     <bool>true</bool>
    </property>
