@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
+    <width>431</width>
     <height>670</height>
    </rect>
   </property>
@@ -29,7 +29,7 @@
   <widget class="QLineEdit" name="lastName">
    <property name="geometry">
     <rect>
-     <x>140</x>
+     <x>150</x>
      <y>45</y>
      <width>221</width>
      <height>27</height>
@@ -81,7 +81,7 @@
   <widget class="QLineEdit" name="firstName">
    <property name="geometry">
     <rect>
-     <x>140</x>
+     <x>150</x>
      <y>10</y>
      <width>221</width>
      <height>27</height>
@@ -146,7 +146,7 @@
   <widget class="QLineEdit" name="id">
    <property name="geometry">
     <rect>
-     <x>140</x>
+     <x>150</x>
      <y>85</y>
      <width>261</width>
      <height>27</height>
@@ -511,7 +511,7 @@
   <widget class="QSpinBox" name="pmSpin_2">
    <property name="geometry">
     <rect>
-     <x>140</x>
+     <x>150</x>
      <y>120</y>
      <width>71</width>
      <height>27</height>
@@ -527,7 +527,7 @@
   <widget class="QSpinBox" name="pmSpin_3">
    <property name="geometry">
     <rect>
-     <x>140</x>
+     <x>150</x>
      <y>160</y>
      <width>71</width>
      <height>27</height>
