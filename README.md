@@ -8,7 +8,7 @@
 
 
 
-This project will run in the COMP3004-F15 virtual machine (Ubuntu 14.04 Linux environment).
+This project will run in COMP3004-F15 virtual machine (Ubuntu 14.04 Linux environment).
 
 ##Instructions
 1. Run d2, *entrywindow* shows the sign in page so user can enter username whether it is a Student (e.g. 100890425) or an Administrator (e.g. 999999999).
