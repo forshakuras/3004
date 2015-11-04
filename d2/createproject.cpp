@@ -17,7 +17,6 @@ CreateProject::~CreateProject()
 
 void CreateProject::on_saveButton_clicked()
 {
-    newProject->setId(ui->projectId->text().toInt());
     newProject->setTitle(ui->projectTitle->text().toStdString());
     newProject->setMaxStudents(ui->maxMem->value());
     newProject->setIdealNumberStudents(ui->idealMem->value());
@@ -37,4 +36,5 @@ void CreateProject::on_saveButton_clicked()
     newProject->setAlgor(ui->uiSpin1->value());
     DB_Utility db;
     db.DBAdd_Project("projects",newProject);
+    hide();
 }

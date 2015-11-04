@@ -229,9 +229,9 @@ void DB_Utility::DBModify_Project(string tableName, project_obj * newProject)
 {
     string strSql = "update "+ tableName + " set" +
             " title='"+newProject->getTitle()+ "',"
-            " maxStudent='"+intToString(newProject->getMaxStudents())+"',"
-            " currentStudent='"+intToString(newProject->getCurrentStudent())+ "',"
-            " idealNumberStudents="+intToString(newProject->getIdealNumberStudents())+ "',"
+            " maxStudents='"+intToString(newProject->getMaxStudents())+"',"
+            " currentStudents='"+intToString(newProject->getCurrentStudent())+ "',"
+            " idealNumberStudents='"+intToString(newProject->getIdealNumberStudents())+ "',"
             " gpa='"+floatToString(newProject->getGpa())+ "',"
             " pmSkill='"+intToString(newProject->getPmSkill())+ "',"
             " database='"+intToString(newProject->getDatabase())+ "',"
@@ -247,6 +247,7 @@ void DB_Utility::DBModify_Project(string tableName, project_obj * newProject)
             " algorithm='"+intToString(newProject->getAlgor())+"'"
             " where projectId='"+intToString(newProject->getId())+"'"
             ;
+    cout << strSql << endl;
     if(db.open()){
         QSqlQuery data;
         data.exec(QString::fromStdString(strSql));
