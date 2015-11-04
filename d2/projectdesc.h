@@ -3,6 +3,10 @@
 
 #include <QDialog>
 #include "project_obj.h"
+#include "db_utility.h"
+#include <vector>
+#include <QStandardItemModel>
+
 using namespace std;
 namespace Ui {
 class projectDesc;

@@ -15,6 +15,10 @@ public:
     explicit AdminProjWindow(QWidget *parent = 0,project_obj *project=0);
     ~AdminProjWindow();
 
+private slots:
+    void on_saveButton_clicked();
+    void on_deleteButton_clicked();
+
 private:
     Ui::AdminProjWindow *ui;
     project_obj *projob;
