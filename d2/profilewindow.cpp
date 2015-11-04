@@ -53,6 +53,7 @@ Profilewindow::~Profilewindow()
 
 void Profilewindow::on_saveButton_clicked()
 {
+    //=================update student object=======================
     stu->setStudent_number(ui->id->text().toInt());
     stu->setFirstName(ui->firstName->text().toStdString());
     stu->setLastName(ui->lastName->text().toStdString());
@@ -69,6 +70,29 @@ void Profilewindow::on_saveButton_clicked()
     stu->setNetwork(ui->networkingSpin->value());
     stu->setUi(ui->uiSpin->value());
     stu->setAlgor(ui->algSpin->value());
-    cout<<stu->getAlgor()<<endl;
+
+    //======================update student preference================
+    pref->setStudent_number(ui->id->text().toInt());
+    pref->setFirstName(ui->firstName->text().toStdString());
+    pref->setLastName(ui->lastName->text().toStdString());
+    pref->setGpa(ui->gpaSpinPref->value());
+    pref->setPmSkill(ui->pmPrefSpin->value());
+    pref->setDatabase(ui->dbSpinPref->value());
+    pref->setJava(ui->javaSpinPref->value());
+    pref->setCCpp(ui->cSpinPref->value());
+    pref->setJsHtml(ui->jsSpinPref->value());
+    pref->setPython(ui->pythonSpinPref->value());
+    pref->setDebug(ui->debuggingSpinPref->value());
+    pref->setDocument(ui->docSpinPref->value());
+    pref->setMobile(ui->mobileSpinPref->value());
+    pref->setNetwork(ui->networkingSpinPref->value());
+    pref->setUi(ui->uiSpinPref->value());
+    pref->setAlgor(ui->algSpinPref->value());
+
+    //=====================update db=============================
+    DB_Utility *db = new DB_Utility();
+    db->DBModify_Student("students", stu);
+    db->DBModify_Studentpref("studentPreferences", pref);
+    hide();
 
 }

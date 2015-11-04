@@ -597,12 +597,12 @@ moc_entrywindow.cpp: /usr/include/qt5/QtWidgets/QDialog \
 		profilewindow.h \
 		studentpre_obj.h \
 		student_obj.h \
-		projectwindow.h \
-		/usr/include/qt5/QtGui/QStandardItemModel \
-		/usr/include/qt5/QtGui/qstandarditemmodel.h \
 		db_utility.h \
 		project_obj.h \
 		admin_obj.h \
+		projectwindow.h \
+		/usr/include/qt5/QtGui/QStandardItemModel \
+		/usr/include/qt5/QtGui/qstandarditemmodel.h \
 		projectdesc.h \
 		entrywindow.h \
 		adminwindow.h \
@@ -723,11 +723,6 @@ moc_choosewindow.cpp: /usr/include/qt5/QtWidgets/QDialog \
 		profilewindow.h \
 		studentpre_obj.h \
 		student_obj.h \
-		projectwindow.h \
-		/usr/include/qt5/QtGui/QStandardItemModel \
-		/usr/include/qt5/QtGui/qstandarditemmodel.h \
-		/usr/include/qt5/QtCore/qabstractitemmodel.h \
-		/usr/include/qt5/QtGui/qicon.h \
 		db_utility.h \
 		project_obj.h \
 		/usr/include/qt5/QtSql/QtSql \
@@ -765,6 +760,7 @@ moc_choosewindow.cpp: /usr/include/qt5/QtWidgets/QDialog \
 		/usr/include/qt5/QtCore/qtemporarydir.h \
 		/usr/include/qt5/QtCore/QScopedPointer \
 		/usr/include/qt5/QtCore/qtemporaryfile.h \
+		/usr/include/qt5/QtCore/qabstractitemmodel.h \
 		/usr/include/qt5/QtCore/qabstractproxymodel.h \
 		/usr/include/qt5/QtCore/qidentityproxymodel.h \
 		/usr/include/qt5/QtCore/qitemselectionmodel.h \
@@ -857,6 +853,7 @@ moc_choosewindow.cpp: /usr/include/qt5/QtWidgets/QDialog \
 		/usr/include/qt5/QtWidgets/qstyleoption.h \
 		/usr/include/qt5/QtWidgets/qabstractspinbox.h \
 		/usr/include/qt5/QtGui/qvalidator.h \
+		/usr/include/qt5/QtGui/qicon.h \
 		/usr/include/qt5/QtWidgets/qslider.h \
 		/usr/include/qt5/QtWidgets/qabstractslider.h \
 		/usr/include/qt5/QtWidgets/qstyle.h \
@@ -872,6 +869,9 @@ moc_choosewindow.cpp: /usr/include/qt5/QtWidgets/QDialog \
 		/usr/include/qt5/QtSql/qsqltablemodel.h \
 		/usr/include/qt5/QtSql/qtsqlversion.h \
 		admin_obj.h \
+		projectwindow.h \
+		/usr/include/qt5/QtGui/QStandardItemModel \
+		/usr/include/qt5/QtGui/qstandarditemmodel.h \
 		projectdesc.h \
 		entrywindow.h \
 		/usr/include/qt5/QtCore/QDebug \
@@ -994,6 +994,152 @@ moc_profilewindow.cpp: /usr/include/qt5/QtWidgets/QDialog \
 		/usr/include/qt5/QtGui/qtouchdevice.h \
 		studentpre_obj.h \
 		student_obj.h \
+		db_utility.h \
+		project_obj.h \
+		/usr/include/qt5/QtSql/QtSql \
+		/usr/include/qt5/QtSql/QtSqlDepends \
+		/usr/include/qt5/QtCore/QtCore \
+		/usr/include/qt5/QtCore/QtCoreDepends \
+		/usr/include/qt5/QtCore/qabstractanimation.h \
+		/usr/include/qt5/QtCore/qanimationgroup.h \
+		/usr/include/qt5/QtCore/qparallelanimationgroup.h \
+		/usr/include/qt5/QtCore/qpauseanimation.h \
+		/usr/include/qt5/QtCore/qpropertyanimation.h \
+		/usr/include/qt5/QtCore/qvariantanimation.h \
+		/usr/include/qt5/QtCore/qeasingcurve.h \
+		/usr/include/qt5/QtCore/qsequentialanimationgroup.h \
+		/usr/include/qt5/QtCore/qtextcodec.h \
+		/usr/include/qt5/QtCore/qendian.h \
+		/usr/include/qt5/QtCore/qlibraryinfo.h \
+		/usr/include/qt5/QtCore/qdatetime.h \
+		/usr/include/qt5/QtCore/qnumeric.h \
+		/usr/include/qt5/QtCore/qbuffer.h \
+		/usr/include/qt5/QtCore/qdir.h \
+		/usr/include/qt5/QtCore/qfileinfo.h \
+		/usr/include/qt5/QtCore/qdiriterator.h \
+		/usr/include/qt5/QtCore/qfileselector.h \
+		/usr/include/qt5/QtCore/QObject \
+		/usr/include/qt5/QtCore/QStringList \
+		/usr/include/qt5/QtCore/qfilesystemwatcher.h \
+		/usr/include/qt5/QtCore/qlockfile.h \
+		/usr/include/qt5/QtCore/qloggingcategory.h \
+		/usr/include/qt5/QtCore/qprocess.h \
+		/usr/include/qt5/QtCore/qresource.h \
+		/usr/include/qt5/QtCore/qsavefile.h \
+		/usr/include/qt5/QtCore/qsettings.h \
+		/usr/include/qt5/QtCore/qstandardpaths.h \
+		/usr/include/qt5/QtCore/qtemporarydir.h \
+		/usr/include/qt5/QtCore/QScopedPointer \
+		/usr/include/qt5/QtCore/qtemporaryfile.h \
+		/usr/include/qt5/QtCore/qabstractitemmodel.h \
+		/usr/include/qt5/QtCore/qabstractproxymodel.h \
+		/usr/include/qt5/QtCore/qidentityproxymodel.h \
+		/usr/include/qt5/QtCore/qitemselectionmodel.h \
+		/usr/include/qt5/QtCore/qsortfilterproxymodel.h \
+		/usr/include/qt5/QtCore/qstringlistmodel.h \
+		/usr/include/qt5/QtCore/qjsonarray.h \
+		/usr/include/qt5/QtCore/qjsonvalue.h \
+		/usr/include/qt5/QtCore/qjsondocument.h \
+		/usr/include/qt5/QtCore/qjsonobject.h \
+		/usr/include/qt5/QtCore/qabstracteventdispatcher.h \
+		/usr/include/qt5/QtCore/qeventloop.h \
+		/usr/include/qt5/QtCore/qabstractnativeeventfilter.h \
+		/usr/include/qt5/QtCore/qbasictimer.h \
+		/usr/include/qt5/QtCore/qcoreapplication.h \
+		/usr/include/qt5/QtCore/qmath.h \
+		/usr/include/qt5/QtCore/qmetaobject.h \
+		/usr/include/qt5/QtCore/qmimedata.h \
+		/usr/include/qt5/QtCore/qobjectcleanuphandler.h \
+		/usr/include/qt5/QtCore/qpointer.h \
+		/usr/include/qt5/QtCore/qsharedmemory.h \
+		/usr/include/qt5/QtCore/qsignalmapper.h \
+		/usr/include/qt5/QtCore/qsocketnotifier.h \
+		/usr/include/qt5/QtCore/qsystemsemaphore.h \
+		/usr/include/qt5/QtCore/qtimer.h \
+		/usr/include/qt5/QtCore/qtranslator.h \
+		/usr/include/qt5/QtCore/qwineventnotifier.h \
+		/usr/include/qt5/QtCore/qmimedatabase.h \
+		/usr/include/qt5/QtCore/qmimetype.h \
+		/usr/include/qt5/QtCore/qfactoryinterface.h \
+		/usr/include/qt5/QtCore/qlibrary.h \
+		/usr/include/qt5/QtCore/qplugin.h \
+		/usr/include/qt5/QtCore/qpluginloader.h \
+		/usr/include/qt5/QtCore/quuid.h \
+		/usr/include/qt5/QtCore/qabstractstate.h \
+		/usr/include/qt5/QtCore/qabstracttransition.h \
+		/usr/include/qt5/QtCore/qeventtransition.h \
+		/usr/include/qt5/QtCore/qfinalstate.h \
+		/usr/include/qt5/QtCore/qhistorystate.h \
+		/usr/include/qt5/QtCore/qsignaltransition.h \
+		/usr/include/qt5/QtCore/qstate.h \
+		/usr/include/qt5/QtCore/qstatemachine.h \
+		/usr/include/qt5/QtCore/qexception.h \
+		/usr/include/qt5/QtCore/qfuture.h \
+		/usr/include/qt5/QtCore/qfutureinterface.h \
+		/usr/include/qt5/QtCore/qrunnable.h \
+		/usr/include/qt5/QtCore/qresultstore.h \
+		/usr/include/qt5/QtCore/qfuturesynchronizer.h \
+		/usr/include/qt5/QtCore/qfuturewatcher.h \
+		/usr/include/qt5/QtCore/qreadwritelock.h \
+		/usr/include/qt5/QtCore/qsemaphore.h \
+		/usr/include/qt5/QtCore/qthread.h \
+		/usr/include/qt5/QtCore/qthreadpool.h \
+		/usr/include/qt5/QtCore/qthreadstorage.h \
+		/usr/include/qt5/QtCore/qwaitcondition.h \
+		/usr/include/qt5/QtCore/qarraydataops.h \
+		/usr/include/qt5/QtCore/qarraydatapointer.h \
+		/usr/include/qt5/QtCore/qbitarray.h \
+		/usr/include/qt5/QtCore/qbytearraymatcher.h \
+		/usr/include/qt5/QtCore/qcache.h \
+		/usr/include/qt5/QtCore/qcollator.h \
+		/usr/include/qt5/QtCore/qcommandlineoption.h \
+		/usr/include/qt5/QtCore/qcommandlineparser.h \
+		/usr/include/qt5/QtCore/qcryptographichash.h \
+		/usr/include/qt5/QtCore/qelapsedtimer.h \
+		/usr/include/qt5/QtCore/qlinkedlist.h \
+		/usr/include/qt5/QtCore/qmessageauthenticationcode.h \
+		/usr/include/qt5/QtCore/qqueue.h \
+		/usr/include/qt5/QtCore/qregularexpression.h \
+		/usr/include/qt5/QtCore/qscopedvaluerollback.h \
+		/usr/include/qt5/QtCore/qstack.h \
+		/usr/include/qt5/QtCore/qtextboundaryfinder.h \
+		/usr/include/qt5/QtCore/qtimeline.h \
+		/usr/include/qt5/QtCore/qtimezone.h \
+		/usr/include/qt5/QtCore/qxmlstream.h \
+		/usr/include/qt5/QtCore/qtcoreversion.h \
+		/usr/include/qt5/QtSql/qsql.h \
+		/usr/include/qt5/QtSql/qsqldatabase.h \
+		/usr/include/qt5/QtSql/qsqldriver.h \
+		/usr/include/qt5/QtSql/qsqldriverplugin.h \
+		/usr/include/qt5/QtSql/qsqlerror.h \
+		/usr/include/qt5/QtSql/qsqlfield.h \
+		/usr/include/qt5/QtSql/qsqlindex.h \
+		/usr/include/qt5/QtSql/qsqlrecord.h \
+		/usr/include/qt5/QtSql/qsqlquery.h \
+		/usr/include/qt5/QtSql/qsqlresult.h \
+		/usr/include/qt5/QtSql/qsqlquerymodel.h \
+		/usr/include/qt5/QtSql/qsqlrelationaldelegate.h \
+		/usr/include/qt5/QtWidgets/qitemdelegate.h \
+		/usr/include/qt5/QtWidgets/qabstractitemdelegate.h \
+		/usr/include/qt5/QtWidgets/qstyleoption.h \
+		/usr/include/qt5/QtWidgets/qabstractspinbox.h \
+		/usr/include/qt5/QtGui/qvalidator.h \
+		/usr/include/qt5/QtGui/qicon.h \
+		/usr/include/qt5/QtWidgets/qslider.h \
+		/usr/include/qt5/QtWidgets/qabstractslider.h \
+		/usr/include/qt5/QtWidgets/qstyle.h \
+		/usr/include/qt5/QtWidgets/qtabbar.h \
+		/usr/include/qt5/QtWidgets/qtabwidget.h \
+		/usr/include/qt5/QtWidgets/qrubberband.h \
+		/usr/include/qt5/QtWidgets/qframe.h \
+		/usr/include/qt5/QtWidgets/qlistview.h \
+		/usr/include/qt5/QtWidgets/qabstractitemview.h \
+		/usr/include/qt5/QtWidgets/qabstractscrollarea.h \
+		/usr/include/qt5/QtWidgets/qcombobox.h \
+		/usr/include/qt5/QtSql/qsqlrelationaltablemodel.h \
+		/usr/include/qt5/QtSql/qsqltablemodel.h \
+		/usr/include/qt5/QtSql/qtsqlversion.h \
+		admin_obj.h \
 		profilewindow.h
 	/usr/lib/i386-linux-gnu/qt5/bin/moc $(DEFINES) $(INCPATH) -I/usr/include/c++/4.8 -I/usr/include/i386-linux-gnu/c++/4.8 -I/usr/include/c++/4.8/backward -I/usr/lib/gcc/i686-linux-gnu/4.8/include -I/usr/local/include -I/usr/lib/gcc/i686-linux-gnu/4.8/include-fixed -I/usr/include/i386-linux-gnu -I/usr/include profilewindow.h -o moc_profilewindow.cpp
 
@@ -1634,12 +1780,12 @@ moc_adminwindow.cpp: /usr/include/qt5/QtWidgets/QMainWindow \
 		profilewindow.h \
 		studentpre_obj.h \
 		student_obj.h \
-		projectwindow.h \
-		/usr/include/qt5/QtGui/QStandardItemModel \
-		/usr/include/qt5/QtGui/qstandarditemmodel.h \
 		db_utility.h \
 		project_obj.h \
 		admin_obj.h \
+		projectwindow.h \
+		/usr/include/qt5/QtGui/QStandardItemModel \
+		/usr/include/qt5/QtGui/qstandarditemmodel.h \
 		projectdesc.h \
 		adminwindow.h \
 		adminwindow.h
@@ -1937,12 +2083,12 @@ main.o: main.cpp entrywindow.h \
 		profilewindow.h \
 		studentpre_obj.h \
 		student_obj.h \
-		projectwindow.h \
-		/usr/include/qt5/QtGui/QStandardItemModel \
-		/usr/include/qt5/QtGui/qstandarditemmodel.h \
 		db_utility.h \
 		project_obj.h \
 		admin_obj.h \
+		projectwindow.h \
+		/usr/include/qt5/QtGui/QStandardItemModel \
+		/usr/include/qt5/QtGui/qstandarditemmodel.h \
 		projectdesc.h \
 		adminwindow.h \
 		/usr/include/qt5/QtWidgets/QMainWindow \
@@ -2067,11 +2213,6 @@ choosewindow.o: choosewindow.cpp choosewindow.h \
 		profilewindow.h \
 		studentpre_obj.h \
 		student_obj.h \
-		projectwindow.h \
-		/usr/include/qt5/QtGui/QStandardItemModel \
-		/usr/include/qt5/QtGui/qstandarditemmodel.h \
-		/usr/include/qt5/QtCore/qabstractitemmodel.h \
-		/usr/include/qt5/QtGui/qicon.h \
 		db_utility.h \
 		project_obj.h \
 		/usr/include/qt5/QtSql/QtSql \
@@ -2109,6 +2250,7 @@ choosewindow.o: choosewindow.cpp choosewindow.h \
 		/usr/include/qt5/QtCore/qtemporarydir.h \
 		/usr/include/qt5/QtCore/QScopedPointer \
 		/usr/include/qt5/QtCore/qtemporaryfile.h \
+		/usr/include/qt5/QtCore/qabstractitemmodel.h \
 		/usr/include/qt5/QtCore/qabstractproxymodel.h \
 		/usr/include/qt5/QtCore/qidentityproxymodel.h \
 		/usr/include/qt5/QtCore/qitemselectionmodel.h \
@@ -2201,6 +2343,7 @@ choosewindow.o: choosewindow.cpp choosewindow.h \
 		/usr/include/qt5/QtWidgets/qstyleoption.h \
 		/usr/include/qt5/QtWidgets/qabstractspinbox.h \
 		/usr/include/qt5/QtGui/qvalidator.h \
+		/usr/include/qt5/QtGui/qicon.h \
 		/usr/include/qt5/QtWidgets/qslider.h \
 		/usr/include/qt5/QtWidgets/qabstractslider.h \
 		/usr/include/qt5/QtWidgets/qstyle.h \
@@ -2216,6 +2359,9 @@ choosewindow.o: choosewindow.cpp choosewindow.h \
 		/usr/include/qt5/QtSql/qsqltablemodel.h \
 		/usr/include/qt5/QtSql/qtsqlversion.h \
 		admin_obj.h \
+		projectwindow.h \
+		/usr/include/qt5/QtGui/QStandardItemModel \
+		/usr/include/qt5/QtGui/qstandarditemmodel.h \
 		projectdesc.h \
 		entrywindow.h \
 		/usr/include/qt5/QtCore/QDebug \
@@ -2338,6 +2484,152 @@ profilewindow.o: profilewindow.cpp profilewindow.h \
 		/usr/include/qt5/QtGui/qtouchdevice.h \
 		studentpre_obj.h \
 		student_obj.h \
+		db_utility.h \
+		project_obj.h \
+		/usr/include/qt5/QtSql/QtSql \
+		/usr/include/qt5/QtSql/QtSqlDepends \
+		/usr/include/qt5/QtCore/QtCore \
+		/usr/include/qt5/QtCore/QtCoreDepends \
+		/usr/include/qt5/QtCore/qabstractanimation.h \
+		/usr/include/qt5/QtCore/qanimationgroup.h \
+		/usr/include/qt5/QtCore/qparallelanimationgroup.h \
+		/usr/include/qt5/QtCore/qpauseanimation.h \
+		/usr/include/qt5/QtCore/qpropertyanimation.h \
+		/usr/include/qt5/QtCore/qvariantanimation.h \
+		/usr/include/qt5/QtCore/qeasingcurve.h \
+		/usr/include/qt5/QtCore/qsequentialanimationgroup.h \
+		/usr/include/qt5/QtCore/qtextcodec.h \
+		/usr/include/qt5/QtCore/qendian.h \
+		/usr/include/qt5/QtCore/qlibraryinfo.h \
+		/usr/include/qt5/QtCore/qdatetime.h \
+		/usr/include/qt5/QtCore/qnumeric.h \
+		/usr/include/qt5/QtCore/qbuffer.h \
+		/usr/include/qt5/QtCore/qdir.h \
+		/usr/include/qt5/QtCore/qfileinfo.h \
+		/usr/include/qt5/QtCore/qdiriterator.h \
+		/usr/include/qt5/QtCore/qfileselector.h \
+		/usr/include/qt5/QtCore/QObject \
+		/usr/include/qt5/QtCore/QStringList \
+		/usr/include/qt5/QtCore/qfilesystemwatcher.h \
+		/usr/include/qt5/QtCore/qlockfile.h \
+		/usr/include/qt5/QtCore/qloggingcategory.h \
+		/usr/include/qt5/QtCore/qprocess.h \
+		/usr/include/qt5/QtCore/qresource.h \
+		/usr/include/qt5/QtCore/qsavefile.h \
+		/usr/include/qt5/QtCore/qsettings.h \
+		/usr/include/qt5/QtCore/qstandardpaths.h \
+		/usr/include/qt5/QtCore/qtemporarydir.h \
+		/usr/include/qt5/QtCore/QScopedPointer \
+		/usr/include/qt5/QtCore/qtemporaryfile.h \
+		/usr/include/qt5/QtCore/qabstractitemmodel.h \
+		/usr/include/qt5/QtCore/qabstractproxymodel.h \
+		/usr/include/qt5/QtCore/qidentityproxymodel.h \
+		/usr/include/qt5/QtCore/qitemselectionmodel.h \
+		/usr/include/qt5/QtCore/qsortfilterproxymodel.h \
+		/usr/include/qt5/QtCore/qstringlistmodel.h \
+		/usr/include/qt5/QtCore/qjsonarray.h \
+		/usr/include/qt5/QtCore/qjsonvalue.h \
+		/usr/include/qt5/QtCore/qjsondocument.h \
+		/usr/include/qt5/QtCore/qjsonobject.h \
+		/usr/include/qt5/QtCore/qabstracteventdispatcher.h \
+		/usr/include/qt5/QtCore/qeventloop.h \
+		/usr/include/qt5/QtCore/qabstractnativeeventfilter.h \
+		/usr/include/qt5/QtCore/qbasictimer.h \
+		/usr/include/qt5/QtCore/qcoreapplication.h \
+		/usr/include/qt5/QtCore/qmath.h \
+		/usr/include/qt5/QtCore/qmetaobject.h \
+		/usr/include/qt5/QtCore/qmimedata.h \
+		/usr/include/qt5/QtCore/qobjectcleanuphandler.h \
+		/usr/include/qt5/QtCore/qpointer.h \
+		/usr/include/qt5/QtCore/qsharedmemory.h \
+		/usr/include/qt5/QtCore/qsignalmapper.h \
+		/usr/include/qt5/QtCore/qsocketnotifier.h \
+		/usr/include/qt5/QtCore/qsystemsemaphore.h \
+		/usr/include/qt5/QtCore/qtimer.h \
+		/usr/include/qt5/QtCore/qtranslator.h \
+		/usr/include/qt5/QtCore/qwineventnotifier.h \
+		/usr/include/qt5/QtCore/qmimedatabase.h \
+		/usr/include/qt5/QtCore/qmimetype.h \
+		/usr/include/qt5/QtCore/qfactoryinterface.h \
+		/usr/include/qt5/QtCore/qlibrary.h \
+		/usr/include/qt5/QtCore/qplugin.h \
+		/usr/include/qt5/QtCore/qpluginloader.h \
+		/usr/include/qt5/QtCore/quuid.h \
+		/usr/include/qt5/QtCore/qabstractstate.h \
+		/usr/include/qt5/QtCore/qabstracttransition.h \
+		/usr/include/qt5/QtCore/qeventtransition.h \
+		/usr/include/qt5/QtCore/qfinalstate.h \
+		/usr/include/qt5/QtCore/qhistorystate.h \
+		/usr/include/qt5/QtCore/qsignaltransition.h \
+		/usr/include/qt5/QtCore/qstate.h \
+		/usr/include/qt5/QtCore/qstatemachine.h \
+		/usr/include/qt5/QtCore/qexception.h \
+		/usr/include/qt5/QtCore/qfuture.h \
+		/usr/include/qt5/QtCore/qfutureinterface.h \
+		/usr/include/qt5/QtCore/qrunnable.h \
+		/usr/include/qt5/QtCore/qresultstore.h \
+		/usr/include/qt5/QtCore/qfuturesynchronizer.h \
+		/usr/include/qt5/QtCore/qfuturewatcher.h \
+		/usr/include/qt5/QtCore/qreadwritelock.h \
+		/usr/include/qt5/QtCore/qsemaphore.h \
+		/usr/include/qt5/QtCore/qthread.h \
+		/usr/include/qt5/QtCore/qthreadpool.h \
+		/usr/include/qt5/QtCore/qthreadstorage.h \
+		/usr/include/qt5/QtCore/qwaitcondition.h \
+		/usr/include/qt5/QtCore/qarraydataops.h \
+		/usr/include/qt5/QtCore/qarraydatapointer.h \
+		/usr/include/qt5/QtCore/qbitarray.h \
+		/usr/include/qt5/QtCore/qbytearraymatcher.h \
+		/usr/include/qt5/QtCore/qcache.h \
+		/usr/include/qt5/QtCore/qcollator.h \
+		/usr/include/qt5/QtCore/qcommandlineoption.h \
+		/usr/include/qt5/QtCore/qcommandlineparser.h \
+		/usr/include/qt5/QtCore/qcryptographichash.h \
+		/usr/include/qt5/QtCore/qelapsedtimer.h \
+		/usr/include/qt5/QtCore/qlinkedlist.h \
+		/usr/include/qt5/QtCore/qmessageauthenticationcode.h \
+		/usr/include/qt5/QtCore/qqueue.h \
+		/usr/include/qt5/QtCore/qregularexpression.h \
+		/usr/include/qt5/QtCore/qscopedvaluerollback.h \
+		/usr/include/qt5/QtCore/qstack.h \
+		/usr/include/qt5/QtCore/qtextboundaryfinder.h \
+		/usr/include/qt5/QtCore/qtimeline.h \
+		/usr/include/qt5/QtCore/qtimezone.h \
+		/usr/include/qt5/QtCore/qxmlstream.h \
+		/usr/include/qt5/QtCore/qtcoreversion.h \
+		/usr/include/qt5/QtSql/qsql.h \
+		/usr/include/qt5/QtSql/qsqldatabase.h \
+		/usr/include/qt5/QtSql/qsqldriver.h \
+		/usr/include/qt5/QtSql/qsqldriverplugin.h \
+		/usr/include/qt5/QtSql/qsqlerror.h \
+		/usr/include/qt5/QtSql/qsqlfield.h \
+		/usr/include/qt5/QtSql/qsqlindex.h \
+		/usr/include/qt5/QtSql/qsqlrecord.h \
+		/usr/include/qt5/QtSql/qsqlquery.h \
+		/usr/include/qt5/QtSql/qsqlresult.h \
+		/usr/include/qt5/QtSql/qsqlquerymodel.h \
+		/usr/include/qt5/QtSql/qsqlrelationaldelegate.h \
+		/usr/include/qt5/QtWidgets/qitemdelegate.h \
+		/usr/include/qt5/QtWidgets/qabstractitemdelegate.h \
+		/usr/include/qt5/QtWidgets/qstyleoption.h \
+		/usr/include/qt5/QtWidgets/qabstractspinbox.h \
+		/usr/include/qt5/QtGui/qvalidator.h \
+		/usr/include/qt5/QtGui/qicon.h \
+		/usr/include/qt5/QtWidgets/qslider.h \
+		/usr/include/qt5/QtWidgets/qabstractslider.h \
+		/usr/include/qt5/QtWidgets/qstyle.h \
+		/usr/include/qt5/QtWidgets/qtabbar.h \
+		/usr/include/qt5/QtWidgets/qtabwidget.h \
+		/usr/include/qt5/QtWidgets/qrubberband.h \
+		/usr/include/qt5/QtWidgets/qframe.h \
+		/usr/include/qt5/QtWidgets/qlistview.h \
+		/usr/include/qt5/QtWidgets/qabstractitemview.h \
+		/usr/include/qt5/QtWidgets/qabstractscrollarea.h \
+		/usr/include/qt5/QtWidgets/qcombobox.h \
+		/usr/include/qt5/QtSql/qsqlrelationaltablemodel.h \
+		/usr/include/qt5/QtSql/qsqltablemodel.h \
+		/usr/include/qt5/QtSql/qtsqlversion.h \
+		admin_obj.h \
 		ui_profilewindow.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o profilewindow.o profilewindow.cpp
 
@@ -2981,12 +3273,12 @@ adminwindow.o: adminwindow.cpp adminwindow.h \
 		profilewindow.h \
 		studentpre_obj.h \
 		student_obj.h \
-		projectwindow.h \
-		/usr/include/qt5/QtGui/QStandardItemModel \
-		/usr/include/qt5/QtGui/qstandarditemmodel.h \
 		db_utility.h \
 		project_obj.h \
 		admin_obj.h \
+		projectwindow.h \
+		/usr/include/qt5/QtGui/QStandardItemModel \
+		/usr/include/qt5/QtGui/qstandarditemmodel.h \
 		projectdesc.h \
 		ui_adminwindow.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o adminwindow.o adminwindow.cpp
@@ -3259,12 +3551,12 @@ entrywindow.o: entrywindow.cpp entrywindow.h \
 		profilewindow.h \
 		studentpre_obj.h \
 		student_obj.h \
-		projectwindow.h \
-		/usr/include/qt5/QtGui/QStandardItemModel \
-		/usr/include/qt5/QtGui/qstandarditemmodel.h \
 		db_utility.h \
 		project_obj.h \
 		admin_obj.h \
+		projectwindow.h \
+		/usr/include/qt5/QtGui/QStandardItemModel \
+		/usr/include/qt5/QtGui/qstandarditemmodel.h \
 		projectdesc.h \
 		adminwindow.h \
 		/usr/include/qt5/QtWidgets/QMainWindow \

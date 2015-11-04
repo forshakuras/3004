@@ -47,7 +47,7 @@ void Entrywindow::on_Loginbutton_clicked()
         student_obj *data = new student_obj();
         studentpre_obj *pref = new studentpre_obj();
         db.DBSearch_Student("students",ui->lineEdit->text().toStdString(),data);
-        db.DBSearch_Studentpref("students",ui->lineEdit->text().toStdString(),pref);
+        db.DBSearch_Studentpref("studentPreferences",ui->lineEdit->text().toStdString(),pref);
             if(data->getStudent_number() == 0){
                 QMessageBox msgBox;
                 msgBox.setWindowTitle("Warning");

@@ -9,6 +9,7 @@ projectDesc::projectDesc(QWidget *parent, project_obj *proj) :
     ui->setupUi(this);
 
     ui->lineEdit->setText(QString::number(projob->getId()));
+    ui->ppid->setReadOnly(true);
     ui->textBrowser->setText(QString::fromStdString(projob->getDescription()));
     ui->member->setText(QString::number(projob->getCurrentStudent()) + QString::fromStdString("/") + QString::number(projob->getMaxStudents()));
 }
