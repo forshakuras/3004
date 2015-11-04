@@ -25,6 +25,9 @@ projectDesc::projectDesc(QWidget *parent, project_obj *proj) :
     ui->docLabel->setText(QString::number(projob->getDocument()));
     ui->networkLabel->setText(QString::number(projob->getNetwork()));
     ui->uiLabel->setText(QString::number(projob->getUi()));
+
+    //------------------------set member list-------------------------
+
 }
 
 projectDesc::~projectDesc()
