@@ -225,6 +225,7 @@ void DB_Utility::DBModify_Student(string tableName, student_obj* newStudent)
     }
 }
 
+
 void DB_Utility::DBAdd_Project(string tableName, project_obj* newProject)
 {
     string strSql = "insert into "+ tableName + "(title,description,idealNumberStudents, maxStudents,currentStudents,gpa,pmSkill,database,java,cCpp,jsHtml,python,debuggingTesting,documentation,mobile,networking,ui,algorithm)"
@@ -253,6 +254,36 @@ void DB_Utility::DBAdd_Project(string tableName, project_obj* newProject)
      }else{
             cout << db.lastError().text().toStdString() << endl;
      }
+}
+
+
+void DB_Utility::DBModify_Studentpref(string tableName,studentpre_obj* newStudent)
+{
+
+    string strSql = "update "+ tableName + " set" +
+            " firstName='"+newStudent->getFirstName()+ "',"
+            " lastName='"+newStudent->getLastName()+ "',"
+            " gpa='"+floatToString(newStudent->getGpa())+ "',"
+            " pmSkill='"+intToString(newStudent->getPmSkill())+ "',"
+            " database='"+intToString(newStudent->getDatabase())+ "',"
+            " java='"+intToString(newStudent->getJava())+ "',"
+            " cCpp='"+intToString(newStudent->getCCpp())+ "',"
+            " jsHtml='"+intToString(newStudent->getJsHtml())+ "',"
+            " python='"+intToString(newStudent->getPython())+ "',"
+            " debuggingTesting='"+intToString(newStudent->getDebug())+ "',"
+            " documentation='"+intToString(newStudent->getDocument())+ "',"
+            " mobile='"+intToString(newStudent->getMobile())+ "',"
+            " networking='"+intToString(newStudent->getNetwork())+ "',"
+            " ui='"+intToString(newStudent->getUi())+ "',"
+            " algorithm='"+intToString(newStudent->getAlgor())+"'"
+            " where student_number='"+intToString(newStudent->getStudent_number())+"'"
+            ;
+    if(db.open()){
+        QSqlQuery data;
+        data.exec(QString::fromStdString(strSql));
+    }else{
+        cout << db.lastError().text().toStdString() << endl;
+    }
 }
 
 string DB_Utility::floatToString(float x)

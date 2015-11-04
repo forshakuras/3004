@@ -30,6 +30,7 @@ public:
     void DBRemove_Student(string,student_obj*);
     void DBRemove_Project(string,project_obj*);
     void DBModify_Student(string,student_obj*);
+    void DBModify_Studentpref(string ,studentpre_obj*);
     void DBModify_Project(string,project_obj*);
     void DBSearch_Admin(string, string, admin_obj*);
     string floatToString(float);
