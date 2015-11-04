@@ -8,7 +8,6 @@ AdminWIndow::AdminWIndow(QWidget *parent) :
     ui(new Ui::AdminWIndow)
 {
     ui->setupUi(this);
-
     DB_Utility db;
 
     db.DBSearchAll_Projects("projects",&proj);
@@ -40,6 +39,6 @@ void AdminWIndow::on_pushButton_3_clicked()
 void AdminWIndow::on_listView_doubleClicked(const QModelIndex &index)
 {
     int row = ui->listView->currentIndex().row();
-    projdesc = new projectDesc(this, proj[row]);
-    projdesc->show();
+    adProjWindow = new AdminProjWindow(this,proj[row]);
+    adProjWindow->show();
 }

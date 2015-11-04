@@ -17,43 +17,30 @@
    <widget class="QListView" name="listView">
     <property name="geometry">
      <rect>
-      <x>130</x>
-      <y>20</y>
-      <width>301</width>
-      <height>441</height>
+      <x>20</x>
+      <y>60</y>
+      <width>401</width>
+      <height>401</height>
      </rect>
     </property>
    </widget>
    <widget class="QPushButton" name="Createproject">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>40</y>
-      <width>111</width>
-      <height>31</height>
+      <x>80</x>
+      <y>470</y>
+      <width>116</width>
+      <height>27</height>
      </rect>
     </property>
     <property name="text">
      <string>Create Project</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="Editproject">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>100</y>
-      <width>111</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Edit Project</string>
-    </property>
-   </widget>
    <widget class="QPushButton" name="pushButton_3">
     <property name="geometry">
      <rect>
-      <x>230</x>
+      <x>240</x>
       <y>470</y>
       <width>99</width>
       <height>27</height>
@@ -63,17 +50,24 @@
      <string>Sign out</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="Removeproject">
+   <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>160</y>
-      <width>111</width>
-      <height>31</height>
+      <x>160</x>
+      <y>0</y>
+      <width>121</width>
+      <height>61</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <pointsize>18</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
     <property name="text">
-     <string>Remove Project</string>
+     <string>Projects</string>
     </property>
    </widget>
   </widget>

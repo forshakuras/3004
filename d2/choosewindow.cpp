@@ -28,7 +28,7 @@ void chooseWindow::on_profileButton_clicked()
 
 void chooseWindow::on_projectButton_clicked()
 {
-    project = new projectWindow(this);
+    project = new projectWindow(this, temp, pref);
     project ->show();
 
 }
