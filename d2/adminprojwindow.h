@@ -3,6 +3,9 @@
 
 #include <QDialog>
 #include "project_obj.h"
+#include <QStandardItemModel>
+#include "db_utility.h"
+
 namespace Ui {
 class AdminProjWindow;
 }

@@ -314,21 +314,28 @@ void DB_Utility::DBModify_Studentpref(string tableName,studentpre_obj* newStuden
     }
 }
 
-void DB_Utility::DBAdd_StudentToProject(student_obj *student, project_obj *project)
+bool DB_Utility::DBAdd_StudentToProject(student_obj *student, project_obj *project)
 {
-    string strSql = "insert into studentList (student_number,projectId) values ('"+ intToString(student->getStudent_number())+"','"+ intToString(project->getId())+"')";
-    if(db.open()){
-        QSqlQuery data;
-        data.exec(QString::fromStdString(strSql));
-    }else{
-        cout << db.lastError().text().toStdString() << endl;
+    string str = "select * from studentList where projectId = " +intToString(project->getId()) +" and student_number = " + intToString(student->getStudent_number());
+
+    QSqlQuery condition;
+    condition.exec(QString::fromStdString(str));
+    if (condition.next() == true){
+        return false;
     }
+
+    string strSql = "insert into studentList (student_number,projectId) values ('"+ intToString(student->getStudent_number())+"','"+ intToString(project->getId())+"')";
+
+    QSqlQuery data;
+    data.exec(QString::fromStdString(strSql));
+    return true;
+
 }
 
 void DB_Utility::DBSearch_StudentFromProjectList(vector<int>* studentNum, project_obj *project)
 {
     string strSql = "select * from studentList where projectId = "+ intToString(project->getId());
-    cout << strSql << endl;
+
     if(db.open()){
         QSqlQuery data;
         student_obj *temp;

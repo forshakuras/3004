@@ -34,7 +34,7 @@ Entrywindow::~Entrywindow()
 
 void Entrywindow::on_Signupbutton_clicked()
 {
-
+    QMessageBox::information(this, tr("Warning"), tr("not yet implement"));
 }
 
 void Entrywindow::on_Loginbutton_clicked()

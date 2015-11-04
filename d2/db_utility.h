@@ -8,6 +8,7 @@
 #include <sstream>
 #include <vector>
 #include "admin_obj.h"
+#include <QMessageBox>
 
 using namespace std;
 
@@ -33,7 +34,7 @@ public:
     void DBModify_Studentpref(string ,studentpre_obj*);
     void DBModify_Project(string,project_obj*);
     void DBSearch_Admin(string, string, admin_obj*);
-    void DBAdd_StudentToProject(student_obj*, project_obj*);
+    bool DBAdd_StudentToProject(student_obj*, project_obj*);
     void DBSearch_StudentFromProjectList(vector<int>*,project_obj*);
     string floatToString(float);
     string intToString(int);

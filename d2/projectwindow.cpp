@@ -51,9 +51,11 @@ void projectWindow::on_joinProj_clicked()
        (user->getNetwork() >= data[row]->getNetwork()) && (user->getUi() >= data[row]->getUi()) &&
        (user->getAlgor() >= data[row]->getAlgor())){
 
-       db.DBAdd_StudentToProject(user,data[row]);
-       QMessageBox::information(this, tr("Congradulation"), tr("Successfully join the project !"));
-
+       bool rc = db.DBAdd_StudentToProject(user,data[row]);
+       if (rc){QMessageBox::information(this, tr("Congradulation"), tr("Successfully join the project !"));}
+       else{
+           QMessageBox::information(this, tr("Warning"), tr("You already registered in this project !"));
+       }
    }else{
        QMessageBox::information(this, tr("Warning"), tr("You do not meet the minimum requirement of this project !"));
 
