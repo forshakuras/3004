@@ -9,6 +9,7 @@
 #include "adminprojwindow.h"
 #include "createproject.h"
 #include "adminprojwindow.h"
+class CreateProject;
 class AdminProjWindow;
 class Entrywindow;
 namespace Ui {

@@ -6,7 +6,8 @@
 #include "project_obj.h"
 #include "db_utility.h"
 #include <string>
-
+#include "adminwindow.h"
+class AdminWIndow;
 using namespace std;
 
 
@@ -26,6 +27,7 @@ private slots:
     void on_saveButton_clicked();
 
 private:
+    AdminWIndow *admin;
     Ui::CreateProject *ui;
     project_obj *newProject;
 };

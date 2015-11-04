@@ -48,4 +48,5 @@ void AdminWIndow::on_Createproject_clicked()
 {
     cpWindow=new CreateProject(this);
     cpWindow->show();
+    hide();
 }

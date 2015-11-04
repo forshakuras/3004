@@ -36,5 +36,7 @@ void CreateProject::on_saveButton_clicked()
     newProject->setAlgor(ui->uiSpin1->value());
     DB_Utility db;
     db.DBAdd_Project("projects",newProject);
+    admin= new AdminWIndow(this);
+    admin->show();
     hide();
 }
