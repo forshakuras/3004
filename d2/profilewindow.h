@@ -4,6 +4,8 @@
 #include <QDialog>
 #include "studentpre_obj.h"
 #include "student_obj.h"
+#include "db_utility.h"
+#include "iostream"
 
 namespace Ui {
 class Profilewindow;
@@ -19,7 +21,7 @@ public:
     ~Profilewindow();
 
 private slots:
-    void on_pushButton_clicked();
+    void on_saveButton_clicked();
 
 private:
     Ui::Profilewindow *ui;
