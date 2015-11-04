@@ -197,9 +197,8 @@ void DB_Utility::DBSearchAll_Students(string tableName, vector<student_obj*>* st
     }
 }
 
-void DB_Utility::DBModify_Student(string tableName,student_obj* newStudent)
+void DB_Utility::DBModify_Student(string tableName, student_obj* newStudent)
 {
-
     string strSql = "update "+ tableName + " set" +
             " firstName='"+newStudent->getFirstName()+ "',"
             " lastName='"+newStudent->getLastName()+ "',"
@@ -218,13 +217,42 @@ void DB_Utility::DBModify_Student(string tableName,student_obj* newStudent)
             " algorithm='"+intToString(newStudent->getAlgor())+"'"
             " where student_number='"+intToString(newStudent->getStudent_number())+"'"
             ;
-    cout << strSql << endl;
     if(db.open()){
         QSqlQuery data;
-        cout << data.exec(QString::fromStdString(strSql)) << endl;
+        data.exec(QString::fromStdString(strSql));
     }else{
         cout << db.lastError().text().toStdString() << endl;
     }
+}
+
+void DB_Utility::DBAdd_Project(string tableName, project_obj* newProject)
+{
+    string strSql = "insert into "+ tableName + "(title,description,idealNumberStudents, maxStudents,currentStudents,gpa,pmSkill,database,java,cCpp,jsHtml,python,debuggingTesting,documentation,mobile,networking,ui,algorithm)"
+            " values " "( '" + newProject->getTitle()+"',"
+            " '"+ newProject->getDescription() + "',"
+            " '"+ intToString(newProject->getIdealNumberStudents())+ "',"
+            " '"+ intToString(newProject->getMaxStudents())+ "',"
+            " '"+ intToString(newProject->getCurrentStudent())+ "',"
+            " '"+ intToString(newProject->getGpa())+ "',"
+            " '"+ intToString(newProject->getPmSkill())+ "',"
+            " '"+ intToString(newProject->getDatabase())+ "',"
+            " '"+ intToString(newProject->getJava())+ "',"
+            " '"+ intToString(newProject->getCCpp())+ "',"
+            " '"+ intToString(newProject->getJsHtml())+ "',"
+            " '"+ intToString(newProject->getPython())+ "',"
+            " '"+ intToString(newProject->getDebug())+ "',"
+            " '"+ intToString(newProject->getDocument())+ "',"
+            " '"+ intToString(newProject->getMobile())+ "',"
+            " '"+ intToString(newProject->getNetwork())+ "',"
+            " '"+ intToString(newProject->getUi())+ "',"
+            " '"+ intToString(newProject->getAlgor())+ "'"
+            ")";
+     if(db.open()){
+            QSqlQuery data;
+            data.exec(QString::fromStdString(strSql));
+     }else{
+            cout << db.lastError().text().toStdString() << endl;
+     }
 }
 
 string DB_Utility::floatToString(float x)
