@@ -4,6 +4,11 @@
 #include <QDialog>
 #include <iostream>
 #include "project_obj.h"
+#include "db_utility.h"
+#include <string>
+
+using namespace std;
+
 
 namespace Ui {
 class CreateProject;

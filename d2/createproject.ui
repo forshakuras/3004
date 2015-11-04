@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>Create Project</string>
   </property>
   <widget class="QLabel" name="label_12">
    <property name="geometry">
@@ -26,7 +26,7 @@
     <string>Documentation:</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lastName">
+  <widget class="QLineEdit" name="projectTitle">
    <property name="geometry">
     <rect>
      <x>150</x>
@@ -36,7 +36,7 @@
     </rect>
    </property>
   </widget>
-  <widget class="QSpinBox" name="docSpin">
+  <widget class="QSpinBox" name="docSpin1">
    <property name="geometry">
     <rect>
      <x>260</x>
@@ -62,7 +62,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>Project Name</string>
+    <string>Project Title</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_14">
@@ -127,7 +127,7 @@
     <string>PM skills:</string>
    </property>
   </widget>
-  <widget class="QSpinBox" name="jsSpin">
+  <widget class="QSpinBox" name="jsSpin1">
    <property name="geometry">
     <rect>
      <x>260</x>
@@ -143,7 +143,7 @@
     <number>5</number>
    </property>
   </widget>
-  <widget class="QLineEdit" name="id">
+  <widget class="QLineEdit" name="projectDes">
    <property name="geometry">
     <rect>
      <x>150</x>
@@ -166,7 +166,7 @@
     <string>ProjectId</string>
    </property>
   </widget>
-  <widget class="QSpinBox" name="javaSpin">
+  <widget class="QSpinBox" name="javaSpin1">
    <property name="geometry">
     <rect>
      <x>260</x>
@@ -182,7 +182,7 @@
     <number>5</number>
    </property>
   </widget>
-  <widget class="QSpinBox" name="pmSpin">
+  <widget class="QSpinBox" name="pmSpin1">
    <property name="geometry">
     <rect>
      <x>260</x>
@@ -198,7 +198,7 @@
     <number>5</number>
    </property>
   </widget>
-  <widget class="QSpinBox" name="cSpin">
+  <widget class="QSpinBox" name="cSpin1">
    <property name="geometry">
     <rect>
      <x>260</x>
@@ -240,7 +240,7 @@
     <string>Project Description</string>
    </property>
   </widget>
-  <widget class="QDoubleSpinBox" name="gpaSpin">
+  <widget class="QDoubleSpinBox" name="gpaSpin1">
    <property name="geometry">
     <rect>
      <x>260</x>
@@ -279,7 +279,7 @@
     <string>Debugging/Testing:</string>
    </property>
   </widget>
-  <widget class="QSpinBox" name="uiSpin">
+  <widget class="QSpinBox" name="uiSpin1">
    <property name="geometry">
     <rect>
      <x>260</x>
@@ -295,7 +295,7 @@
     <number>5</number>
    </property>
   </widget>
-  <widget class="QSpinBox" name="networkingSpin">
+  <widget class="QSpinBox" name="networkingSpin1">
    <property name="geometry">
     <rect>
      <x>260</x>
@@ -311,7 +311,7 @@
     <number>5</number>
    </property>
   </widget>
-  <widget class="QSpinBox" name="pythonSpin">
+  <widget class="QSpinBox" name="pythonSpin1">
    <property name="geometry">
     <rect>
      <x>260</x>
@@ -353,7 +353,7 @@
     <string>JS/HTML:</string>
    </property>
   </widget>
-  <widget class="QSpinBox" name="mobileSpin">
+  <widget class="QSpinBox" name="mobileSpin1">
    <property name="geometry">
     <rect>
      <x>260</x>
@@ -369,7 +369,7 @@
     <number>5</number>
    </property>
   </widget>
-  <widget class="QSpinBox" name="debuggingSpin">
+  <widget class="QSpinBox" name="debuggingSpin1">
    <property name="geometry">
     <rect>
      <x>260</x>
@@ -411,7 +411,7 @@
     <string>Algorithm Design:</string>
    </property>
   </widget>
-  <widget class="QSpinBox" name="algSpin">
+  <widget class="QSpinBox" name="algSpin1">
    <property name="geometry">
     <rect>
      <x>260</x>
@@ -427,7 +427,7 @@
     <number>5</number>
    </property>
   </widget>
-  <widget class="QSpinBox" name="dbSpin">
+  <widget class="QSpinBox" name="dbSpin1">
    <property name="geometry">
     <rect>
      <x>260</x>
@@ -508,7 +508,7 @@
     <string>Max Members</string>
    </property>
   </widget>
-  <widget class="QSpinBox" name="pmSpin_2">
+  <widget class="QSpinBox" name="idealMem">
    <property name="geometry">
     <rect>
      <x>150</x>
@@ -524,7 +524,7 @@
     <number>999</number>
    </property>
   </widget>
-  <widget class="QSpinBox" name="pmSpin_3">
+  <widget class="QSpinBox" name="maxMem">
    <property name="geometry">
     <rect>
      <x>150</x>

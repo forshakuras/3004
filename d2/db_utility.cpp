@@ -395,7 +395,6 @@ void DB_Utility::DBRemove_Project(string tableName, project_obj *project)
     }else{
         cout << db.lastError().text().toStdString() << endl;
     }
-     cout<< strSql << endl;
 }
 
 
