@@ -42,10 +42,15 @@ void Entrywindow::on_Loginbutton_clicked()
 
 
     DB_Utility db;
-//    if(ui->studentCheckBox->isChecked()){
-//        project_obj* newProject = new project_obj();
-//        db.DBAdd_Project("projects",newProject);
-//    }
+
+//    project_obj newProject;
+//    db.DBAdd_Project("projects",&newProject);
+
+//    project_obj newProject;
+//    newProject.setId(123);
+//    student_obj newStudent;
+//    newStudent.setStudent_number(11111);
+//    db.DBAdd_StudentToProject(&newStudent,&newProject);
 
     if(ui->studentCheckBox->isChecked()){
         student_obj *data = new student_obj();

@@ -286,6 +286,19 @@ void DB_Utility::DBModify_Studentpref(string tableName,studentpre_obj* newStuden
     }
 }
 
+void DB_Utility::DBAdd_StudentToProject(student_obj *student, project_obj *project)
+{
+    string strSql = "insert into studentList (student_number,projectId) values ('"+ intToString(student->getStudent_number())+"','"+ intToString(project->getId())+"')";
+    if(db.open()){
+        QSqlQuery data;
+        data.exec(QString::fromStdString(strSql));
+    }else{
+        cout << db.lastError().text().toStdString() << endl;
+    }
+}
+
+
+
 string DB_Utility::floatToString(float x)
 {
     stringstream ss (stringstream::in | stringstream::out);
