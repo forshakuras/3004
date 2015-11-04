@@ -46,7 +46,7 @@ void AdminProjWindow::on_saveButton_clicked()
     projob->setDescription(ui->projDesc->text().toStdString());
     DB_Utility *db;
     db = new DB_Utility();
-    //db->DBModify_Project("projects",projob);
+    db->DBModify_Project("projects",projob);
 }
 
 void AdminProjWindow::on_deleteButton_clicked()
