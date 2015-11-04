@@ -27,6 +27,22 @@ projectDesc::projectDesc(QWidget *parent, project_obj *proj) :
     ui->uiLabel->setText(QString::number(projob->getUi()));
 
     //------------------------set member list-------------------------
+    QStandardItemModel *stdModel = new QStandardItemModel(this);
+    DB_Utility *db = new DB_Utility();
+    vector<int> id;
+    student_obj *temp;
+
+    ui->memberlist->setModel(stdModel);
+    db->DBSearch_StudentFromProjectList(&id,projob);
+
+    for (int i = 0; i< id.size(); i++){
+        temp = new student_obj();
+        db->DBSearch_Student("students",db->intToString(id[i]),temp);
+        QStandardItem* Item = new QStandardItem(QString::fromStdString(temp->getFirstName() + " " +temp->getLastName()));
+        Item->setEditable(false);
+        Item->setSelectable(true);
+        stdModel->appendRow(Item);
+    }
 
 }
 
