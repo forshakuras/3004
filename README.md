@@ -21,4 +21,4 @@ The administrator can double click the projects in the list to open a new window
 6. Most windows have a sign out button which will take the user to the login page.
 
 ##Database
-This system created and populated using sample database, can be found in **d2.sql**
+This system created and populated using sample database, can be found in **cupidDB.sql**
