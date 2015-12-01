@@ -77,9 +77,9 @@ create table if not exists projects(
 --INSERT DATA
 --=======================
 begin transaction;
-insert into projects(title,description,idealNumberStudents,maxStudents,currentStudents,gpa,pmSkill,database,java,cCpp,jsHtml,python,debuggingTesting,documentation,mobile,networking,ui,algorithm) values ('3004 D2','CUPID deliverable 2',3,4,3,3.5,3,3,3,3,3,3,3,3,3,3,3,2);
-insert into projects(title,description,idealNumberStudents,maxStudents,currentStudents,gpa,pmSkill,database,java,cCpp,jsHtml,python,debuggingTesting,documentation,mobile,networking,ui,algorithm) values ('Test Project','Test project description',4,6,2,4.3,1,2,3,0,0,0,0,2,1,0,1,0);
-insert into projects(title,description,maxStudents,idealNumberStudents,currentStudents,gpa,pmSkill,database,java,cCpp,jsHtml,python,debuggingTesting,documentation,mobile,networking,ui,algorithm) values ('3004 D4','CUPID deliverable 4',4,3,1,3.5,3,3,3,3,3,3,3,3,3,3,3,2);
+insert into projects(title,description,idealNumberStudents,maxStudents,currentStudents,gpa,pmSkill,database,java,cCpp,jsHtml,python,debuggingTesting,documentation,mobile,networking,ui,algorithm) values ('Test Project222','Test project description2323232',4,6,3,2.3,1,0,1,0,0,0,0,1,1,0,1,0);
+insert into projects(title,description,idealNumberStudents,maxStudents,currentStudents,gpa,pmSkill,database,java,cCpp,jsHtml,python,debuggingTesting,documentation,mobile,networking,ui,algorithm) values ('Test Project','Test project description',4,6,2,2.3,1,0,1,0,0,0,0,1,1,0,1,0);
+insert into projects(title,description,maxStudents,idealNumberStudents,currentStudents,gpa,pmSkill,database,java,cCpp,jsHtml,python,debuggingTesting,documentation,mobile,networking,ui,algorithm) values ('Test Project1','Test project description12345',4,6,1,2.3,1,0,1,0,0,0,0,1,1,0,1,0);
 end transaction;
 
 create table if not exists studentPreferences(
