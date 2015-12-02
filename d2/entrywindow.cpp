@@ -41,36 +41,37 @@ void Entrywindow::on_Loginbutton_clicked()
 {
 
 
-    DB_Utility db;
+    ManageUserControl *user = new ManageUserControl();
 
     if(ui->studentCheckBox->isChecked()){
         student_obj *data = new student_obj();
         studentpre_obj *pref = new studentpre_obj();
-        db.DBSearch_Student("students",ui->lineEdit->text().toStdString(),data);
-        db.DBSearch_Studentpref("studentPreferences",ui->lineEdit->text().toStdString(),pref);
-            if(data->getStudent_number() == 0){
-                QMessageBox msgBox;
-                msgBox.setWindowTitle("Warning");
-                msgBox.setText("Invaliad Username, please try again !");
-                msgBox.exec();
-                db.DBClose();
-                free(data);
-                free(pref);
-                return;
-            }
+
+
+        user->getStudent(ui->lineEdit->text().toStdString(),data,pref);
+
+        if(data->getStudent_number() == 0){
+            QMessageBox msgBox;
+            msgBox.setWindowTitle("Warning");
+            msgBox.setText("Invaliad Username, please try again !");
+            msgBox.exec();
+            free(data);
+            free(pref);
+            return;
+        }
         choose = new chooseWindow(this,data,pref);
 
         choose ->show();
         hide();
     }else if(ui->adminCheckBox->isChecked()){
         admin_obj *temp = new admin_obj();
-        db.DBSearch_Admin("admin",ui->lineEdit->text().toStdString(),temp);
+        user->getAdmin(ui->lineEdit->text().toStdString(),temp);
+
         if(temp->getAdminNum() == 0){
             QMessageBox msgBox;
             msgBox.setWindowTitle("Warning");
             msgBox.setText("Invaliad Username, please try again !");
             msgBox.exec();
-            db.DBClose();
             free(temp);
             return;
         }

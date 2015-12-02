@@ -90,9 +90,9 @@ void Profilewindow::on_saveButton_clicked()
     pref->setAlgor(ui->algSpinPref->value());
 
     //=====================update db=============================
-    DB_Utility *db = new DB_Utility();
-    db->DBModify_Student("students", stu);
-    db->DBModify_Studentpref("studentPreferences", pref);
+    ManageStudentControl *manager = new ManageStudentControl(stu);
+    manager->ModifyProfile();
+    manager->ModifyPref(pref);
     hide();
 
 }

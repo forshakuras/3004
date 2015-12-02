@@ -6,6 +6,7 @@
 #include "student_obj.h"
 #include "db_utility.h"
 #include "iostream"
+#include "managestudentcontrol.h"
 
 namespace Ui {
 class Profilewindow;

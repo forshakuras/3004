@@ -41,7 +41,7 @@ void projectWindow::on_listView_doubleClicked(const QModelIndex &index)
 
 void projectWindow::on_joinProj_clicked()
 {
-   DB_Utility db;
+   //DB_Utility db;
    int row = ui->listView->currentIndex().row();
    if ((user->getGpa() >= data[row]->getGpa()) && (user->getPmSkill() >= data[row]->getPmSkill()) &&
        (user->getDatabase() >= data[row]->getDatabase()) && (user->getJava() >= data[row]->getJava()) &&
@@ -51,7 +51,9 @@ void projectWindow::on_joinProj_clicked()
        (user->getNetwork() >= data[row]->getNetwork()) && (user->getUi() >= data[row]->getUi()) &&
        (user->getAlgor() >= data[row]->getAlgor())){
 
-       bool rc = db.DBAdd_StudentToProject(user,data[row]);
+       ManageStudentControl* manage = new ManageStudentControl(user);
+       bool rc = manage->JoinProjectOption(data[row]);
+
        if (rc){QMessageBox::information(this, tr("Congradulation"), tr("Successfully join the project !"));}
        else{
            QMessageBox::information(this, tr("Warning"), tr("You already registered in this project !"));

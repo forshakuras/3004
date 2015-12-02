@@ -10,6 +10,7 @@
 #include "student_obj.h"
 #include "studentpre_obj.h"
 #include "admin_obj.h"
+#include "manageusercontrol.h"
 
 class chooseWindow;
 class AdminWIndow;
