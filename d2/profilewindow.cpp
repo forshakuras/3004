@@ -58,18 +58,18 @@ void Profilewindow::on_saveButton_clicked()
     stu->setFirstName(ui->firstName->text().toStdString());
     stu->setLastName(ui->lastName->text().toStdString());
     stu->setGpa(ui->gpaSpin->value());
-    stu->setPmSkill(ui->pmSpin->value());
+    stu->setObjectDev(ui->ooSpin->value());
     stu->setDatabase(ui->dbSpin->value());
-    stu->setJava(ui->javaSpin->value());
-    stu->setCCpp(ui->cSpin->value());
-    stu->setJsHtml(ui->jsSpin->value());
-    stu->setPython(ui->pythonSpin->value());
-    stu->setDebug(ui->debuggingSpin->value());
-    stu->setDocument(ui->docSpin->value());
-    stu->setMobile(ui->mobileSpin->value());
-    stu->setNetwork(ui->networkingSpin->value());
-    stu->setUi(ui->uiSpin->value());
-    stu->setAlgor(ui->algSpin->value());
+    stu->setWebDev(ui->webSpin->value());
+    stu->setTeamWork(ui->teamSpin->value());
+    stu->setCommunication(ui->jsSpin->value());
+    stu->setWorkExperience(ui->expSpin->value());
+    stu->setCriticalThinking(ui->criticalSpin->value());
+    stu->setDocumentation(ui->docSpin->value());
+    stu->setTeamWork(ui->teamSpin->value());
+    stu->setMultitasking(ui->multiSpin->value());
+    stu->setLeadership(ui->leadSpin->value());
+    stu->setAgileKnowledge(ui->agileSpin->value());
 
     //======================update student preference================
     pref->setStudent_number(ui->id->text().toInt());
