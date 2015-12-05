@@ -6,6 +6,9 @@ class PPIDpart3 : PPID
 {
 public:
     PPIDpart3();
+
+private:
+   /* virtual*/ void runPPID(vector<student_obj*> *) = 0;
 };
 
 #endif // PPIDPART3_H
