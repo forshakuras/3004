@@ -31,7 +31,8 @@ SOURCES += main.cpp\
     project_storagectrl.cpp \
     student_storagectrl.cpp \
     user_storagectrl.cpp \
-    db_control.cpp
+    db_control.cpp \
+    project_control.cpp
 
 
 HEADERS  += \
@@ -53,7 +54,8 @@ HEADERS  += \
     project_storagectrl.h \
     student_storagectrl.h \
     user_storagectrl.h \
-    db_control.h
+    db_control.h \
+    project_control.h
 
 FORMS    += \
     entrywindow.ui \

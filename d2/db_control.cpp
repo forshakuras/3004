@@ -100,10 +100,10 @@ bool db_control::projectstorage(string tag, project_obj *project, student_obj *s
 {
     project_storagectrl* pc = new project_storagectrl();
 
-    if(tag == "add"){
+    if(tag == "addStudent"){
         pc->DBAdd_StudentToProject(student,project);
     }
-    if(tag == "remove"){
+    if(tag == "removeStudent"){
         pc->DBRemove_StudentFromProject(student,project);
     }
 
