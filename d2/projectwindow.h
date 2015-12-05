@@ -10,6 +10,7 @@
 #include "projectdesc.h"
 #include <QMessageBox>
 #include "managestudentcontrol.h"
+#include "project_control.h"
 
 namespace Ui {
 class projectWindow;

@@ -12,16 +12,24 @@ projectWindow::projectWindow(QWidget *parent, student_obj *student, studentpre_o
     user = student;
     userpref = preference;
 
-    DB_Utility db;
-
-    db.DBSearchAll_Projects("projects",&data);
+    project_control pc;
+    pc.SearchAllProject(&data);
     QStandardItemModel *stdModel = new QStandardItemModel(this);
+    QStandardItemModel *stdModel2 = new QStandardItemModel(this);
     ui->listView->setModel(stdModel);
+    ui->registerproject->setModel(stdModel2);
     for(int i=0; i<data.size();i++){
         QStandardItem* Item = new QStandardItem(QString::fromStdString(data[i]->getTitle()));
         Item->setEditable(false);
         Item->setSelectable(true);
         stdModel->appendRow(Item);
+    }
+
+    for(int i=0; i<data.size();i++){
+        QStandardItem* Item = new QStandardItem(QString::fromStdString(data[i]->getTitle()));
+        Item->setEditable(false);
+        Item->setSelectable(true);
+        stdModel2->appendRow(Item);
     }
 
 
@@ -41,7 +49,7 @@ void projectWindow::on_listView_doubleClicked(const QModelIndex &index)
 
 void projectWindow::on_joinProj_clicked()
 {
-
+   //DB_Utility db;
    int row = ui->listView->currentIndex().row();
    if ((user->getGpa() >= data[row]->getGpa()) && (user->getPmSkill() >= data[row]->getPmSkill()) &&
        (user->getDatabase() >= data[row]->getDatabase()) && (user->getJava() >= data[row]->getJava()) &&
