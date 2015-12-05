@@ -68,8 +68,7 @@ SOURCES       = main.cpp \
 		project_control.cpp \
 		ppid.cpp \
 		ppidpart1.cpp \
-		ppidpart2.cpp \
-		ppidpart3.cpp moc_entrywindow.cpp \
+		ppidpart2.cpp moc_entrywindow.cpp \
 		moc_choosewindow.cpp \
 		moc_profilewindow.cpp \
 		moc_projectwindow.cpp \
@@ -101,7 +100,6 @@ OBJECTS       = main.o \
 		ppid.o \
 		ppidpart1.o \
 		ppidpart2.o \
-		ppidpart3.o \
 		moc_entrywindow.o \
 		moc_choosewindow.o \
 		moc_profilewindow.o \
@@ -343,7 +341,7 @@ qmake_all: FORCE
 
 dist: 
 	@test -d .tmp/d21.0.0 || mkdir -p .tmp/d21.0.0
-	$(COPY_FILE) --parents $(SOURCES) $(DIST) .tmp/d21.0.0/ && $(COPY_FILE) --parents entrywindow.h choosewindow.h profilewindow.h projectwindow.h projectdesc.h adminwindow.h project_obj.h student_obj.h studentpre_obj.h db_utility.h admin_obj.h createproject.h adminprojwindow.h managestudentcontrol.h manageusercontrol.h project_storagectrl.h student_storagectrl.h user_storagectrl.h db_control.h project_control.h ppid.h ppidpart1.h ppidpart2.h ppidpart3.h .tmp/d21.0.0/ && $(COPY_FILE) --parents main.cpp choosewindow.cpp profilewindow.cpp projectwindow.cpp projectdesc.cpp adminwindow.cpp project_obj.cpp student_obj.cpp studentpre_obj.cpp entrywindow.cpp db_utility.cpp admin_obj.cpp createproject.cpp adminprojwindow.cpp managestudentcontrol.cpp manageusercontrol.cpp project_storagectrl.cpp student_storagectrl.cpp user_storagectrl.cpp db_control.cpp project_control.cpp ppid.cpp ppidpart1.cpp ppidpart2.cpp ppidpart3.cpp .tmp/d21.0.0/ && $(COPY_FILE) --parents entrywindow.ui choosewindow.ui profilewindow.ui projectwindow.ui projectdesc.ui adminwindow.ui createproject.ui adminprojwindow.ui .tmp/d21.0.0/ && (cd `dirname .tmp/d21.0.0` && $(TAR) d21.0.0.tar d21.0.0 && $(COMPRESS) d21.0.0.tar) && $(MOVE) `dirname .tmp/d21.0.0`/d21.0.0.tar.gz . && $(DEL_FILE) -r .tmp/d21.0.0
+	$(COPY_FILE) --parents $(SOURCES) $(DIST) .tmp/d21.0.0/ && $(COPY_FILE) --parents entrywindow.h choosewindow.h profilewindow.h projectwindow.h projectdesc.h adminwindow.h project_obj.h student_obj.h studentpre_obj.h db_utility.h admin_obj.h createproject.h adminprojwindow.h managestudentcontrol.h manageusercontrol.h project_storagectrl.h student_storagectrl.h user_storagectrl.h db_control.h project_control.h ppid.h ppidpart1.h ppidpart2.h .tmp/d21.0.0/ && $(COPY_FILE) --parents main.cpp choosewindow.cpp profilewindow.cpp projectwindow.cpp projectdesc.cpp adminwindow.cpp project_obj.cpp student_obj.cpp studentpre_obj.cpp entrywindow.cpp db_utility.cpp admin_obj.cpp createproject.cpp adminprojwindow.cpp managestudentcontrol.cpp manageusercontrol.cpp project_storagectrl.cpp student_storagectrl.cpp user_storagectrl.cpp db_control.cpp project_control.cpp ppid.cpp ppidpart1.cpp ppidpart2.cpp .tmp/d21.0.0/ && $(COPY_FILE) --parents entrywindow.ui choosewindow.ui profilewindow.ui projectwindow.ui projectdesc.ui adminwindow.ui createproject.ui adminprojwindow.ui .tmp/d21.0.0/ && (cd `dirname .tmp/d21.0.0` && $(TAR) d21.0.0.tar d21.0.0 && $(COMPRESS) d21.0.0.tar) && $(MOVE) `dirname .tmp/d21.0.0`/d21.0.0.tar.gz . && $(DEL_FILE) -r .tmp/d21.0.0
 
 
 clean:compiler_clean 
@@ -7238,20 +7236,19 @@ project_control.o: project_control.cpp project_control.h \
 		user_storagectrl.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o project_control.o project_control.cpp
 
-ppid.o: ppid.cpp ppid.h
+ppid.o: ppid.cpp ppid.h \
+		student_obj.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o ppid.o ppid.cpp
 
 ppidpart1.o: ppidpart1.cpp ppidpart1.h \
-		ppid.h
+		ppid.h \
+		student_obj.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o ppidpart1.o ppidpart1.cpp
 
 ppidpart2.o: ppidpart2.cpp ppidpart2.h \
-		ppid.h
+		ppid.h \
+		student_obj.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o ppidpart2.o ppidpart2.cpp
-
-ppidpart3.o: ppidpart3.cpp ppidpart3.h \
-		ppid.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o ppidpart3.o ppidpart3.cpp
 
 moc_entrywindow.o: moc_entrywindow.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_entrywindow.o moc_entrywindow.cpp

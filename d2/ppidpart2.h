@@ -8,7 +8,7 @@ public:
     PPIDpart2(): PPID(){};
 
 private:
-   /* virtual*/ void runPPID(vector<int>*, vector<student_obj*> *);
+   /* virtual*/ void runPPID(project_obj*, vector<int>*, vector<student_obj*> *);
 };
 
 #endif // PPIDPART2_H
