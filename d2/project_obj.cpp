@@ -109,13 +109,13 @@ float   project_obj::getGpa(){
     return gpa;
 }
 
-void    project_obj::setPmSkill(int i){
-    pmSkill=i;
-}
+//void    project_obj::setPmSkill(int i){
+//    pmSkill=i;
+//}
 
-int     project_obj::getPmSkill(){
-    return pmSkill;
-}
+//int     project_obj::getPmSkill(){
+//    return pmSkill;
+//}
 
 void    project_obj::setDatabase(int i){
     database=i;
@@ -125,82 +125,161 @@ int     project_obj::getDatabase(){
     return database;
 }
 
-void    project_obj::setJava(int i){
-    java=i;
+//void    project_obj::setJava(int i){
+//    java=i;
+//}
+
+//int     project_obj::getJava(){
+//    return java;
+//}
+
+//void    project_obj::setCCpp(int i){
+//    cCpp=i;
+//}
+
+//int     project_obj::getCCpp(){
+//    return cCpp;
+//}
+
+//void    project_obj::setJsHtml(int i){
+//    jsHtml=i;
+//}
+
+//int     project_obj::getJsHtml(){
+//    return jsHtml;
+//}
+
+//void    project_obj::setPython(int i){
+//    python=i;
+//}
+
+//int     project_obj::getPython(){
+//    return python;
+//}
+
+//void    project_obj::setDebug(int i){
+//    debuggingTesting=i;
+//}
+
+//int     project_obj::getDebug(){
+//    return debuggingTesting;
+//}
+
+//void    project_obj::setDocument(int i){
+//    documentation=i;
+//}
+
+//int     project_obj::getDocument(){
+//    return documentation;
+//}
+
+//void    project_obj::setMobile(int i){
+//    mobile=i;
+//}
+
+//int     project_obj::getMobile(){
+//    return mobile;
+//}
+
+//void    project_obj::setNetwork(int i){
+//    networking=i;
+//}
+
+//int     project_obj::getNetwork(){
+//    return networking;
+//}
+
+//void    project_obj::setUi(int i){
+//    ui=i;
+//}
+
+//int     project_obj::getUi(){
+//    return ui;
+//}
+
+//void    project_obj::setAlgor(int i){
+//    algorithm=i;
+//}
+
+//int     project_obj::getAlgor(){
+//    return algorithm;
+//}
+
+void        project_obj::setWebDev(int i){
+        webDev=i;
 }
 
-int     project_obj::getJava(){
-    return java;
+int         project_obj::getWebDev(){
+        return webDev;
+}
+void        project_obj::setFlexibility(int i){
+        flexibility =i;
+}
+int         project_obj::getFlexibility(){
+        return flexibility;
+}
+void        project_obj::setCommunication(int i){
+        communication = i;
 }
 
-void    project_obj::setCCpp(int i){
-    cCpp=i;
+int         project_obj::getCommunication(){
+        return communication;
 }
 
-int     project_obj::getCCpp(){
-    return cCpp;
+void        project_obj::setWorkExperience(int i){
+        workExperience = i;
 }
 
-void    project_obj::setJsHtml(int i){
-    jsHtml=i;
+int         project_obj::getWorkExperience(){
+        return workExperience;
 }
 
-int     project_obj::getJsHtml(){
-    return jsHtml;
+void        project_obj::setCriticalThinking(int i){
+        criticalThinking = i;
 }
 
-void    project_obj::setPython(int i){
-    python=i;
+int         project_obj::getCriticalThinking(){
+        return criticalThinking;
 }
 
-int     project_obj::getPython(){
-    return python;
+void        project_obj::setDocumentation(int i){
+        documentation = i;
 }
 
-void    project_obj::setDebug(int i){
-    debuggingTesting=i;
+int         project_obj::getDocumentation(){
+        return documentation;
 }
 
-int     project_obj::getDebug(){
-    return debuggingTesting;
+void        project_obj::setTeamWork(int i){
+        teamwork=i;
 }
 
-void    project_obj::setDocument(int i){
-    documentation=i;
+int         project_obj::getTeamWork(){
+        return teamwork;
 }
 
-int     project_obj::getDocument(){
-    return documentation;
+void        project_obj::setMultitasking(int i){
+        multitasking=i;
 }
 
-void    project_obj::setMobile(int i){
-    mobile=i;
+int         project_obj::getMultitasking(){
+        return multitasking;
 }
 
-int     project_obj::getMobile(){
-    return mobile;
+void        project_obj::setLeadership(int i){
+        leadership =i;
 }
 
-void    project_obj::setNetwork(int i){
-    networking=i;
+int         project_obj::getLeadership(){
+        return leadership;
 }
 
-int     project_obj::getNetwork(){
-    return networking;
+void        project_obj::setAgileKnowledge(int i){
+        agileKnowledge = i;
 }
 
-void    project_obj::setUi(int i){
-    ui=i;
+int         project_obj::getAgileKnowledge(){
+        return agileKnowledge;
 }
 
-int     project_obj::getUi(){
-    return ui;
-}
 
-void    project_obj::setAlgor(int i){
-    algorithm=i;
-}
-
-int     project_obj::getAlgor(){
-    return algorithm;
-}

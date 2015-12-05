@@ -80,13 +80,101 @@ float   studentpre_obj::getGpa(){
     return gpa;
 }
 
-void    studentpre_obj::setPmSkill(int i){
-    pmSkill=i;
-}
+//void    studentpre_obj::setPmSkill(int i){
+//    pmSkill=i;
+//}
 
-int     studentpre_obj::getPmSkill(){
-    return pmSkill;
-}
+//int     studentpre_obj::getPmSkill(){
+//    return pmSkill;
+//}
+
+//void    studentpre_obj::setDatabase(int i){
+//    database=i;
+//}
+
+//int     studentpre_obj::getDatabase(){
+//    return database;
+//}
+
+//void    studentpre_obj::setJava(int i){
+//    java=i;
+//}
+
+//int     studentpre_obj::getJava(){
+//    return java;
+//}
+
+//void    studentpre_obj::setCCpp(int i){
+//    cCpp = i;
+//}
+
+//int     studentpre_obj::getCCpp(){
+//    return cCpp;
+//}
+
+//void    studentpre_obj::setJsHtml(int i){
+//    jsHtml=i;
+//}
+
+//int     studentpre_obj::getJsHtml(){
+//    return jsHtml;
+//}
+
+//void    studentpre_obj::setPython(int i){
+//    python=i;
+//}
+
+//int     studentpre_obj::getPython(){
+//    return python;
+//}
+
+//void    studentpre_obj::setDebug(int i){
+//    debuggingTesting=i;
+//}
+
+//int     studentpre_obj::getDebug(){
+//    return debuggingTesting;
+//}
+
+//void    studentpre_obj::setDocument(int i){
+//    documentation=i;
+//}
+
+//int     studentpre_obj::getDocument(){
+//    return documentation;
+//}
+
+//void    studentpre_obj::setMobile(int i){
+//    mobile=i;
+//}
+
+//int     studentpre_obj::getMobile(){
+//    return mobile;
+//}
+
+//void    studentpre_obj::setNetwork(int i){
+//    networking=i;
+//}
+
+//int     studentpre_obj::getNetwork(){
+//    return networking;
+//}
+
+//void    studentpre_obj::setUi(int i){
+//    ui=i;
+//}
+
+//int     studentpre_obj::getUi(){
+//    return ui;
+//}
+
+//void    studentpre_obj::setAlgor(int i){
+//    algorithm=i;
+//}
+
+//int     studentpre_obj::getAlgor(){
+//    return algorithm;
+//}
 
 void    studentpre_obj::setDatabase(int i){
     database=i;
@@ -96,82 +184,79 @@ int     studentpre_obj::getDatabase(){
     return database;
 }
 
-void    studentpre_obj::setJava(int i){
-    java=i;
+void    studentpre_obj::setWebDev(int i){
+        webDev=i;
 }
 
-int     studentpre_obj::getJava(){
-    return java;
+int     studentpre_obj::getWebDev(){
+        return webDev;
+}
+void    studentpre_obj::setFlexibility(int i){
+        flexibility =i;
+}
+int     studentpre_obj::getFlexibility(){
+        return flexibility;
+}
+void    studentpre_obj::setCommunication(int i){
+        communication = i;
 }
 
-void    studentpre_obj::setCCpp(int i){
-    cCpp = i;
+int     studentpre_obj::getCommunication(){
+        return communication;
 }
 
-int     studentpre_obj::getCCpp(){
-    return cCpp;
+void    studentpre_obj::setWorkExperience(int i){
+        workExperience = i;
 }
 
-void    studentpre_obj::setJsHtml(int i){
-    jsHtml=i;
+int     studentpre_obj::getWorkExperience(){
+        return workExperience;
 }
 
-int     studentpre_obj::getJsHtml(){
-    return jsHtml;
+void    studentpre_obj::setCriticalThinking(int i){
+        criticalThinking = i;
 }
 
-void    studentpre_obj::setPython(int i){
-    python=i;
+int     studentpre_obj::getCriticalThinking(){
+        return criticalThinking;
 }
 
-int     studentpre_obj::getPython(){
-    return python;
+void    studentpre_obj::setDocumentation(int i){
+        documentation = i;
 }
 
-void    studentpre_obj::setDebug(int i){
-    debuggingTesting=i;
+int     studentpre_obj::getDocumentation(){
+        return documentation;
 }
 
-int     studentpre_obj::getDebug(){
-    return debuggingTesting;
+void    studentpre_obj::setTeamWork(int i){
+        teamwork=i;
 }
 
-void    studentpre_obj::setDocument(int i){
-    documentation=i;
+int     studentpre_obj::getTeamWork(){
+        return teamwork;
 }
 
-int     studentpre_obj::getDocument(){
-    return documentation;
+void    studentpre_obj::setMultitasking(int i){
+        multitasking=i;
 }
 
-void    studentpre_obj::setMobile(int i){
-    mobile=i;
+int     studentpre_obj::getMultitasking(){
+        return multitasking;
 }
 
-int     studentpre_obj::getMobile(){
-    return mobile;
+void    studentpre_obj::setLeadership(int i){
+        leadership =i;
 }
 
-void    studentpre_obj::setNetwork(int i){
-    networking=i;
+int     studentpre_obj::getLeadership(){
+        return leadership;
 }
 
-int     studentpre_obj::getNetwork(){
-    return networking;
+void    studentpre_obj::setAgileKnowledge(int i){
+        agileKnowledge = i;
 }
 
-void    studentpre_obj::setUi(int i){
-    ui=i;
-}
-
-int     studentpre_obj::getUi(){
-    return ui;
-}
-
-void    studentpre_obj::setAlgor(int i){
-    algorithm=i;
-}
-
-int     studentpre_obj::getAlgor(){
-    return algorithm;
+int     studentpre_obj::getAgileKnowledge(){
+        return agileKnowledge;
 }
