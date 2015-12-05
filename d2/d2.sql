@@ -148,7 +148,7 @@ create table if not exists studentList(
       student_number int NOT NULL, 
       projectId int NOT NULL
       );
---begin transaction;
+begin transaction;
 insert into studentList(student_number,projectId) values (100890425,1);
 insert into studentList(student_number,projectId) values (100000001,1);
 insert into studentList(student_number,projectId) values (100000002,1);
@@ -165,7 +165,6 @@ create table if not exists joinRequestList(
       );
 create table if not exists projectWeight(
       projectId integer primary key not null, 
-      gpa float not null, 
       objectDev int not null, 
       database int not null, 
       webDev int not null, 
@@ -183,9 +182,9 @@ create table if not exists projectWeight(
 --INSERT DATA
 --=======================
 begin transaction;
-insert into projects(pmSkill,database,java,cCpp,jsHtml,python,debuggingTesting,documentation,mobile,networking,ui,algorithm) values (1,0,1,0,0,0,0,1,1,0,1,0);
-insert into projects(pmSkill,database,java,cCpp,jsHtml,python,debuggingTesting,documentation,mobile,networking,ui,algorithm) values (0,1,0,0,1,0,1,0,1,0,1,0);
-insert into projects(pmSkill,database,java,cCpp,jsHtml,python,debuggingTesting,documentation,mobile,networking,ui,algorithm) values (0,1,1,0,1,0,0,0,1,0,1,0);
+insert into projectWeight(objectDev,database,webDev,flexibility,communication,workExperience,criticalThinking,documentation,teamwork,multitasking,leadership,agileKnowledge) values (1,0,1,0,0,0,0,1,1,0,1,0);
+insert into projectWeight(objectDev,database,webDev,flexibility,communication,workExperience,criticalThinking,documentation,teamwork,multitasking,leadership,agileKnowledge) values (0,1,0,0,1,0,1,0,1,0,1,0);
+insert into projectWeight(objectDev,database,webDev,flexibility,communication,workExperience,criticalThinking,documentation,teamwork,multitasking,leadership,agileKnowledge) values (0,1,1,0,1,0,0,0,1,0,1,0);
 end transaction;
 create table if not exists studentTeamList(
       id INTEGER primary key autoincrement NOT NULL,
