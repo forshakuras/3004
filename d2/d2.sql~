@@ -187,9 +187,4 @@ insert into projects(pmSkill,database,java,cCpp,jsHtml,python,debuggingTesting,d
 insert into projects(pmSkill,database,java,cCpp,jsHtml,python,debuggingTesting,documentation,mobile,networking,ui,algorithm) values (0,1,0,0,1,0,1,0,1,0,1,0);
 insert into projects(pmSkill,database,java,cCpp,jsHtml,python,debuggingTesting,documentation,mobile,networking,ui,algorithm) values (0,1,1,0,1,0,0,0,1,0,1,0);
 end transaction;
-create table if not exists studentTeamList(
-      id INTEGER primary key autoincrement NOT NULL,
-      teamId int NOT NULL,
-      student_number int NOT NULL, 
-      projectId int NOT NULL
-      );
+
