@@ -165,3 +165,28 @@ create table if not exists joinRequestList(
       foreign key(projectId) references projects(projectId),
       foreign key(student_number) references students(student_number)
       );
+create table if not exists projectWeight(
+      projectId integer primary key not null, 
+      gpa float not null, 
+      pmSkill int not null, 
+      database int not null, 
+      java int not null, 
+      cCpp int not null, 
+      jsHtml int not null, 
+      python int not null,
+      debuggingTesting int not null,  
+      documentation int not null, 
+      mobile int not null, 
+      networking int not null, 
+      ui int not null, 
+      algorithm int not null
+      );
+
+--INSERT DATA
+--=======================
+begin transaction;
+insert into projects(pmSkill,database,java,cCpp,jsHtml,python,debuggingTesting,documentation,mobile,networking,ui,algorithm) values (1,0,1,0,0,0,0,1,1,0,1,0);
+insert into projects(pmSkill,database,java,cCpp,jsHtml,python,debuggingTesting,documentation,mobile,networking,ui,algorithm) values (0,1,0,0,1,0,1,0,1,0,1,0);
+insert into projects(pmSkill,database,java,cCpp,jsHtml,python,debuggingTesting,documentation,mobile,networking,ui,algorithm) values (0,1,1,0,1,0,0,0,1,0,1,0);
+end transaction;
+
