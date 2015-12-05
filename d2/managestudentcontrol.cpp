@@ -7,22 +7,22 @@ ManageStudentControl::ManageStudentControl(student_obj *student)
 
 bool ManageStudentControl::JoinProjectOption(project_obj *project)
 {
-    DB_Utility db;
-    bool rc = db.DBAdd_StudentToProject(stu,project);
-    return rc;
+    db_control db;
+    return db.projectstorage("addStudent",project,stu);
 }
 
-bool ManageStudentControl::LeaveProjectOption(){
-
+bool ManageStudentControl::LeaveProjectOption(project_obj *project){
+    db_control db;
+    return db.projectstorage("removeStudent",project,stu);
 }
 
 
 void ManageStudentControl::ModifyProfile(){
-    DB_Utility db;
-    db.DBModify_Student("students", stu);
+    db_control db;
+    db.studentstorage("modify",stu);
 
 }
 void ManageStudentControl::ModifyPref(studentpre_obj *pref){
-    DB_Utility db;
-    db.DBModify_Studentpref("studentPreferences", pref);
+    db_control db;
+    db.studentstorage("modify",pref);
 }

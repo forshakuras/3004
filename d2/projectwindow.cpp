@@ -41,7 +41,7 @@ void projectWindow::on_listView_doubleClicked(const QModelIndex &index)
 
 void projectWindow::on_joinProj_clicked()
 {
-   //DB_Utility db;
+
    int row = ui->listView->currentIndex().row();
    if ((user->getGpa() >= data[row]->getGpa()) && (user->getPmSkill() >= data[row]->getPmSkill()) &&
        (user->getDatabase() >= data[row]->getDatabase()) && (user->getJava() >= data[row]->getJava()) &&

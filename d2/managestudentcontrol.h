@@ -4,13 +4,14 @@
 #include "studentpre_obj.h"
 #include "project_obj.h"
 #include "db_utility.h"
+#include "db_control.h"
 
 class ManageStudentControl
 {
 public:
     ManageStudentControl(student_obj *);
     bool JoinProjectOption(project_obj *);
-    bool LeaveProjectOption();
+    bool LeaveProjectOption(project_obj *);
     void ModifyProfile();
     void ModifyPref(studentpre_obj *);
 

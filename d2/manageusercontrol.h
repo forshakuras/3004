@@ -4,6 +4,7 @@
 #include "studentpre_obj.h"
 #include "admin_obj.h"
 #include "db_utility.h"
+#include "db_control.h"
 using namespace std;
 
 class ManageUserControl

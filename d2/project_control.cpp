@@ -33,18 +33,6 @@ void project_control::SearchProject(string projectId, project_obj *project)
 }
 
 
-bool project_control::AddStudentToProject(student_obj *student, project_obj *project)
-{
-    db_control* dbc = new db_control();
-    return dbc->projectstorage("addStudent",project,student);
-}
-
-bool project_control::RemoveStudentFromProject(student_obj *student, project_obj *project)
-{
-    db_control* dbc = new db_control();
-    return dbc->projectstorage("removeStudent",project,student);
-}
-
 void project_control::SearchAllProject(vector<project_obj *> * projectList)
 {
     db_control* dbc = new db_control();

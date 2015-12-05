@@ -16,8 +16,6 @@ public:
     project_control();
     void CreateProject(project_obj*);
     void DeleteProject(project_obj*);
-    bool AddStudentToProject(student_obj*,project_obj*);
-    bool RemoveStudentFromProject(student_obj*,project_obj*);
     void SearchProject(string,project_obj*);
     void ModifyProject(project_obj*);
     void SearchAllProject(vector<project_obj*>*);
