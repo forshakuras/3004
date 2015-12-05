@@ -166,18 +166,18 @@ create table if not exists joinRequestList(
 create table if not exists projectWeight(
       projectId integer primary key not null, 
       gpa float not null, 
-      pmSkill int not null, 
+      objectDev int not null, 
       database int not null, 
-      java int not null, 
-      cCpp int not null, 
-      jsHtml int not null, 
-      python int not null,
-      debuggingTesting int not null,  
+      webDev int not null, 
+      flexibility int not null, 
+      communication int not null, 
+      workExperience int not null,
+      criticalThinking int not null,  
       documentation int not null, 
-      mobile int not null, 
-      networking int not null, 
-      ui int not null, 
-      algorithm int not null
+      teamwork int not null, 
+      multitasking int not null, 
+      leadership int not null, 
+      agileKnowledge int not null
       );
 
 --INSERT DATA
