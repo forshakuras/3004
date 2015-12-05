@@ -32,7 +32,10 @@ SOURCES += main.cpp\
     student_storagectrl.cpp \
     user_storagectrl.cpp \
     db_control.cpp \
-    project_control.cpp
+    project_control.cpp \
+    ppid.cpp \
+    ppidpart1.cpp \
+    ppidpart2.cpp
 
 
 HEADERS  += \
@@ -55,7 +58,10 @@ HEADERS  += \
     student_storagectrl.h \
     user_storagectrl.h \
     db_control.h \
-    project_control.h
+    project_control.h \
+    ppid.h \
+    ppidpart1.h \
+    ppidpart2.h
 
 FORMS    += \
     entrywindow.ui \

@@ -17,32 +17,32 @@ Profilewindow::Profilewindow(QWidget *parent, student_obj *student, studentpre_o
     ui->lastName->setText(QString::fromStdString(stu->getLastName()));
     ui->id->setText(QString::number(stu->getStudent_number()));
     ui->gpaSpin->setValue(stu->getGpa());
-    ui->pmSpin->setValue(stu->getPmSkill());
+    ui->ooSpin->setValue(stu->getPmSkill());
     ui->dbSpin->setValue(stu->getDatabase());
-    ui->javaSpin->setValue(stu->getJava());
-    ui->cSpin->setValue(stu->getCCpp());
-    ui->jsSpin->setValue(stu->getJsHtml());
-    ui->pythonSpin->setValue(stu->getPython());
-    ui->debuggingSpin->setValue(stu->getDebug());
+    ui->webSpin->setValue(stu->getJava());
+    ui->teamSpin->setValue(stu->getCCpp());
+    ui->communicationSpin->setValue(stu->getJsHtml());
+    ui->multiSpin->setValue(stu->getPython());
+    ui->leadSpin->setValue(stu->getDebug());
     ui->docSpin->setValue(stu->getDocument());
-    ui->mobileSpin->setValue(stu->getMobile());
-    ui->networkingSpin->setValue(stu->getNetwork());
-    ui->uiSpin->setValue(stu->getUi());
-    ui->algSpin->setValue(stu->getAlgor());
+    ui->criticalSpin->setValue(stu->getMobile());
+    ui->expSpin->setValue(stu->getNetwork());
+    ui->flexSpin->setValue(stu->getUi());
+    ui->agileSpin->setValue(stu->getAlgor());
 //-------------------------set pref value---------------------
     ui->gpaSpinPref->setValue(pref->getGpa());
-    ui->pmPrefSpin->setValue(pref->getPmSkill());
+    ui->ooPrefSpin->setValue(pref->getPmSkill());
     ui->dbSpinPref->setValue(pref->getDatabase());
-    ui->javaSpinPref->setValue(pref->getJava());
-    ui->cSpinPref->setValue(pref->getCCpp());
-    ui->jsSpinPref->setValue(pref->getJsHtml());
-    ui->pythonSpinPref->setValue(pref->getPython());
-    ui->debuggingSpinPref->setValue(pref->getDebug());
+    ui->webSpinPref->setValue(pref->getJava());
+    ui->teamSpinPref->setValue(pref->getCCpp());
+    ui->communicationSpinPref->setValue(pref->getJsHtml());
+    ui->multiSpinPref->setValue(pref->getPython());
+    ui->leadSpinPref->setValue(pref->getDebug());
     ui->docSpinPref->setValue(pref->getDocument());
-    ui->mobileSpinPref->setValue(pref->getMobile());
-    ui->networkingSpinPref->setValue(pref->getNetwork());
-    ui->uiSpinPref->setValue(pref->getUi());
-    ui->algSpinPref->setValue(pref->getAlgor());
+    ui->criticalSpinPref->setValue(pref->getMobile());
+    ui->expSpinPref->setValue(pref->getNetwork());
+    ui->flexSpinPref->setValue(pref->getUi());
+    ui->agileSpinPref->setValue(pref->getAlgor());
 
 }
 

@@ -146,22 +146,49 @@ end transaction;
 create table if not exists studentList(
       id INTEGER primary key autoincrement NOT NULL,
       student_number int NOT NULL, 
-      projectId int NOT NULL,
-      foreign key(projectId) references projects(projectId),
-      foreign key(student_number) references students(student_number)
+      projectId int NOT NULL
       );
---begin transaction;
---insert into studentList(student_number,projectId) values (100890425,1);
---insert into studentList(student_number,projectId) values (100111119,1);
---insert into studentList(student_number,projectId) values (100111118,1);
---insert into studentList(student_number,projectId) values (100111333,2);
---insert into studentList(student_number,projectId) values (100111444,2);
---insert into studentList(student_number,projectId) values (100111555,3);
---end transaction;
+begin transaction;
+insert into studentList(student_number,projectId) values (100890425,1);
+insert into studentList(student_number,projectId) values (100000001,1);
+insert into studentList(student_number,projectId) values (100000002,1);
+insert into studentList(student_number,projectId) values (100000001,2);
+insert into studentList(student_number,projectId) values (100000002,2);
+insert into studentList(student_number,projectId) values (100000001,3);
+end transaction;
 create table if not exists joinRequestList(
       id INTEGER primary key autoincrement NOT NULL,
       student_number int NOT NULL, 
       projectId int NOT NULL,
       foreign key(projectId) references projects(projectId),
       foreign key(student_number) references students(student_number)
+      );
+create table if not exists projectWeight(
+      projectId integer primary key not null, 
+      objectDev int not null, 
+      database int not null, 
+      webDev int not null, 
+      flexibility int not null, 
+      communication int not null, 
+      workExperience int not null,
+      criticalThinking int not null,  
+      documentation int not null, 
+      teamwork int not null, 
+      multitasking int not null, 
+      leadership int not null, 
+      agileKnowledge int not null
+      );
+
+--INSERT DATA
+--=======================
+begin transaction;
+insert into projectWeight(objectDev,database,webDev,flexibility,communication,workExperience,criticalThinking,documentation,teamwork,multitasking,leadership,agileKnowledge) values (1,0,1,0,0,0,0,1,1,0,1,0);
+insert into projectWeight(objectDev,database,webDev,flexibility,communication,workExperience,criticalThinking,documentation,teamwork,multitasking,leadership,agileKnowledge) values (0,1,0,0,1,0,1,0,1,0,1,0);
+insert into projectWeight(objectDev,database,webDev,flexibility,communication,workExperience,criticalThinking,documentation,teamwork,multitasking,leadership,agileKnowledge) values (0,1,1,0,1,0,0,0,1,0,1,0);
+end transaction;
+create table if not exists studentTeamList(
+      id INTEGER primary key autoincrement NOT NULL,
+      teamId int NOT NULL,
+      student_number int NOT NULL, 
+      projectId int NOT NULL
       );
