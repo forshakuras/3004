@@ -11,7 +11,7 @@ public:
     PPID();
 
 private:
-    virtual void runPPID(project_obj*, vector<int>*, vector<student_obj*> *) = 0;
+    virtual void runPPID(project_obj*, vector<int>*, vector<int>*) = 0;
 };
 
 #endif // PPID_H
