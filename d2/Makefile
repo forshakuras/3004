@@ -65,7 +65,11 @@ SOURCES       = main.cpp \
 		student_storagectrl.cpp \
 		user_storagectrl.cpp \
 		db_control.cpp \
-		project_control.cpp moc_entrywindow.cpp \
+		project_control.cpp \
+		ppid.cpp \
+		ppidpart1.cpp \
+		ppidpart2.cpp \
+		ppidpart3.cpp moc_entrywindow.cpp \
 		moc_choosewindow.cpp \
 		moc_profilewindow.cpp \
 		moc_projectwindow.cpp \
@@ -94,6 +98,10 @@ OBJECTS       = main.o \
 		user_storagectrl.o \
 		db_control.o \
 		project_control.o \
+		ppid.o \
+		ppidpart1.o \
+		ppidpart2.o \
+		ppidpart3.o \
 		moc_entrywindow.o \
 		moc_choosewindow.o \
 		moc_profilewindow.o \
@@ -335,7 +343,7 @@ qmake_all: FORCE
 
 dist: 
 	@test -d .tmp/d21.0.0 || mkdir -p .tmp/d21.0.0
-	$(COPY_FILE) --parents $(SOURCES) $(DIST) .tmp/d21.0.0/ && $(COPY_FILE) --parents entrywindow.h choosewindow.h profilewindow.h projectwindow.h projectdesc.h adminwindow.h project_obj.h student_obj.h studentpre_obj.h db_utility.h admin_obj.h createproject.h adminprojwindow.h managestudentcontrol.h manageusercontrol.h project_storagectrl.h student_storagectrl.h user_storagectrl.h db_control.h project_control.h .tmp/d21.0.0/ && $(COPY_FILE) --parents main.cpp choosewindow.cpp profilewindow.cpp projectwindow.cpp projectdesc.cpp adminwindow.cpp project_obj.cpp student_obj.cpp studentpre_obj.cpp entrywindow.cpp db_utility.cpp admin_obj.cpp createproject.cpp adminprojwindow.cpp managestudentcontrol.cpp manageusercontrol.cpp project_storagectrl.cpp student_storagectrl.cpp user_storagectrl.cpp db_control.cpp project_control.cpp .tmp/d21.0.0/ && $(COPY_FILE) --parents entrywindow.ui choosewindow.ui profilewindow.ui projectwindow.ui projectdesc.ui adminwindow.ui createproject.ui adminprojwindow.ui .tmp/d21.0.0/ && (cd `dirname .tmp/d21.0.0` && $(TAR) d21.0.0.tar d21.0.0 && $(COMPRESS) d21.0.0.tar) && $(MOVE) `dirname .tmp/d21.0.0`/d21.0.0.tar.gz . && $(DEL_FILE) -r .tmp/d21.0.0
+	$(COPY_FILE) --parents $(SOURCES) $(DIST) .tmp/d21.0.0/ && $(COPY_FILE) --parents entrywindow.h choosewindow.h profilewindow.h projectwindow.h projectdesc.h adminwindow.h project_obj.h student_obj.h studentpre_obj.h db_utility.h admin_obj.h createproject.h adminprojwindow.h managestudentcontrol.h manageusercontrol.h project_storagectrl.h student_storagectrl.h user_storagectrl.h db_control.h project_control.h ppid.h ppidpart1.h ppidpart2.h ppidpart3.h .tmp/d21.0.0/ && $(COPY_FILE) --parents main.cpp choosewindow.cpp profilewindow.cpp projectwindow.cpp projectdesc.cpp adminwindow.cpp project_obj.cpp student_obj.cpp studentpre_obj.cpp entrywindow.cpp db_utility.cpp admin_obj.cpp createproject.cpp adminprojwindow.cpp managestudentcontrol.cpp manageusercontrol.cpp project_storagectrl.cpp student_storagectrl.cpp user_storagectrl.cpp db_control.cpp project_control.cpp ppid.cpp ppidpart1.cpp ppidpart2.cpp ppidpart3.cpp .tmp/d21.0.0/ && $(COPY_FILE) --parents entrywindow.ui choosewindow.ui profilewindow.ui projectwindow.ui projectdesc.ui adminwindow.ui createproject.ui adminprojwindow.ui .tmp/d21.0.0/ && (cd `dirname .tmp/d21.0.0` && $(TAR) d21.0.0.tar d21.0.0 && $(COMPRESS) d21.0.0.tar) && $(MOVE) `dirname .tmp/d21.0.0`/d21.0.0.tar.gz . && $(DEL_FILE) -r .tmp/d21.0.0
 
 
 clean:compiler_clean 
@@ -625,10 +633,15 @@ moc_entrywindow.cpp: /usr/include/qt5/QtWidgets/QDialog \
 		/usr/include/qt5/QtWidgets/QMessageBox \
 		/usr/include/qt5/QtWidgets/qmessagebox.h \
 		managestudentcontrol.h \
+		db_control.h \
+		student_storagectrl.h \
+		project_storagectrl.h \
+		user_storagectrl.h \
 		projectwindow.h \
 		/usr/include/qt5/QtGui/QStandardItemModel \
 		/usr/include/qt5/QtGui/qstandarditemmodel.h \
 		projectdesc.h \
+		project_control.h \
 		entrywindow.h \
 		adminwindow.h \
 		/usr/include/qt5/QtWidgets/QMainWindow \
@@ -900,10 +913,15 @@ moc_choosewindow.cpp: /usr/include/qt5/QtWidgets/QDialog \
 		/usr/include/qt5/QtWidgets/QMessageBox \
 		/usr/include/qt5/QtWidgets/qmessagebox.h \
 		managestudentcontrol.h \
+		db_control.h \
+		student_storagectrl.h \
+		project_storagectrl.h \
+		user_storagectrl.h \
 		projectwindow.h \
 		/usr/include/qt5/QtGui/QStandardItemModel \
 		/usr/include/qt5/QtGui/qstandarditemmodel.h \
 		projectdesc.h \
+		project_control.h \
 		entrywindow.h \
 		/usr/include/qt5/QtCore/QDebug \
 		/usr/include/qt5/QtCore/QFileInfo \
@@ -1177,6 +1195,10 @@ moc_profilewindow.cpp: /usr/include/qt5/QtWidgets/QDialog \
 		/usr/include/qt5/QtWidgets/QMessageBox \
 		/usr/include/qt5/QtWidgets/qmessagebox.h \
 		managestudentcontrol.h \
+		db_control.h \
+		student_storagectrl.h \
+		project_storagectrl.h \
+		user_storagectrl.h \
 		profilewindow.h
 	/usr/lib/i386-linux-gnu/qt5/bin/moc $(DEFINES) $(INCPATH) -I/usr/include/c++/4.8 -I/usr/include/i386-linux-gnu/c++/4.8 -I/usr/include/c++/4.8/backward -I/usr/lib/gcc/i686-linux-gnu/4.8/include -I/usr/local/include -I/usr/lib/gcc/i686-linux-gnu/4.8/include-fixed -I/usr/include/i386-linux-gnu -I/usr/include profilewindow.h -o moc_profilewindow.cpp
 
@@ -1443,6 +1465,11 @@ moc_projectwindow.cpp: /usr/include/qt5/QtWidgets/QDialog \
 		/usr/include/qt5/QtWidgets/qmessagebox.h \
 		projectdesc.h \
 		managestudentcontrol.h \
+		db_control.h \
+		student_storagectrl.h \
+		project_storagectrl.h \
+		user_storagectrl.h \
+		project_control.h \
 		projectwindow.h
 	/usr/lib/i386-linux-gnu/qt5/bin/moc $(DEFINES) $(INCPATH) -I/usr/include/c++/4.8 -I/usr/include/i386-linux-gnu/c++/4.8 -I/usr/include/c++/4.8/backward -I/usr/lib/gcc/i686-linux-gnu/4.8/include -I/usr/local/include -I/usr/lib/gcc/i686-linux-gnu/4.8/include-fixed -I/usr/include/i386-linux-gnu -I/usr/include projectwindow.h -o moc_projectwindow.cpp
 
@@ -1977,10 +2004,15 @@ moc_adminwindow.cpp: /usr/include/qt5/QtWidgets/QMainWindow \
 		/usr/include/qt5/QtWidgets/QMessageBox \
 		/usr/include/qt5/QtWidgets/qmessagebox.h \
 		managestudentcontrol.h \
+		db_control.h \
+		student_storagectrl.h \
+		project_storagectrl.h \
+		user_storagectrl.h \
 		projectwindow.h \
 		/usr/include/qt5/QtGui/QStandardItemModel \
 		/usr/include/qt5/QtGui/qstandarditemmodel.h \
 		projectdesc.h \
+		project_control.h \
 		adminwindow.h \
 		adminprojwindow.h \
 		createproject.h \
@@ -2256,10 +2288,15 @@ moc_createproject.cpp: /usr/include/qt5/QtWidgets/QDialog \
 		choosewindow.h \
 		profilewindow.h \
 		managestudentcontrol.h \
+		db_control.h \
+		student_storagectrl.h \
+		project_storagectrl.h \
+		user_storagectrl.h \
 		projectwindow.h \
 		/usr/include/qt5/QtGui/QStandardItemModel \
 		/usr/include/qt5/QtGui/qstandarditemmodel.h \
 		projectdesc.h \
+		project_control.h \
 		manageusercontrol.h \
 		adminprojwindow.h \
 		createproject.h \
@@ -2536,8 +2573,13 @@ moc_adminprojwindow.cpp: /usr/include/qt5/QtWidgets/QDialog \
 		choosewindow.h \
 		profilewindow.h \
 		managestudentcontrol.h \
+		db_control.h \
+		student_storagectrl.h \
+		project_storagectrl.h \
+		user_storagectrl.h \
 		projectwindow.h \
 		projectdesc.h \
+		project_control.h \
 		manageusercontrol.h \
 		adminprojwindow.h \
 		createproject.h \
@@ -2848,10 +2890,15 @@ main.o: main.cpp entrywindow.h \
 		/usr/include/qt5/QtWidgets/QMessageBox \
 		/usr/include/qt5/QtWidgets/qmessagebox.h \
 		managestudentcontrol.h \
+		db_control.h \
+		student_storagectrl.h \
+		project_storagectrl.h \
+		user_storagectrl.h \
 		projectwindow.h \
 		/usr/include/qt5/QtGui/QStandardItemModel \
 		/usr/include/qt5/QtGui/qstandarditemmodel.h \
 		projectdesc.h \
+		project_control.h \
 		adminwindow.h \
 		/usr/include/qt5/QtWidgets/QMainWindow \
 		/usr/include/qt5/QtWidgets/qmainwindow.h \
@@ -3127,10 +3174,15 @@ choosewindow.o: choosewindow.cpp choosewindow.h \
 		/usr/include/qt5/QtWidgets/QMessageBox \
 		/usr/include/qt5/QtWidgets/qmessagebox.h \
 		managestudentcontrol.h \
+		db_control.h \
+		student_storagectrl.h \
+		project_storagectrl.h \
+		user_storagectrl.h \
 		projectwindow.h \
 		/usr/include/qt5/QtGui/QStandardItemModel \
 		/usr/include/qt5/QtGui/qstandarditemmodel.h \
 		projectdesc.h \
+		project_control.h \
 		entrywindow.h \
 		/usr/include/qt5/QtCore/QDebug \
 		/usr/include/qt5/QtCore/QFileInfo \
@@ -3404,6 +3456,10 @@ profilewindow.o: profilewindow.cpp profilewindow.h \
 		/usr/include/qt5/QtWidgets/QMessageBox \
 		/usr/include/qt5/QtWidgets/qmessagebox.h \
 		managestudentcontrol.h \
+		db_control.h \
+		student_storagectrl.h \
+		project_storagectrl.h \
+		user_storagectrl.h \
 		ui_profilewindow.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o profilewindow.o profilewindow.cpp
 
@@ -3671,6 +3727,11 @@ projectwindow.o: projectwindow.cpp projectwindow.h \
 		/usr/include/qt5/QtWidgets/qmessagebox.h \
 		projectdesc.h \
 		managestudentcontrol.h \
+		db_control.h \
+		student_storagectrl.h \
+		project_storagectrl.h \
+		user_storagectrl.h \
+		project_control.h \
 		ui_projectwindow.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o projectwindow.o projectwindow.cpp
 
@@ -4207,10 +4268,15 @@ adminwindow.o: adminwindow.cpp adminwindow.h \
 		/usr/include/qt5/QtWidgets/QMessageBox \
 		/usr/include/qt5/QtWidgets/qmessagebox.h \
 		managestudentcontrol.h \
+		db_control.h \
+		student_storagectrl.h \
+		project_storagectrl.h \
+		user_storagectrl.h \
 		projectwindow.h \
 		/usr/include/qt5/QtGui/QStandardItemModel \
 		/usr/include/qt5/QtGui/qstandarditemmodel.h \
 		projectdesc.h \
+		project_control.h \
 		manageusercontrol.h \
 		adminprojwindow.h \
 		createproject.h \
@@ -4491,10 +4557,15 @@ entrywindow.o: entrywindow.cpp entrywindow.h \
 		/usr/include/qt5/QtWidgets/QMessageBox \
 		/usr/include/qt5/QtWidgets/qmessagebox.h \
 		managestudentcontrol.h \
+		db_control.h \
+		student_storagectrl.h \
+		project_storagectrl.h \
+		user_storagectrl.h \
 		projectwindow.h \
 		/usr/include/qt5/QtGui/QStandardItemModel \
 		/usr/include/qt5/QtGui/qstandarditemmodel.h \
 		projectdesc.h \
+		project_control.h \
 		adminwindow.h \
 		/usr/include/qt5/QtWidgets/QMainWindow \
 		/usr/include/qt5/QtWidgets/qmainwindow.h \
@@ -5036,10 +5107,15 @@ createproject.o: createproject.cpp createproject.h \
 		choosewindow.h \
 		profilewindow.h \
 		managestudentcontrol.h \
+		db_control.h \
+		student_storagectrl.h \
+		project_storagectrl.h \
+		user_storagectrl.h \
 		projectwindow.h \
 		/usr/include/qt5/QtGui/QStandardItemModel \
 		/usr/include/qt5/QtGui/qstandarditemmodel.h \
 		projectdesc.h \
+		project_control.h \
 		manageusercontrol.h \
 		adminprojwindow.h \
 		ui_createproject.h
@@ -5316,8 +5392,13 @@ adminprojwindow.o: adminprojwindow.cpp adminprojwindow.h \
 		choosewindow.h \
 		profilewindow.h \
 		managestudentcontrol.h \
+		db_control.h \
+		student_storagectrl.h \
+		project_storagectrl.h \
+		user_storagectrl.h \
 		projectwindow.h \
 		projectdesc.h \
+		project_control.h \
 		manageusercontrol.h \
 		createproject.h \
 		ui_adminprojwindow.h
@@ -5581,7 +5662,11 @@ managestudentcontrol.o: managestudentcontrol.cpp managestudentcontrol.h \
 		admin_obj.h \
 		/usr/include/qt5/QtWidgets/QMessageBox \
 		/usr/include/qt5/QtWidgets/qmessagebox.h \
-		/usr/include/qt5/QtWidgets/qdialog.h
+		/usr/include/qt5/QtWidgets/qdialog.h \
+		db_control.h \
+		student_storagectrl.h \
+		project_storagectrl.h \
+		user_storagectrl.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o managestudentcontrol.o managestudentcontrol.cpp
 
 manageusercontrol.o: manageusercontrol.cpp manageusercontrol.h \
@@ -5842,7 +5927,11 @@ manageusercontrol.o: manageusercontrol.cpp manageusercontrol.h \
 		/usr/include/qt5/QtSql/qtsqlversion.h \
 		/usr/include/qt5/QtWidgets/QMessageBox \
 		/usr/include/qt5/QtWidgets/qmessagebox.h \
-		/usr/include/qt5/QtWidgets/qdialog.h
+		/usr/include/qt5/QtWidgets/qdialog.h \
+		db_control.h \
+		student_storagectrl.h \
+		project_storagectrl.h \
+		user_storagectrl.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o manageusercontrol.o manageusercontrol.cpp
 
 project_storagectrl.o: project_storagectrl.cpp project_storagectrl.h \
@@ -7148,6 +7237,21 @@ project_control.o: project_control.cpp project_control.h \
 		project_storagectrl.h \
 		user_storagectrl.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o project_control.o project_control.cpp
+
+ppid.o: ppid.cpp ppid.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o ppid.o ppid.cpp
+
+ppidpart1.o: ppidpart1.cpp ppidpart1.h \
+		ppid.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o ppidpart1.o ppidpart1.cpp
+
+ppidpart2.o: ppidpart2.cpp ppidpart2.h \
+		ppid.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o ppidpart2.o ppidpart2.cpp
+
+ppidpart3.o: ppidpart3.cpp ppidpart3.h \
+		ppid.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o ppidpart3.o ppidpart3.cpp
 
 moc_entrywindow.o: moc_entrywindow.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_entrywindow.o moc_entrywindow.cpp
