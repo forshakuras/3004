@@ -27,7 +27,11 @@ SOURCES += main.cpp\
     createproject.cpp \
     adminprojwindow.cpp \
     managestudentcontrol.cpp \
-    manageusercontrol.cpp
+    manageusercontrol.cpp \
+    project_storagectrl.cpp \
+    student_storagectrl.cpp \
+    user_storagectrl.cpp \
+    db_control.cpp
 
 
 HEADERS  += \
@@ -45,7 +49,11 @@ HEADERS  += \
     createproject.h \
     adminprojwindow.h \
     managestudentcontrol.h \
-    manageusercontrol.h
+    manageusercontrol.h \
+    project_storagectrl.h \
+    student_storagectrl.h \
+    user_storagectrl.h \
+    db_control.h
 
 FORMS    += \
     entrywindow.ui \
