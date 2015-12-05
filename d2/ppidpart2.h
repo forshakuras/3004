@@ -5,7 +5,7 @@
 class PPIDpart2 : PPID
 {
 public:
-    PPIDpart2();
+    PPIDpart2(): PPID(){};
 
 private:
    /* virtual*/ void runPPID(vector<student_obj*> *);
