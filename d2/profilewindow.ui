@@ -119,12 +119,12 @@
     <rect>
      <x>20</x>
      <y>200</y>
-     <width>67</width>
+     <width>161</width>
      <height>17</height>
     </rect>
    </property>
    <property name="text">
-    <string>PM skills:</string>
+    <string>Object Oriented Dev:</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_6">
@@ -150,7 +150,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>Java:</string>
+    <string>Web Dev:</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_8">
@@ -158,12 +158,12 @@
     <rect>
      <x>20</x>
      <y>290</y>
-     <width>67</width>
+     <width>111</width>
      <height>17</height>
     </rect>
    </property>
    <property name="text">
-    <string>C/Cpp:</string>
+    <string>Flexibility:</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_9">
@@ -171,12 +171,12 @@
     <rect>
      <x>20</x>
      <y>320</y>
-     <width>67</width>
+     <width>121</width>
      <height>17</height>
     </rect>
    </property>
    <property name="text">
-    <string>JS/HTML:</string>
+    <string>Communication:</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_10">
@@ -184,12 +184,12 @@
     <rect>
      <x>20</x>
      <y>350</y>
-     <width>67</width>
+     <width>151</width>
      <height>17</height>
     </rect>
    </property>
    <property name="text">
-    <string>Python:</string>
+    <string>Industry Experience:</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_11">
@@ -202,7 +202,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>Debugging/Testing:</string>
+    <string>Critical Thinking:</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_12">
@@ -228,7 +228,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>Mobile Develop:</string>
+    <string>TeamWork:</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_14">
@@ -241,7 +241,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>Networking:</string>
+    <string>Leadership:</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_15">
@@ -249,12 +249,12 @@
     <rect>
      <x>20</x>
      <y>500</y>
-     <width>81</width>
+     <width>91</width>
      <height>17</height>
     </rect>
    </property>
    <property name="text">
-    <string>UI Design:</string>
+    <string>Multitasking:</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_16">
@@ -267,10 +267,10 @@
     </rect>
    </property>
    <property name="text">
-    <string>Algorithm Design:</string>
+    <string>Agile:</string>
    </property>
   </widget>
-  <widget class="QSpinBox" name="pmSpin">
+  <widget class="QSpinBox" name="ooSpin">
    <property name="geometry">
     <rect>
      <x>210</x>
@@ -302,7 +302,7 @@
     <number>5</number>
    </property>
   </widget>
-  <widget class="QSpinBox" name="javaSpin">
+  <widget class="QSpinBox" name="webSpin">
    <property name="geometry">
     <rect>
      <x>210</x>
@@ -318,7 +318,7 @@
     <number>5</number>
    </property>
   </widget>
-  <widget class="QSpinBox" name="cSpin">
+  <widget class="QSpinBox" name="flexSpin">
    <property name="geometry">
     <rect>
      <x>210</x>
@@ -334,7 +334,7 @@
     <number>5</number>
    </property>
   </widget>
-  <widget class="QSpinBox" name="jsSpin">
+  <widget class="QSpinBox" name="communicationSpin">
    <property name="geometry">
     <rect>
      <x>210</x>
@@ -350,7 +350,7 @@
     <number>5</number>
    </property>
   </widget>
-  <widget class="QSpinBox" name="pythonSpin">
+  <widget class="QSpinBox" name="expSpin">
    <property name="geometry">
     <rect>
      <x>210</x>
@@ -366,7 +366,7 @@
     <number>5</number>
    </property>
   </widget>
-  <widget class="QSpinBox" name="debuggingSpin">
+  <widget class="QSpinBox" name="criticalSpin">
    <property name="geometry">
     <rect>
      <x>210</x>
@@ -398,7 +398,7 @@
     <number>5</number>
    </property>
   </widget>
-  <widget class="QSpinBox" name="mobileSpin">
+  <widget class="QSpinBox" name="teamSpin">
    <property name="geometry">
     <rect>
      <x>210</x>
@@ -414,7 +414,7 @@
     <number>5</number>
    </property>
   </widget>
-  <widget class="QSpinBox" name="networkingSpin">
+  <widget class="QSpinBox" name="leadSpin">
    <property name="geometry">
     <rect>
      <x>210</x>
@@ -430,7 +430,7 @@
     <number>5</number>
    </property>
   </widget>
-  <widget class="QSpinBox" name="uiSpin">
+  <widget class="QSpinBox" name="multiSpin">
    <property name="geometry">
     <rect>
      <x>210</x>
@@ -446,7 +446,7 @@
     <number>5</number>
    </property>
   </widget>
-  <widget class="QSpinBox" name="algSpin">
+  <widget class="QSpinBox" name="agileSpin">
    <property name="geometry">
     <rect>
      <x>210</x>
@@ -501,7 +501,7 @@
     <double>12.000000000000000</double>
    </property>
   </widget>
-  <widget class="QSpinBox" name="pmPrefSpin">
+  <widget class="QSpinBox" name="ooPrefSpin">
    <property name="geometry">
     <rect>
      <x>310</x>
@@ -527,7 +527,7 @@
     <number>5</number>
    </property>
   </widget>
-  <widget class="QSpinBox" name="javaSpinPref">
+  <widget class="QSpinBox" name="webSpinPref">
    <property name="geometry">
     <rect>
      <x>310</x>
@@ -540,7 +540,7 @@
     <number>5</number>
    </property>
   </widget>
-  <widget class="QSpinBox" name="cSpinPref">
+  <widget class="QSpinBox" name="flexSpinPref">
    <property name="geometry">
     <rect>
      <x>310</x>
@@ -553,7 +553,7 @@
     <number>5</number>
    </property>
   </widget>
-  <widget class="QSpinBox" name="jsSpinPref">
+  <widget class="QSpinBox" name="communicationSpinPref">
    <property name="geometry">
     <rect>
      <x>310</x>
@@ -566,7 +566,7 @@
     <number>5</number>
    </property>
   </widget>
-  <widget class="QSpinBox" name="pythonSpinPref">
+  <widget class="QSpinBox" name="expSpinPref">
    <property name="geometry">
     <rect>
      <x>310</x>
@@ -579,7 +579,7 @@
     <number>5</number>
    </property>
   </widget>
-  <widget class="QSpinBox" name="debuggingSpinPref">
+  <widget class="QSpinBox" name="criticalSpinPref">
    <property name="geometry">
     <rect>
      <x>310</x>
@@ -605,7 +605,7 @@
     <number>5</number>
    </property>
   </widget>
-  <widget class="QSpinBox" name="mobileSpinPref">
+  <widget class="QSpinBox" name="teamSpinPref">
    <property name="geometry">
     <rect>
      <x>310</x>
@@ -618,7 +618,7 @@
     <number>5</number>
    </property>
   </widget>
-  <widget class="QSpinBox" name="networkingSpinPref">
+  <widget class="QSpinBox" name="leadSpinPref">
    <property name="geometry">
     <rect>
      <x>310</x>
@@ -631,7 +631,7 @@
     <number>5</number>
    </property>
   </widget>
-  <widget class="QSpinBox" name="uiSpinPref">
+  <widget class="QSpinBox" name="multiSpinPref">
    <property name="geometry">
     <rect>
      <x>310</x>
@@ -644,7 +644,7 @@
     <number>5</number>
    </property>
   </widget>
-  <widget class="QSpinBox" name="algSpinPref">
+  <widget class="QSpinBox" name="agileSpinPref">
    <property name="geometry">
     <rect>
      <x>310</x>
