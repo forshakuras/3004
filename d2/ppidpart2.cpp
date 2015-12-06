@@ -21,6 +21,26 @@ void PPIDpart2::runPPID(project_obj *project, vector<int> *teamsize, vector<int>
 }
 
 
+void PPIDpart2::Loopteam(vector<int> *teamsize, vector<student_obj *> *students, vector<studentpre_obj *> *studentpres,project_obj *project){
+    for (int i=0; i< teamsize->size(); i++){
+        vector<student_obj*> *team = new vector<student_obj*>();
+        buildTeam(teamsize->at(i),team,students,studentpres,project);
+
+        project_control *pc = new project_control();
+        for (int j=0; j < team->size();j++){
+            stringstream ss;
+            ss << i;
+            string teamnum = ss.str();
+            ss << project->getId();
+            string projnum = ss.str();
+            ss << team->at(j)->getStudent_number();
+            string stunum = ss.str();
+            pc->AddstudentlistToTeam(stunum,projnum,teamnum);
+        }
+    }
+}
+
+
 float PPIDpart2::compareSandP(student_obj *stu, project_obj *proj)
 {
     vector<float> *stum = new vector<float>();
@@ -104,11 +124,11 @@ void PPIDpart2::buildTeam(int teamSize, vector<student_obj *> *newTeam, vector<s
     studentpre_obj *fakeDataPre = new studentpre_obj();
 
     for(int i=0; i<students->size(); i++){
-         float temp = compareSandP(students->at(i),project);
-         if(highest <= temp){
-             highest=temp;
-             index = i;
-         }
+        float temp = compareSandP(students->at(i),project);
+        if(highest <= temp){
+            highest=temp;
+            index = i;
+        }
     }
 
 
