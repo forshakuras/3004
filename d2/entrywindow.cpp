@@ -4,7 +4,6 @@
 #include "choosewindow.h"
 #include "adminwindow.h"
 #include <iostream>
-#include "db_utility.h"
 #include <vector>
 #include <QtSql>
 

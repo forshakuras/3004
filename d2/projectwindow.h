@@ -4,7 +4,6 @@
 #include <QDialog>
 #include <vector>
 #include <QStandardItemModel>
-#include "db_utility.h"
 #include "project_obj.h"
 #include "studentpre_obj.h"
 #include "projectdesc.h"

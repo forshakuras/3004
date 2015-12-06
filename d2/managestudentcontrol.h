@@ -3,7 +3,6 @@
 #include "student_obj.h"
 #include "studentpre_obj.h"
 #include "project_obj.h"
-#include "db_utility.h"
 #include "db_control.h"
 
 class ManageStudentControl

@@ -28,20 +28,24 @@ projectDesc::projectDesc(QWidget *parent, project_obj *proj) :
 
     //------------------------set member list-------------------------
     QStandardItemModel *stdModel = new QStandardItemModel(this);
-    DB_Utility *db = new DB_Utility();
+    project_control *pc = new project_control();
+    ManageUserControl *uc = new ManageUserControl();
     vector<int> id;
     student_obj *temp;
+    studentpre_obj *temp1;
 
     ui->memberlist->setModel(stdModel);
-    db->DBSearch_StudentFromProjectList(&id,projob);
+    pc->SearchStudentInProj(&id,projob);
 
     for (int i = 0; i< id.size(); i++){
         temp = new student_obj();
-        db->DBSearch_Student("students",db->intToString(id[i]),temp);
+        temp1 = new studentpre_obj();
+        uc->getStudent(uc->intToString(id[i]),temp,temp1);
         QStandardItem* Item = new QStandardItem(QString::fromStdString(temp->getFirstName() + " " +temp->getLastName()));
         Item->setEditable(false);
         Item->setSelectable(true);
         stdModel->appendRow(Item);
+        free(temp1);
     }
 
 }

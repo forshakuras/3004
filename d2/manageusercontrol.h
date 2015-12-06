@@ -3,7 +3,6 @@
 #include "student_obj.h"
 #include "studentpre_obj.h"
 #include "admin_obj.h"
-#include "db_utility.h"
 #include "db_control.h"
 using namespace std;
 
@@ -14,6 +13,7 @@ public:
     //void addUser();
     void getAdmin(string,admin_obj*);
     void getStudent(string,student_obj*,studentpre_obj*);
+    string intToString(int);
 };
 
 #endif // MANAGEUSERCONTROL_H

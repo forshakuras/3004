@@ -3,9 +3,11 @@
 
 #include <QDialog>
 #include "project_obj.h"
-#include "db_utility.h"
 #include <vector>
 #include <QStandardItemModel>
+#include "project_control.h"
+#include "managestudentcontrol.h"
+#include "manageusercontrol.h"
 
 using namespace std;
 namespace Ui {

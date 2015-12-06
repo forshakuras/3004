@@ -4,9 +4,10 @@
 #include <QDialog>
 #include "project_obj.h"
 #include <QStandardItemModel>
-#include "db_utility.h"
 #include "adminwindow.h"
 #include "ppidwindow.h"
+#include "project_control.h"
+#include "manageusercontrol.h"
 
 class AdminWIndow;
 

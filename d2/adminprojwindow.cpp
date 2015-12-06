@@ -1,7 +1,8 @@
 #include "adminprojwindow.h"
 #include "ui_adminprojwindow.h"
-#include "db_utility.h"
 #include "qmessagebox.h"
+
+
 AdminProjWindow::AdminProjWindow(QWidget *parent,project_obj *project) :
     QDialog(parent),
     ui(new Ui::AdminProjWindow)
@@ -29,20 +30,26 @@ AdminProjWindow::AdminProjWindow(QWidget *parent,project_obj *project) :
 
     //----------------------------set member list------------------
     QStandardItemModel *stdModel = new QStandardItemModel(this);
-    DB_Utility *db = new DB_Utility();
+    //DB_Utility *db = new DB_Utility();
+    project_control *pc = new project_control();
+    ManageUserControl *uc = new ManageUserControl();
     vector<int> id;
     student_obj *temp;
+    studentpre_obj *temp1;
 
     ui->memberlist->setModel(stdModel);
-    db->DBSearch_StudentFromProjectList(&id,projob);
-
+    //db->DBSearch_StudentFromProjectList(&id,projob);
+    pc->SearchStudentInProj(&id,projob);
     for (int i = 0; i< id.size(); i++){
         temp = new student_obj();
-        db->DBSearch_Student("students",db->intToString(id[i]),temp);
+        temp1 = new studentpre_obj();
+        //db->DBSearch_Student("students",db->intToString(id[i]),temp);
+        uc->getStudent(uc->intToString(id[i]),temp,temp1);
         QStandardItem* Item = new QStandardItem(QString::fromStdString(temp->getFirstName() + " " +temp->getLastName()));
         Item->setEditable(false);
         Item->setSelectable(true);
         stdModel->appendRow(Item);
+        free(temp1);
     }
 }
 void AdminProjWindow::on_saveButton_clicked()
@@ -63,9 +70,11 @@ void AdminProjWindow::on_saveButton_clicked()
     projob->setMaxStudents(ui->maxSpin->value());
     projob->setTitle(ui->projName->text().toStdString());
     projob->setDescription(ui->projDesc->text().toStdString());
-    DB_Utility *db;
-    db = new DB_Utility();
-    db->DBModify_Project("projects",projob);
+    //DB_Utility *db;
+    //db = new DB_Utility();
+    //db->DBModify_Project("projects",projob);
+    project_control pc = new project_control();
+    pc.ModifyProject(projob);
     adminWindow= new AdminWIndow(this);
     adminWindow->show();
     hide();
@@ -73,9 +82,11 @@ void AdminProjWindow::on_saveButton_clicked()
 
 void AdminProjWindow::on_deleteButton_clicked()
 {
-    DB_Utility *db;
-    db = new DB_Utility();
-    db->DBRemove_Project("projects",projob);
+    //DB_Utility *db;
+    //db = new DB_Utility();
+    //db->DBRemove_Project("projects",projob);
+    project_control pc = new project_control();
+    pc.DeleteProject(projob);
     adminWindow= new AdminWIndow(this);
     adminWindow->show();
     hide();

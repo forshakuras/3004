@@ -3,12 +3,13 @@
 
 #include <QMainWindow>
 #include "entrywindow.h"
-#include "db_utility.h"
 #include <QStandardItemModel>
 #include "projectdesc.h"
 #include "adminprojwindow.h"
 #include "createproject.h"
 #include "adminprojwindow.h"
+#include "project_control.h"
+
 class CreateProject;
 class AdminProjWindow;
 class Entrywindow;

@@ -4,7 +4,6 @@
 #include <QDialog>
 #include "studentpre_obj.h"
 #include "student_obj.h"
-#include "db_utility.h"
 #include "iostream"
 #include "managestudentcontrol.h"
 

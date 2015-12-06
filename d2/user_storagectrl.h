@@ -20,6 +20,7 @@ private:
 public:
     user_storagectrl();
     void DBSearch_Admin(string, string, admin_obj*);
+    void DBSearch_Student(string,string,student_obj*);
     string floatToString(float);
     string intToString(int);
     void DBClose();

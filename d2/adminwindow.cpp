@@ -8,9 +8,10 @@ AdminWIndow::AdminWIndow(QWidget *parent) :
     ui(new Ui::AdminWIndow)
 {
     ui->setupUi(this);
-    DB_Utility db;
-
-    db.DBSearchAll_Projects("projects",&proj);
+    //DB_Utility db;
+    project_control pc;
+    //db.DBSearchAll_Projects("projects",&proj);
+    pc.SearchAllProject(&proj);
     QStandardItemModel *stdModel = new QStandardItemModel(this);
     ui->listView->setModel(stdModel);
     for(int i=0; i<proj.size();i++){
