@@ -20,6 +20,7 @@ public:
     void ModifyProject(project_obj*);
     void SearchAllProject(vector<project_obj*>*);
     void SearchStudentInProj(vector<int>*,project_obj*);
+    void SearchProjectofstudent(string,vector<project_obj*> *);
 };
 
 #endif // PROJECT_CONTROL_H

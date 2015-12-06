@@ -210,17 +210,19 @@ void student_storagectrl::DBRemove_Student(string tableName, student_obj *studen
 
 void student_storagectrl::DBSearch_StudentProject(string student_number, vector<int> *projectIds)
 {
-    string strSql = "select * from studentList where student_number = "+student_number;
+    string strSql = "select projectId from studentList where student_number = "+student_number;
     if(db.open()){
         QSqlQuery data;
-        int i=1;
+
         if(data.exec(QString::fromStdString(strSql))){
             while(data.next()){
-                int num = data.value(1).toInt();
+                int num = data.value(0).toInt();
                 projectIds->push_back(num);
-                i++;
+
+
             }
         }
+
     }else{
         cout << db.lastError().text().toStdString() << endl;
     }

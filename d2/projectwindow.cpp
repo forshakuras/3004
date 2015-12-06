@@ -12,8 +12,19 @@ projectWindow::projectWindow(QWidget *parent, student_obj *student, studentpre_o
     user = student;
     userpref = preference;
 
+    string Result;//string which will contain the result
+
+    stringstream convert; // stringstream used for the conversion
+
+    convert << user->getStudent_number();//add the value of Number to the characters in the stream
+
+    Result = convert.str();//set Result to the content of the stream
+
+
     project_control pc;
     pc.SearchAllProject(&data);
+    pc.SearchProjectofstudent(Result,&registeredProj);
+
     QStandardItemModel *stdModel = new QStandardItemModel(this);
     QStandardItemModel *stdModel2 = new QStandardItemModel(this);
     ui->listView->setModel(stdModel);
@@ -25,8 +36,8 @@ projectWindow::projectWindow(QWidget *parent, student_obj *student, studentpre_o
         stdModel->appendRow(Item);
     }
 
-    for(int i=0; i<data.size();i++){
-        QStandardItem* Item = new QStandardItem(QString::fromStdString(data[i]->getTitle()));
+    for(int j=0; j<registeredProj.size();j++){
+        QStandardItem* Item = new QStandardItem(QString::fromStdString(registeredProj[j]->getTitle()));
         Item->setEditable(false);
         Item->setSelectable(true);
         stdModel2->appendRow(Item);
@@ -72,4 +83,20 @@ void projectWindow::on_joinProj_clicked()
        QMessageBox::information(this, tr("Warning"), tr("You do not meet the minimum requirement of this project !"));
 
    }
+}
+
+void projectWindow::on_leavebutton_clicked()
+{
+    int row = ui->registerproject->currentIndex().row();
+    ManageStudentControl *sc = new ManageStudentControl(user);
+
+    bool rc = sc->LeaveProjectOption(registeredProj[row]);
+
+    if (rc){
+        QMessageBox::information(this, tr("Congradulation"), tr("Successfully leave the project !"));
+    }
+    else{
+        QMessageBox::information(this, tr("Warning"), tr("Failed to remove you from project!"));
+    }
+
 }
