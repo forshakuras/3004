@@ -1,6 +1,10 @@
 #ifndef PPIDPART2_H
 #define PPIDPART2_H
 #include "ppid.h"
+#include <cmath>
+
+using namespace std;
+
 class PPIDpart2 : PPID
 {
 public:
@@ -12,7 +16,7 @@ private:
     int bestScore=0;
    /* virtual*/ void runPPID(project_obj*, vector<int>*, vector<int> *);
     float compareSandP(student_obj*, project_obj*);
-    float compareSandM(student_obj*, int);
+    float compareSandM(student_obj*, studentpre_obj*, student_obj*, studentpre_obj*);
     void  buildTeam(int,vector<student_obj*>*,vector<student_obj*>*,vector<studentpre_obj*>*,project_obj*);
     void Loopteam(vector<int> *, vector<student_obj *> *, vector<studentpre_obj *> *,project_obj *);
 };
