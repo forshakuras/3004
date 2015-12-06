@@ -117,12 +117,12 @@ void project_storagectrl::DBModify_Project(string tableName, project_obj * newPr
 
 void project_storagectrl::DBAdd_Project(string tableName, project_obj* newProject)
 {
-    string strSql = "insert into "+ tableName + "(title,description,idealNumberStudents, maxStudents,currentStudents,gpa,objectDev,database,webDev,flexibility,communication,workExperience,criticalThinking,documentation,Teamwork,multitasking,leadership,agileKnowledge"
+    string strSql = "insert into "+ tableName + "(title,maxStudents,currentStudents,idealNumberStudents,description,gpa,objectDev,database,webDev,flexibility,communication,workExperience,criticalThinking,documentation,teamwork,multitasking,leadership,agileKnowledge)"
             " values " "( '" + newProject->getTitle()+"',"
-            " '"+ newProject->getDescription() + "',"
-            " '"+ intToString(newProject->getIdealNumberStudents())+ "',"
             " '"+ intToString(newProject->getMaxStudents())+ "',"
             " '"+ intToString(newProject->getCurrentStudent())+ "',"
+            " '"+ intToString(newProject->getIdealNumberStudents())+ "',"
+            " '"+ newProject->getDescription() + "',"
             " '"+ floatToString(newProject->getGpa())+ "',"
             " '"+ intToString(newProject->getObjectDev())+ "',"
             " '"+ intToString(newProject->getDatabase())+ "',"
@@ -140,6 +140,7 @@ void project_storagectrl::DBAdd_Project(string tableName, project_obj* newProjec
      if(db.open()){
             QSqlQuery data;
             data.exec(QString::fromStdString(strSql));
+            cout << strSql << endl;
      }else{
             cout << db.lastError().text().toStdString() << endl;
      }

@@ -37,8 +37,8 @@ void CreateProject::on_saveButton_clicked()
     //DB_Utility db;
     //db.DBAdd_Project("projects",newProject);
 
-    project_control pc;
-    pc.CreateProject(newProject);
+    project_control *pc=new project_control();
+    pc->CreateProject(newProject);
     admin= new AdminWIndow(this);
     admin->show();
     hide();
