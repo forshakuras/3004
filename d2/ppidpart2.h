@@ -18,6 +18,7 @@ private:
     float compareSandP(student_obj*, project_obj*);
     float compareSandM(student_obj*, studentpre_obj*, student_obj*, studentpre_obj*);
     void  buildTeam(int,vector<student_obj*>*,vector<student_obj*>*,vector<studentpre_obj*>*,project_obj*);
+    void  calculateAvg(vector<student_obj*>*,student_obj*);
 };
 
 #endif // PPIDPART2_H
