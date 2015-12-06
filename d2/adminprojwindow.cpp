@@ -109,9 +109,13 @@ void AdminProjWindow::on_pushButton_clicked()
     vector<int> *teamsize = new vector<int>();
     vector<int> *studentIDlist = new vector<int>();
     PPID *firstpart = new PPIDpart1();
+    //    if(firstpart->precheckPPID(projob)){
     firstpart->runPPID(projob,teamsize,studentIDlist);
     PPID *secondpart = new PPIDpart2();
     secondpart->runPPID(projob,teamsize,studentIDlist);
+    //    }else{
+    //        QMessageBox::information(this, tr("Warning"), tr("This project already have PPID teams !"));
+    //    }
 
     ppid = new PPIDwindow();
     ppid->show();

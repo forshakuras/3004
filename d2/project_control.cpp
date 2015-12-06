@@ -80,3 +80,11 @@ void project_control::AddstudentlistToTeam(string studentid, string projectid, s
     db_control *dbc = new db_control();
     dbc->projectstorage("add", studentid,projectid,teamid);
 }
+
+
+string project_control::intToString(int x)
+{
+    stringstream ss;
+    ss << x;
+    return ss.str();
+}
