@@ -12,19 +12,19 @@ projectDesc::projectDesc(QWidget *parent, project_obj *proj) :
     ui->projDesc->setReadOnly(true);
     ui->projDesc->setText(QString::fromStdString(projob->getDescription()));
     ui->member->setText(QString::number(projob->getCurrentStudent()) + QString::fromStdString("/") + QString::number(projob->getMaxStudents()));
-    ui->algLabel->setText(QString::number(projob->getAlgor()));
-    ui->cLabel->setText(QString::number(projob->getCCpp()));
+    ui->agileLabel->setText(QString::number(projob->getAgileKnowledge()));
+    ui->ooLabel->setText(QString::number(projob->getObjectDev()));
     ui->gpaLabel->setText(QString::number(projob->getGpa()));
-    ui->pmLabel->setText(QString::number(projob->getPmSkill()));
+    ui->webLabel->setText(QString::number(projob->getWebDev()));
     ui->dbLabel->setText(QString::number(projob->getDatabase()));
-    ui->javaLabel->setText(QString::number(projob->getJava()));
-    ui->jsLabel->setText(QString::number(projob->getJsHtml()));
-    ui->mobileLabel->setText(QString::number(projob->getMobile()));
-    ui->pythonLabel->setText(QString::number(projob->getPython()));
-    ui->debugLabel->setText(QString::number(projob->getDebug()));
-    ui->docLabel->setText(QString::number(projob->getDocument()));
-    ui->networkLabel->setText(QString::number(projob->getNetwork()));
-    ui->uiLabel->setText(QString::number(projob->getUi()));
+    ui->teamLabel->setText(QString::number(projob->getTeamWork()));
+    ui->communicationLabel->setText(QString::number(projob->getCommunication()));
+    ui->expLabel->setText(QString::number(projob->getWorkExperience()));
+    ui->critLabel->setText(QString::number(projob->getCriticalThinking()));
+    ui->multiLabel->setText(QString::number(projob->getMultitasking()));
+    ui->docLabel->setText(QString::number(projob->getDocumentation()));
+    ui->leadLabel->setText(QString::number(projob->getLeadership()));
+    ui->flexLabel->setText(QString::number(projob->getFlexibility()));
 
     //------------------------set member list-------------------------
     QStandardItemModel *stdModel = new QStandardItemModel(this);

@@ -501,7 +501,7 @@
     <double>12.000000000000000</double>
    </property>
   </widget>
-  <widget class="QSpinBox" name="ooPrefSpin">
+  <widget class="QSpinBox" name="ooSpinPref">
    <property name="geometry">
     <rect>
      <x>310</x>
