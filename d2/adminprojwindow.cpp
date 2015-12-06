@@ -113,6 +113,8 @@ void AdminProjWindow::on_pushButton_clicked()
     PPID *secondpart = new PPIDpart2();
     secondpart->runPPID(projob,teamsize,studentIDlist);
 
+    project_control *pc = new project_control();
+    pc->RemoveTeamFromProject(projob);
     ppid = new PPIDwindow();
     ppid->show();
 }

@@ -80,3 +80,8 @@ void project_control::AddstudentlistToTeam(string studentid, string projectid, s
     db_control *dbc = new db_control();
     dbc->projectstorage("add", studentid,projectid,teamid);
 }
+
+void project_control::RemoveTeamFromProject(project_obj *project){
+    db_control *dbc = new db_control();
+    dbc->projectstorage("removeteam",project);
+}

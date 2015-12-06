@@ -28,6 +28,7 @@ public:
     void DBSearch_StudentFromProjectList(vector<int>*,project_obj*);
     bool DBRemove_StudentFromProject(student_obj*, project_obj*);
     void DBAdd_StudentToTeam(string,string,string);
+    void DBRemove_Team(project_obj*);
     string floatToString(float);
     string intToString(int);
     void DBClose();

@@ -245,6 +245,16 @@ void project_storagectrl::DBRemove_Project(string tableName, project_obj *projec
     }
 }
 
+void project_storagectrl::DBRemove_Team(project_obj *project){
+    string strSql = "delete from studentteamlist where projectId = "+intToString(project->getId());
+    cout << strSql << endl;
+    if(db.open()){
+        QSqlQuery data;
+        data.exec(QString::fromStdString(strSql));
+    }else{
+        cout << db.lastError().text().toStdString() << endl;
+    }
+}
 
 
 string project_storagectrl::floatToString(float x)
