@@ -75,3 +75,8 @@ void project_control::SearchProjectofstudent(string studentId,vector<project_obj
     }
 
 }
+
+void project_control::AddstudentlistToTeam(string studentid, string projectid, string teamid){
+    db_control *dbc = new db_control();
+    dbc->projectstorage("add", studentid,projectid,teamid);
+}

@@ -14,6 +14,7 @@ private:
     float compareSandP(student_obj*, project_obj*);
     float compareSandM(student_obj*, int);
     void  buildTeam(int,vector<student_obj*>*,vector<student_obj*>*,vector<studentpre_obj*>*,project_obj*);
+    void Loopteam(vector<int> *, vector<student_obj *> *, vector<studentpre_obj *> *,project_obj *);
 };
 
 #endif // PPIDPART2_H
