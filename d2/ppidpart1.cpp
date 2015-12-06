@@ -3,6 +3,8 @@
 void PPIDpart1::runPPID(project_obj *project, vector<int> *teamsize, vector<int>  *studentIDlist)
 {
    project_control pc;
+   pc.RemoveTeamFromProject(project);
+
    pc.SearchStudentInProj(studentIDlist,project);
 
    int remainder = (studentIDlist->size())%(project->getIdealNumberStudents());
@@ -20,3 +22,26 @@ void PPIDpart1::runPPID(project_obj *project, vector<int> *teamsize, vector<int>
        teamsize->push_back(size+1);
    }
 }
+
+//bool PPIDpart1::precheckPPID(project_obj *project)
+//{
+//    project_control* pc = new project_control();
+//    vector<int>* testSL = new vector<int>();
+//    vector<int>* testTI = new vector<int>();
+//    vector<int>* testPL = new vector<int>();
+//    bool rc=false;
+
+//    pc->SearchProjectTeams(pc->intToString(project->getId()),testSL,testTI,testPL);
+
+//    if(testTI->size() == 0){
+//        rc=true;
+//    }else{
+//        if(project->getCurrentStudent() != testSL->size()){
+//            //call remove
+//            rc=true;
+//        }else{
+//            rc=false;
+//        }
+//    }
+//    return rc;
+//}

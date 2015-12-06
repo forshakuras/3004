@@ -92,6 +92,10 @@ void db_control::projectstorage(string tag, project_obj *project)
         pc->DBModify_Project("projects",project);
     }
 
+    if(tag == "removeteam"){
+        pc->DBRemove_Team(project);
+    }
+
     pc->DBClose();
 
 }
