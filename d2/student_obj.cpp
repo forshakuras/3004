@@ -15,38 +15,38 @@ student_obj::student_obj()
     firstName="";
     lastName="";
     gpa=0;
-    pmSkill=0;
+    objectDev=0;
     database=0;
-    java=0;
-    cCpp=0;
-    jsHtml=0;
-    python=0;
-    debuggingTesting=0;
+    webDev=0;
+    flexibility=0;
+    communication=0;
+    workExperience=0;
+    criticalThinking=0;
     documentation=0;
-    mobile=0;
-    networking=0;
-    ui=0;
-    algorithm=0;
+    teamwork=0;
+    multitasking=0;
+    leadership=0;
+    agileKnowledge=0;
 }
 
-student_obj::student_obj(int student_number, string firstName, string lastName, float gpa, int pmSkill, int database, int java, int cCpp, int jsHtml, int python, int debuggingTesting, int documentation, int mobile, int networking, int ui, int algorithm)
+student_obj::student_obj(int student_number, string firstName, string lastName, float gpa, int objectDev, int database,int webDev,int flexibility,int communication,int workExperience,int criticalThinking,int     documentation,int     teamwork,int     multitasking,int     leadership, int     agileKnowledge)
 {
     this->student_number=student_number;
     this->firstName=firstName;
     this->lastName=lastName;
     this->gpa=gpa;
-    this->pmSkill=pmSkill;
+    this->objectDev=objectDev;
     this->database=database;
-    this->java=java;
-    this->cCpp=cCpp;
-    this->jsHtml=jsHtml;
-    this->python=python;
-    this->debuggingTesting=debuggingTesting;
+    this->webDev=webDev;
+    this->flexibility=flexibility;
+    this->communication=communication;
+    this->workExperience=workExperience;
+    this->criticalThinking=criticalThinking;
     this->documentation=documentation;
-    this->mobile=mobile;
-    this->networking=networking;
-    this->ui=ui;
-    this->algorithm=algorithm;
+    this->teamwork=teamwork;
+    this->multitasking=multitasking;
+    this->leadership=leadership;
+    this->agileKnowledge=agileKnowledge;
 }
 
 void    student_obj::setStudent_number(int i){
@@ -80,94 +80,6 @@ void    student_obj::setGpa(float i){
 float   student_obj::getGpa(){
     return gpa;
 }
-
-//void    student_obj::setPmSkill(int i){
-//    pmSkill=i;
-//}
-
-//int     student_obj::getPmSkill(){
-//    return pmSkill;
-//}
-
-//void    student_obj::setJava(int i){
-//    java=i;
-//}
-
-//int     student_obj::getJava(){
-//    return java;
-//}
-
-//void    student_obj::setCCpp(int i){
-//    cCpp=i;
-//}
-
-//int     student_obj::getCCpp(){
-//    return cCpp;
-//}
-
-//void    student_obj::setJsHtml(int i){
-//    jsHtml=i;
-//}
-
-//int     student_obj::getJsHtml(){
-//    return jsHtml;
-//}
-
-//void    student_obj::setPython(int i){
-//    python=i;
-//}
-
-//int     student_obj::getPython(){
-//    return python;
-//}
-
-//void    student_obj::setDebug(int i){
-//    debuggingTesting=i;
-//}
-
-//int     student_obj::getDebug(){
-//    return debuggingTesting;
-//}
-
-//void    student_obj::setDocument(int i){
-//    documentation=i;
-//}
-
-//int     student_obj::getDocument(){
-//    return documentation;
-//}
-
-//void    student_obj::setMobile(int i){
-//    mobile=i;
-//}
-
-//int     student_obj::getMobile(){
-//    return mobile;
-//}
-
-//void    student_obj::setNetwork(int i){
-//    networking=i;
-//}
-
-//int     student_obj::getNetwork(){
-//    return networking;
-//}
-
-//void    student_obj::setUi(int i){
-//    ui=i;
-//}
-
-//int     student_obj::getUi(){
-//    return ui;
-//}
-
-//void    student_obj::setAlgor(int i){
-//    algorithm=i;
-//}
-
-//int     student_obj::getAlgor(){
-//    return algorithm;
-//}
 
 void    student_obj::setDatabase(int i){
     database=i;

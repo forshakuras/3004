@@ -23,18 +23,18 @@ void student_storagectrl::DBSearch_Student(string tableName,string student_numbe
                 returnObj->setFirstName(data.value(0).toString().toStdString());
                 returnObj->setLastName(data.value(1).toString().toStdString());
                 returnObj->setGpa(data.value(2).toFloat());
-                returnObj->setPmSkill(data.value(3).toInt());
+                returnObj->setObjectDev(data.value(3).toInt());
                 returnObj->setDatabase(data.value(4).toInt());
-                returnObj->setJava(data.value(5).toInt());
-                returnObj->setCCpp(data.value(6).toInt());
-                returnObj->setJsHtml(data.value(7).toInt());
-                returnObj->setPython(data.value(8).toInt());
-                returnObj->setDebug(data.value(9).toInt());
-                returnObj->setDocument(data.value(10).toInt());
-                returnObj->setMobile(data.value(11).toInt());
-                returnObj->setNetwork(data.value(12).toInt());
-                returnObj->setUi(data.value(13).toInt());
-                returnObj->setAlgor(data.value(14).toInt());
+                returnObj->setWebDev(data.value(5).toInt());
+                returnObj->setFlexibility(data.value(6).toInt());
+                returnObj->setCommunication(data.value(7).toInt());
+                returnObj->setWorkExperience(data.value(8).toInt());
+                returnObj->setCriticalThinking(data.value(9).toInt());
+                returnObj->setDocumentation(data.value(10).toInt());
+                returnObj->setTeamWork(data.value(11).toInt());
+                returnObj->setMultitasking(data.value(12).toInt());
+                returnObj->setLeadership(data.value(13).toInt());
+                returnObj->setAgileKnowledge(data.value(14).toInt());
                 returnObj->setStudent_number(data.value(15).toInt());
             }
         }else{
@@ -54,18 +54,18 @@ void student_storagectrl::DBSearch_Studentpref(string tableName,string student_n
                 returnObj->setFirstName(data.value(0).toString().toStdString());
                 returnObj->setLastName(data.value(1).toString().toStdString());
                 returnObj->setGpa(data.value(2).toFloat());
-                returnObj->setPmSkill(data.value(3).toInt());
+                returnObj->setObjectDev(data.value(3).toInt());
                 returnObj->setDatabase(data.value(4).toInt());
-                returnObj->setJava(data.value(5).toInt());
-                returnObj->setCCpp(data.value(6).toInt());
-                returnObj->setJsHtml(data.value(7).toInt());
-                returnObj->setPython(data.value(8).toInt());
-                returnObj->setDebug(data.value(9).toInt());
-                returnObj->setDocument(data.value(10).toInt());
-                returnObj->setMobile(data.value(11).toInt());
-                returnObj->setNetwork(data.value(12).toInt());
-                returnObj->setUi(data.value(13).toInt());
-                returnObj->setAlgor(data.value(14).toInt());
+                returnObj->setWebDev(data.value(5).toInt());
+                returnObj->setFlexibility(data.value(6).toInt());
+                returnObj->setCommunication(data.value(7).toInt());
+                returnObj->setWorkExperience(data.value(8).toInt());
+                returnObj->setCriticalThinking(data.value(9).toInt());
+                returnObj->setDocumentation(data.value(10).toInt());
+                returnObj->setTeamWork(data.value(11).toInt());
+                returnObj->setMultitasking(data.value(12).toInt());
+                returnObj->setLeadership(data.value(13).toInt());
+                returnObj->setAgileKnowledge(data.value(14).toInt());
                 returnObj->setStudent_number(data.value(15).toInt());
             }
         }else{
@@ -86,18 +86,18 @@ void student_storagectrl::DBSearchAll_Students(string tableName, vector<student_
                 newStudent->setFirstName(data.value(0).toString().toStdString());
                 newStudent->setLastName(data.value(1).toString().toStdString());
                 newStudent->setGpa(data.value(2).toFloat());
-                newStudent->setPmSkill(data.value(3).toInt());
-                newStudent->setDatabase(data.value(4).toInt());
-                newStudent->setJava(data.value(5).toInt());
-                newStudent->setCCpp(data.value(6).toInt());
-                newStudent->setJsHtml(data.value(7).toInt());
-                newStudent->setPython(data.value(8).toInt());
-                newStudent->setDebug(data.value(9).toInt());
-                newStudent->setDocument(data.value(10).toInt());
-                newStudent->setMobile(data.value(11).toInt());
-                newStudent->setNetwork(data.value(12).toInt());
-                newStudent->setUi(data.value(13).toInt());
-                newStudent->setAlgor(data.value(14).toInt());
+                returnObj->setObjectDev(data.value(3).toInt());
+                returnObj->setDatabase(data.value(4).toInt());
+                returnObj->setWebDev(data.value(5).toInt());
+                returnObj->setFlexibility(data.value(6).toInt());
+                returnObj->setCommunication(data.value(7).toInt());
+                returnObj->setWorkExperience(data.value(8).toInt());
+                returnObj->setCriticalThinking(data.value(9).toInt());
+                returnObj->setDocumentation(data.value(10).toInt());
+                returnObj->setTeamWork(data.value(11).toInt());
+                returnObj->setMultitasking(data.value(12).toInt());
+                returnObj->setLeadership(data.value(13).toInt());
+                returnObj->setAgileKnowledge(data.value(14).toInt());
                 newStudent->setStudent_number(data.value(15).toInt());
                 studentList->push_back(newStudent);
             }
@@ -115,18 +115,18 @@ void student_storagectrl::DBModify_Student(string tableName, student_obj* newStu
             " firstName='"+newStudent->getFirstName()+ "',"
             " lastName='"+newStudent->getLastName()+ "',"
             " gpa='"+floatToString(newStudent->getGpa())+ "',"
-            " pmSkill='"+intToString(newStudent->getPmSkill())+ "',"
+            " objectDev='"+intToString(newStudent->getObjectDev())+ "',"
             " database='"+intToString(newStudent->getDatabase())+ "',"
-            " java='"+intToString(newStudent->getJava())+ "',"
-            " cCpp='"+intToString(newStudent->getCCpp())+ "',"
-            " jsHtml='"+intToString(newStudent->getJsHtml())+ "',"
-            " python='"+intToString(newStudent->getPython())+ "',"
-            " debuggingTesting='"+intToString(newStudent->getDebug())+ "',"
-            " documentation='"+intToString(newStudent->getDocument())+ "',"
-            " mobile='"+intToString(newStudent->getMobile())+ "',"
-            " networking='"+intToString(newStudent->getNetwork())+ "',"
-            " ui='"+intToString(newStudent->getUi())+ "',"
-            " algorithm='"+intToString(newStudent->getAlgor())+"'"
+            " webDev='"+intToString(newStudent->getWebDev())+ "',"
+            " flexibility='"+intToString(newStudent->getFlexibility())+ "',"
+            " communication='"+intToString(newStudent->getCommunication())+ "',"
+            " workExperience='"+intToString(newStudent->getWorkExperience())+ "',"
+            " criticalThinking='"+intToString(newStudent->getCriticalThinking())+ "',"
+            " documentation='"+intToString(newStudent->getDocumentation())+ "',"
+            " teamwork='"+intToString(newStudent->getTeamWork())+ "',"
+            " multitasking='"+intToString(newStudent->getMultitasking())+ "',"
+            " leadership='"+intToString(newStudent->getLeadership())+ "',"
+            " agileKnowledge='"+intToString(newStudent->getAgileKnowledge())+ "'"
             " where student_number='"+intToString(newStudent->getStudent_number())+"'"
             ;
     if(db.open()){
@@ -144,18 +144,18 @@ void student_storagectrl::DBAdd_Student(string tableName, student_obj *newStuden
             "( '"+newStudent->getFirstName() +"',"
             " '"+ newStudent->getLastName()+"',"
             " '"+ floatToString(newStudent->getGpa())+"',"
-            " '"+ intToString(newStudent->getPmSkill())+ "',"
+            " '"+ intToString(newStudent->getObjectDev())+ "',"
             " '"+ intToString(newStudent->getDatabase())+ "',"
-            " '"+ intToString(newStudent->getJava())+ "',"
-            " '"+ intToString(newStudent->getCCpp())+ "',"
-            " '"+ intToString(newStudent->getJsHtml())+ "',"
-            " '"+ intToString(newStudent->getPython())+ "',"
-            " '"+ intToString(newStudent->getDebug())+ "',"
-            " '"+ intToString(newStudent->getDocument())+ "',"
-            " '"+ intToString(newStudent->getMobile())+ "',"
-            " '"+ intToString(newStudent->getNetwork())+ "',"
-            " '"+ intToString(newStudent->getUi())+ "',"
-            " '"+ intToString(newStudent->getAlgor())+ "',"
+            " '"+ intToString(newStudent->getWebDev())+ "',"
+            " '"+ intToString(newStudent->getFlexibility())+ "',"
+            " '"+ intToString(newStudent->getCommunication())+ "',"
+            " '"+ intToString(newStudent->getWorkExperience())+ "',"
+            " '"+ intToString(newStudent->getCriticalThinking())+ "',"
+            " '"+ intToString(newStudent->getDocumentation())+ "',"
+            " '"+ intToString(newStudent->getTeamWork())+ "',"
+            " '"+ intToString(newStudent->getMultitasking())+ "',"
+            " '"+ intToString(newStudent->getLeadership())+ "',"
+            " '"+ intToString(newStudent->getAgileKnowledge())+ "',"
             " '"+ intToString(newStudent->getStudent_number())+ "'"
             ")";
     if(db.open()){
@@ -174,18 +174,18 @@ void student_storagectrl::DBModify_Studentpref(string tableName,studentpre_obj* 
             " firstName='"+newStudent->getFirstName()+ "',"
             " lastName='"+newStudent->getLastName()+ "',"
             " gpa='"+floatToString(newStudent->getGpa())+ "',"
-            " pmSkill='"+intToString(newStudent->getPmSkill())+ "',"
+            " objectDev='"+intToString(newStudent->getObjectDev())+ "',"
             " database='"+intToString(newStudent->getDatabase())+ "',"
-            " java='"+intToString(newStudent->getJava())+ "',"
-            " cCpp='"+intToString(newStudent->getCCpp())+ "',"
-            " jsHtml='"+intToString(newStudent->getJsHtml())+ "',"
-            " python='"+intToString(newStudent->getPython())+ "',"
-            " debuggingTesting='"+intToString(newStudent->getDebug())+ "',"
-            " documentation='"+intToString(newStudent->getDocument())+ "',"
-            " mobile='"+intToString(newStudent->getMobile())+ "',"
-            " networking='"+intToString(newStudent->getNetwork())+ "',"
-            " ui='"+intToString(newStudent->getUi())+ "',"
-            " algorithm='"+intToString(newStudent->getAlgor())+"'"
+            " webDev='"+intToString(newStudent->getWebDev())+ "',"
+            " flexibility='"+intToString(newStudent->getFlexibility())+ "',"
+            " communication='"+intToString(newStudent->getCommunication())+ "',"
+            " workExperience='"+intToString(newStudent->getWorkExperience())+ "',"
+            " criticalThinking='"+intToString(newStudent->getCriticalThinking())+ "',"
+            " documentation='"+intToString(newStudent->getDocumentation())+ "',"
+            " teamwork='"+intToString(newStudent->getTeamWork())+ "',"
+            " multitasking='"+intToString(newStudent->getMultitasking())+ "',"
+            " leadership='"+intToString(newStudent->getLeadership())+ "',"
+            " agileKnowledge='"+intToString(newStudent->getAgileKnowledge())+ "'"
             " where student_number='"+intToString(newStudent->getStudent_number())+"'"
             ;
     if(db.open()){

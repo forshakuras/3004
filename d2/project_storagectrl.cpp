@@ -28,18 +28,18 @@ void project_storagectrl::DBSearchAll_Projects(string tableName, vector<project_
                 newProject->setIdealNumberStudents(data.value(4).toInt());
                 newProject->setDescription(data.value(5).toString().toStdString());
                 newProject->setGpa(data.value(6).toFloat());
-                newProject->setPmSkill(data.value(7).toInt());
+                newProject->setObjectDev(data.value(7).toInt());
                 newProject->setDatabase(data.value(8).toInt());
-                newProject->setJava(data.value(9).toInt());
-                newProject->setCCpp(data.value(10).toInt());
-                newProject->setJsHtml(data.value(11).toInt());
-                newProject->setPython(data.value(12).toInt());
-                newProject->setDebug(data.value(13).toInt());
-                newProject->setDocument(data.value(14).toInt());
-                newProject->setMobile(data.value(15).toInt());
-                newProject->setNetwork(data.value(16).toInt());
-                newProject->setUi(data.value(17).toInt());
-                newProject->setAlgor(data.value(18).toInt());
+                newProject->setWebDev(data.value(9).toInt());
+                newProject->setFlexibility(data.value(10).toInt());
+                newProject->setCommunication(data.value(11).toInt());
+                newProject->setWorkExperience(data.value(12).toInt());
+                newProject->setCriticalThinking(data.value(13).toInt());
+                newProject->setDocumentation(data.value(14).toInt());
+                newProject->setTeamWork(data.value(15).toInt());
+                newProject->setMultitasking(data.value(16).toInt());
+                newProject->setLeadership(data.value(17).toInt());
+                newProject->setAgileKnowledge(data.value(18).toInt());
                 projectList->push_back(newProject);
             }
         }else{
@@ -63,18 +63,18 @@ void project_storagectrl::DBSearch_Project(string tableName, string title, proje
                  newProject->setIdealNumberStudents(data.value(4).toInt());
                  newProject->setDescription(data.value(5).toString().toStdString());
                  newProject->setGpa(data.value(6).toFloat());
-                 newProject->setPmSkill(data.value(7).toInt());
+                 newProject->setObjectDev(data.value(7).toInt());
                  newProject->setDatabase(data.value(8).toInt());
-                 newProject->setJava(data.value(9).toInt());
-                 newProject->setCCpp(data.value(10).toInt());
-                 newProject->setJsHtml(data.value(11).toInt());
-                 newProject->setPython(data.value(12).toInt());
-                 newProject->setDebug(data.value(13).toInt());
-                 newProject->setDocument(data.value(14).toInt());
-                 newProject->setMobile(data.value(15).toInt());
-                 newProject->setNetwork(data.value(16).toInt());
-                 newProject->setUi(data.value(17).toInt());
-                 newProject->setAlgor(data.value(18).toInt());
+                 newProject->setWebDev(data.value(9).toInt());
+                 newProject->setFlexibility(data.value(10).toInt());
+                 newProject->setCommunication(data.value(11).toInt());
+                 newProject->setWorkExperience(data.value(12).toInt());
+                 newProject->setCriticalThinking(data.value(13).toInt());
+                 newProject->setDocumentation(data.value(14).toInt());
+                 newProject->setTeamWork(data.value(15).toInt());
+                 newProject->setMultitasking(data.value(16).toInt());
+                 newProject->setLeadership(data.value(17).toInt());
+                 newProject->setAgileKnowledge(data.value(18).toInt());
              }
         }
     }else{
@@ -91,18 +91,18 @@ void project_storagectrl::DBModify_Project(string tableName, project_obj * newPr
             " currentStudents='"+intToString(newProject->getCurrentStudent())+ "',"
             " idealNumberStudents='"+intToString(newProject->getIdealNumberStudents())+ "',"
             " gpa='"+floatToString(newProject->getGpa())+ "',"
-            " pmSkill='"+intToString(newProject->getPmSkill())+ "',"
+            " objectDev='"+intToString(newProject->getObjectDev())+ "',"
             " database='"+intToString(newProject->getDatabase())+ "',"
-            " java='"+intToString(newProject->getJava())+ "',"
-            " cCpp='"+intToString(newProject->getCCpp())+ "',"
-            " jsHtml='"+intToString(newProject->getJsHtml())+ "',"
-            " python='"+intToString(newProject->getPython())+ "',"
-            " debuggingTesting='"+intToString(newProject->getDebug())+ "',"
-            " documentation='"+intToString(newProject->getDocument())+ "',"
-            " mobile='"+intToString(newProject->getMobile())+ "',"
-            " networking='"+intToString(newProject->getNetwork())+ "',"
-            " ui='"+intToString(newProject->getUi())+ "',"
-            " algorithm='"+intToString(newProject->getAlgor())+"'"
+            " webDev='"+intToString(newProject->getWebDev())+ "',"
+            " flexibility='"+intToString(newProject->getFlexibility())+ "',"
+            " communication='"+intToString(newProject->getCommunication())+ "',"
+            " workExperience='"+intToString(newProject->getWorkExperience())+ "',"
+            " criticalThinking='"+intToString(newProject->getCriticalThinking())+ "',"
+            " documentation='"+intToString(newProject->getDocumentation())+ "',"
+            " teamwork='"+intToString(newProject->getTeamWork())+ "',"
+            " multitasking='"+intToString(newProject->getMultitasking())+ "',"
+            " leadership='"+intToString(newProject->getLeadership())+ "',"
+            " agileKnowledge='"+intToString(newProject->getAgileKnowledge())+ "'"
             " where projectId='"+intToString(newProject->getId())+"'"
             ;
     cout << strSql << endl;
@@ -117,25 +117,25 @@ void project_storagectrl::DBModify_Project(string tableName, project_obj * newPr
 
 void project_storagectrl::DBAdd_Project(string tableName, project_obj* newProject)
 {
-    string strSql = "insert into "+ tableName + "(title,description,idealNumberStudents, maxStudents,currentStudents,gpa,pmSkill,database,java,cCpp,jsHtml,python,debuggingTesting,documentation,mobile,networking,ui,algorithm)"
+    string strSql = "insert into "+ tableName + "(title,description,idealNumberStudents, maxStudents,currentStudents,gpa,objectDev,database,webDev,flexibility,communication,workExperience,criticalThinking,documentation,Teamwork,multitasking,leadership,agileKnowledge"
             " values " "( '" + newProject->getTitle()+"',"
             " '"+ newProject->getDescription() + "',"
             " '"+ intToString(newProject->getIdealNumberStudents())+ "',"
             " '"+ intToString(newProject->getMaxStudents())+ "',"
             " '"+ intToString(newProject->getCurrentStudent())+ "',"
             " '"+ floatToString(newProject->getGpa())+ "',"
-            " '"+ intToString(newProject->getPmSkill())+ "',"
+            " '"+ intToString(newProject->getObjectDev())+ "',"
             " '"+ intToString(newProject->getDatabase())+ "',"
-            " '"+ intToString(newProject->getJava())+ "',"
-            " '"+ intToString(newProject->getCCpp())+ "',"
-            " '"+ intToString(newProject->getJsHtml())+ "',"
-            " '"+ intToString(newProject->getPython())+ "',"
-            " '"+ intToString(newProject->getDebug())+ "',"
-            " '"+ intToString(newProject->getDocument())+ "',"
-            " '"+ intToString(newProject->getMobile())+ "',"
-            " '"+ intToString(newProject->getNetwork())+ "',"
-            " '"+ intToString(newProject->getUi())+ "',"
-            " '"+ intToString(newProject->getAlgor())+ "'"
+            " '"+ intToString(newProject->getWebDev())+ "',"
+            " '"+ intToString(newProject->getFlexibility())+ "',"
+            " '"+ intToString(newProject->getCommunication())+ "',"
+            " '"+ intToString(newProject->getWorkExperience())+ "',"
+            " '"+ intToString(newProject->getCriticalThinking())+ "',"
+            " '"+ intToString(newProject->getDocumentation())+ "',"
+            " '"+ intToString(newProject->getTeamWork())+ "',"
+            " '"+ intToString(newProject->getMultitasking())+ "',"
+            " '"+ intToString(newProject->getLeadership())+ "',"
+            " '"+ intToString(newProject->getAgileKnowledge())+ "'"
             ")";
      if(db.open()){
             QSqlQuery data;
