@@ -12,6 +12,31 @@ project_storagectrl::project_storagectrl()
     }
 }
 
+void project_storagectrl::DBAdd_StudentToTeam(string projectId,string teamId,string studentId){
+    string strSql = "insert into studentTeamList (student_number,projectId,teamId) values ("+ studentId+","+projectId+","+teamId+")";
+    if(db.open()){
+        QSqlQuery data;
+        data.exec(QString::fromStdString(strSql));
+    }else{
+        cout << db.lastError().text().toStdString() << endl;
+ }
+}
+
+void project_storagectrl::DBSearch_StudentTeams(string projectId, vector<int>* studentIdList,vector<int>* teamId,vector<int>* projectIdList){
+    string strSql="select * from studentTeamList where projectId= "+projectId;
+    if(db.open()){
+        QSqlQuery data;
+        if(data.exec(QString::fromStdString(strSql))){
+            while(data.next()){
+                studentIdList->push_back(data.value(3).toInt());
+                projectIdList->push_back(data.value(2).toInt());
+                teamId->push_back(data.value(1).toInt());
+            }
+        }else{
+            cout << db.lastError().text().toStdString() << endl;
+     }
+    }
+}
 
 void project_storagectrl::DBSearchAll_Projects(string tableName, vector<project_obj*>* projectList)
 {

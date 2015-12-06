@@ -4,6 +4,10 @@ project_control::project_control()
 {
 }
 
+void project_control::SearchProjectTeams(string projectId,vector<int>* studentIdList, vector<int>* teamId,vector<int>* projectIdList){
+    db_control* dbc = new db_control();
+    dbc->projectstorage("searchTeam",projectId,studentIdList,teamId,projectIdList);
+}
 
 void project_control::CreateProject(project_obj *project)
 {
