@@ -6,6 +6,8 @@
 #include <QStandardItemModel>
 #include "db_utility.h"
 #include "adminwindow.h"
+#include "ppidwindow.h"
+
 class AdminWIndow;
 
 namespace Ui {
@@ -25,10 +27,13 @@ private slots:
     void on_saveButton_clicked();
     void on_deleteButton_clicked();
 
+    void on_pushButton_clicked();
+
 private:
     AdminWIndow *adminWindow;
     Ui::AdminProjWindow *ui;
     project_obj *projob;
+    PPIDwindow *ppid;
 };
 
 #endif // ADMINPROJWINDOW_H
