@@ -22,7 +22,6 @@ SOURCES += main.cpp\
     student_obj.cpp \
     studentpre_obj.cpp \
     entrywindow.cpp \
-    db_utility.cpp \
     admin_obj.cpp \
     createproject.cpp \
     adminprojwindow.cpp \
@@ -49,7 +48,6 @@ HEADERS  += \
     project_obj.h \
     student_obj.h \
     studentpre_obj.h \
-    db_utility.h \
     admin_obj.h \
     createproject.h \
     adminprojwindow.h \
