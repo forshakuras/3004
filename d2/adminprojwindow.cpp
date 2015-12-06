@@ -90,3 +90,9 @@ AdminProjWindow::~AdminProjWindow()
 {
     delete ui;
 }
+
+void AdminProjWindow::on_pushButton_clicked()
+{
+    ppid = new PPIDwindow();
+    ppid->show();
+}

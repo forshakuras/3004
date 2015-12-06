@@ -122,12 +122,12 @@
     <rect>
      <x>100</x>
      <y>180</y>
-     <width>67</width>
+     <width>151</width>
      <height>17</height>
     </rect>
    </property>
    <property name="text">
-    <string>PM skills:</string>
+    <string>Object Oriented Dev:</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_16">
@@ -140,7 +140,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>Algorithm Design:</string>
+    <string>Agile Knowledge</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_14">
@@ -153,7 +153,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>Networking:</string>
+    <string>Multitasking:</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_9">
@@ -161,12 +161,12 @@
     <rect>
      <x>100</x>
      <y>300</y>
-     <width>67</width>
+     <width>111</width>
      <height>17</height>
     </rect>
    </property>
    <property name="text">
-    <string>JS/HTML:</string>
+    <string>Teamwork:</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_7">
@@ -179,7 +179,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>Java:</string>
+    <string>Web Dev:</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_10">
@@ -187,12 +187,12 @@
     <rect>
      <x>100</x>
      <y>330</y>
-     <width>67</width>
+     <width>131</width>
      <height>17</height>
     </rect>
    </property>
    <property name="text">
-    <string>Python:</string>
+    <string>Communication:</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_13">
@@ -205,7 +205,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>Mobile Develop:</string>
+    <string>Flexibility:</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_11">
@@ -218,7 +218,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>Debugging/Testing:</string>
+    <string>Work Experience:</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_8">
@@ -226,12 +226,12 @@
     <rect>
      <x>100</x>
      <y>270</y>
-     <width>67</width>
+     <width>121</width>
      <height>17</height>
     </rect>
    </property>
    <property name="text">
-    <string>C/Cpp:</string>
+    <string>Critical Thinking:</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_12">
@@ -270,7 +270,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>UI Design:</string>
+    <string>Leadership:</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_17">
@@ -286,7 +286,7 @@
     <string>GPA(out of 12.00):</string>
    </property>
   </widget>
-  <widget class="QLabel" name="mobileLabel">
+  <widget class="QLabel" name="flexLabel">
    <property name="geometry">
     <rect>
      <x>270</x>
@@ -299,7 +299,7 @@
     <string>Mobile Develop:</string>
    </property>
   </widget>
-  <widget class="QLabel" name="uiLabel">
+  <widget class="QLabel" name="leadLabel">
    <property name="geometry">
     <rect>
      <x>270</x>
@@ -312,13 +312,13 @@
     <string>UI Design:</string>
    </property>
   </widget>
-  <widget class="QLabel" name="cLabel">
+  <widget class="QLabel" name="critLabel">
    <property name="geometry">
     <rect>
      <x>270</x>
-     <y>270</y>
-     <width>67</width>
-     <height>17</height>
+     <y>267</y>
+     <width>61</width>
+     <height>20</height>
     </rect>
    </property>
    <property name="text">
@@ -351,7 +351,7 @@
     <string>Documentation:</string>
    </property>
   </widget>
-  <widget class="QLabel" name="javaLabel">
+  <widget class="QLabel" name="webLabel">
    <property name="geometry">
     <rect>
      <x>270</x>
@@ -361,10 +361,10 @@
     </rect>
    </property>
    <property name="text">
-    <string>Java:</string>
+    <string>Web</string>
    </property>
   </widget>
-  <widget class="QLabel" name="networkLabel">
+  <widget class="QLabel" name="multiLabel">
    <property name="geometry">
     <rect>
      <x>270</x>
@@ -377,7 +377,7 @@
     <string>Networking:</string>
    </property>
   </widget>
-  <widget class="QLabel" name="debugLabel">
+  <widget class="QLabel" name="expLabel">
    <property name="geometry">
     <rect>
      <x>270</x>
@@ -390,7 +390,7 @@
     <string>Debugging/Testing:</string>
    </property>
   </widget>
-  <widget class="QLabel" name="jsLabel">
+  <widget class="QLabel" name="teamLabel">
    <property name="geometry">
     <rect>
      <x>270</x>
@@ -403,20 +403,20 @@
     <string>JS/HTML:</string>
    </property>
   </widget>
-  <widget class="QLabel" name="pmLabel">
+  <widget class="QLabel" name="ooLabel">
    <property name="geometry">
     <rect>
      <x>270</x>
      <y>180</y>
-     <width>67</width>
+     <width>151</width>
      <height>17</height>
     </rect>
    </property>
    <property name="text">
-    <string>PM skills:</string>
+    <string>Object Oriented Dev:</string>
    </property>
   </widget>
-  <widget class="QLabel" name="algLabel">
+  <widget class="QLabel" name="agileLabel">
    <property name="geometry">
     <rect>
      <x>270</x>
@@ -442,7 +442,7 @@
     <string>Database:</string>
    </property>
   </widget>
-  <widget class="QLabel" name="pythonLabel">
+  <widget class="QLabel" name="communicationLabel">
    <property name="geometry">
     <rect>
      <x>270</x>
