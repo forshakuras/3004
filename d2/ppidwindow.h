@@ -15,8 +15,12 @@ public:
     explicit PPIDwindow(QWidget *parent = 0);
     ~PPIDwindow();
 
+
 private:
     Ui::PPIDwindow *ui;
+
+private slots:
+    void on_back_clicked();
 };
 
 #endif // PPIDWINDOW_H

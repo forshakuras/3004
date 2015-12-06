@@ -89,81 +89,89 @@ int     student_obj::getDatabase(){
     return database;
 }
 
+void    student_obj::setObjectDev(int i){
+    objectDev=i;
+}
+
+int    student_obj::getObjectDev(){
+    return objectDev;
+}
+
 void        student_obj::setWebDev(int i){
-        webDev=i;
+    webDev=i;
 }
 
 int         student_obj::getWebDev(){
-        return webDev;
+    return webDev;
 }
 void        student_obj::setFlexibility(int i){
-        flexibility =i;
+    flexibility =i;
 }
 int         student_obj::getFlexibility(){
-        return flexibility;
+    return flexibility;
 }
 void        student_obj::setCommunication(int i){
-        communication = i;
+    communication = i;
 }
 
 int         student_obj::getCommunication(){
-        return communication;
+    return communication;
 }
 
 void        student_obj::setWorkExperience(int i){
-        workExperience = i;
+    workExperience = i;
 }
 
 int         student_obj::getWorkExperience(){
-        return workExperience;
+    return workExperience;
 }
 
 void        student_obj::setCriticalThinking(int i){
-        criticalThinking = i;
+    criticalThinking = i;
 }
 
 int         student_obj::getCriticalThinking(){
-        return criticalThinking;
+    return criticalThinking;
 }
 
 void        student_obj::setDocumentation(int i){
-        documentation = i;
+    documentation = i;
 }
 
 int         student_obj::getDocumentation(){
-        return documentation;
+    return documentation;
 }
 
 void        student_obj::setTeamWork(int i){
-        teamwork=i;
+    teamwork=i;
 }
 
 int         student_obj::getTeamWork(){
-        return teamwork;
+    return teamwork;
 }
 
 void        student_obj::setMultitasking(int i){
-        multitasking=i;
+    multitasking=i;
 }
 
 int         student_obj::getMultitasking(){
-        return multitasking;
+    return multitasking;
 }
 
 void        student_obj::setLeadership(int i){
-        leadership =i;
+    leadership =i;
 }
 
 int         student_obj::getLeadership(){
-        return leadership;
+    return leadership;
 }
 
 void        student_obj::setAgileKnowledge(int i){
-        agileKnowledge = i;
+    agileKnowledge = i;
 }
 
 int         student_obj::getAgileKnowledge(){
-        return agileKnowledge;
+    return agileKnowledge;
 }
 
 

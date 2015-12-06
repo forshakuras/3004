@@ -80,6 +80,14 @@ float   studentpre_obj::getGpa(){
     return gpa;
 }
 
+void    studentpre_obj::setObjectDev(int i){
+    objectDev=i;
+}
+
+int    studentpre_obj::getObjectDev(){
+    return objectDev;
+}
+
 void    studentpre_obj::setDatabase(int i){
     database=i;
 }

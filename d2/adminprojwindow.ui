@@ -23,10 +23,10 @@
     </rect>
    </property>
    <property name="text">
-    <string>Algorithm Design:</string>
+    <string>Agile:</string>
    </property>
   </widget>
-  <widget class="QSpinBox" name="networkSpin">
+  <widget class="QSpinBox" name="leadSpin">
    <property name="geometry">
     <rect>
      <x>340</x>
@@ -41,12 +41,12 @@
     <rect>
      <x>170</x>
      <y>355</y>
-     <width>67</width>
+     <width>111</width>
      <height>17</height>
     </rect>
    </property>
    <property name="text">
-    <string>JS/HTML:</string>
+    <string>Communication:</string>
    </property>
   </widget>
   <widget class="QSpinBox" name="idealSpin">
@@ -59,7 +59,7 @@
     </rect>
    </property>
   </widget>
-  <widget class="QSpinBox" name="cSpin">
+  <widget class="QSpinBox" name="flexSpin">
    <property name="geometry">
     <rect>
      <x>340</x>
@@ -79,7 +79,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>Networking:</string>
+    <string>Leadership:</string>
    </property>
   </widget>
   <widget class="QLabel" name="label">
@@ -95,7 +95,7 @@
     <string>Project ID:</string>
    </property>
   </widget>
-  <widget class="QSpinBox" name="debugSpin">
+  <widget class="QSpinBox" name="criticalSpin">
    <property name="geometry">
     <rect>
      <x>340</x>
@@ -133,12 +133,12 @@
     <rect>
      <x>170</x>
      <y>535</y>
-     <width>81</width>
+     <width>111</width>
      <height>17</height>
     </rect>
    </property>
    <property name="text">
-    <string>UI Design:</string>
+    <string>Multitasking:</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_19">
@@ -177,7 +177,7 @@
     </rect>
    </property>
   </widget>
-  <widget class="QSpinBox" name="mobileSpin">
+  <widget class="QSpinBox" name="teamSpin">
    <property name="geometry">
     <rect>
      <x>340</x>
@@ -207,7 +207,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>Java:</string>
+    <string>Web Dev:</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_3">
@@ -241,7 +241,7 @@
     <rect>
      <x>170</x>
      <y>445</y>
-     <width>121</width>
+     <width>151</width>
      <height>17</height>
     </rect>
    </property>
@@ -249,7 +249,7 @@
     <string>Documentation:</string>
    </property>
   </widget>
-  <widget class="QSpinBox" name="javaSpin">
+  <widget class="QSpinBox" name="webSpin">
    <property name="geometry">
     <rect>
      <x>340</x>
@@ -259,7 +259,7 @@
     </rect>
    </property>
   </widget>
-  <widget class="QSpinBox" name="algSpin">
+  <widget class="QSpinBox" name="agileSpin">
    <property name="geometry">
     <rect>
      <x>340</x>
@@ -274,12 +274,12 @@
     <rect>
      <x>170</x>
      <y>235</y>
-     <width>63</width>
+     <width>151</width>
      <height>17</height>
     </rect>
    </property>
    <property name="text">
-    <string>PM skills:</string>
+    <string>Object Oriented Dev:</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_11">
@@ -292,7 +292,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>Debugging/Testing:</string>
+    <string>Critical Thinking:</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_10">
@@ -300,12 +300,12 @@
     <rect>
      <x>170</x>
      <y>385</y>
-     <width>67</width>
+     <width>141</width>
      <height>17</height>
     </rect>
    </property>
    <property name="text">
-    <string>Python:</string>
+    <string>Industry Experience:</string>
    </property>
   </widget>
   <widget class="QDoubleSpinBox" name="gpaSpin">
@@ -368,12 +368,12 @@
     <rect>
      <x>170</x>
      <y>325</y>
-     <width>67</width>
+     <width>91</width>
      <height>17</height>
     </rect>
    </property>
    <property name="text">
-    <string>C/Cpp:</string>
+    <string>Flexibility:</string>
    </property>
   </widget>
   <widget class="QSpinBox" name="maxSpin">
@@ -399,7 +399,7 @@
     <string>Project Description:</string>
    </property>
   </widget>
-  <widget class="QSpinBox" name="pmSpin">
+  <widget class="QSpinBox" name="ooSpin">
    <property name="geometry">
     <rect>
      <x>340</x>
@@ -409,7 +409,7 @@
     </rect>
    </property>
   </widget>
-  <widget class="QSpinBox" name="pythonSpin">
+  <widget class="QSpinBox" name="expSpin">
    <property name="geometry">
     <rect>
      <x>340</x>
@@ -432,7 +432,7 @@
     <string>Delete Project</string>
    </property>
   </widget>
-  <widget class="QSpinBox" name="jsSpin">
+  <widget class="QSpinBox" name="communicationSpin">
    <property name="geometry">
     <rect>
      <x>340</x>
@@ -452,7 +452,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>Mobile Develop:</string>
+    <string>TeamWork:</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="projName">
@@ -481,7 +481,7 @@
     <bool>true</bool>
    </property>
   </widget>
-  <widget class="QSpinBox" name="uiSpin">
+  <widget class="QSpinBox" name="multiSpin">
    <property name="geometry">
     <rect>
      <x>340</x>

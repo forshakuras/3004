@@ -62,7 +62,9 @@ void projectWindow::on_joinProj_clicked()
        ManageStudentControl* manage = new ManageStudentControl(user);
        bool rc = manage->JoinProjectOption(data[row]);
 
-       if (rc){QMessageBox::information(this, tr("Congradulation"), tr("Successfully join the project !"));}
+       if (rc){
+           QMessageBox::information(this, tr("Congradulation"), tr("Successfully join the project !"));
+       }
        else{
            QMessageBox::information(this, tr("Warning"), tr("You already registered in this project !"));
        }

@@ -99,16 +99,17 @@ void db_control::projectstorage(string tag, string project_Id, project_obj *proj
 bool db_control::projectstorage(string tag, project_obj *project, student_obj *student)
 {
     project_storagectrl* pc = new project_storagectrl();
+    bool rc;
 
     if(tag == "addStudent"){
-        pc->DBAdd_StudentToProject(student,project);
+        rc= pc->DBAdd_StudentToProject(student,project);
     }
     if(tag == "removeStudent"){
-        pc->DBRemove_StudentFromProject(student,project);
+        rc= pc->DBRemove_StudentFromProject(student,project);
     }
 
     pc->DBClose();
-
+    return rc;
 }
 
 

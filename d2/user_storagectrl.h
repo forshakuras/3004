@@ -6,6 +6,7 @@
 #include <vector>
 #include "admin_obj.h"
 #include <QMessageBox>
+#include "student_obj.h"
 
 using namespace std;
 

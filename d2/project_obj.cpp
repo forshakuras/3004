@@ -109,6 +109,14 @@ float   project_obj::getGpa(){
     return gpa;
 }
 
+void    project_obj::setObjectDev(int i){
+    objectDev=i;
+}
+
+int    project_obj::getObjectDev(){
+   return objectDev;
+}
+
 void    project_obj::setDatabase(int i){
     database=i;
 }
