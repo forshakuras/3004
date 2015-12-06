@@ -106,6 +106,13 @@ AdminProjWindow::~AdminProjWindow()
 
 void AdminProjWindow::on_pushButton_clicked()
 {
+    vector<int> *teamsize = new vector<int>();
+    vector<int> *studentIDlist = new vector<int>();
+    PPID *firstpart = new PPIDpart1();
+    firstpart->runPPID(projob,teamsize,studentIDlist);
+    PPID *secondpart = new PPIDpart2();
+    secondpart->runPPID(projob,teamsize,studentIDlist);
+
     ppid = new PPIDwindow();
     ppid->show();
 }

@@ -12,11 +12,13 @@ project_storagectrl::project_storagectrl()
     }
 }
 
-void project_storagectrl::DBAdd_StudentToTeam(string projectId,string teamId,string studentId){
-    string strSql = "insert into studentTeamList (student_number,projectId,teamId) values ("+ studentId+","+projectId+","+teamId+")";
+void project_storagectrl::DBAdd_StudentToTeam(string studentId,string projectId,string teamId){
+    string strSql = "insert into studentTeamList (teamId,student_number,projectId) values ("+ teamId+","+studentId+","+projectId+")";
+
     if(db.open()){
         QSqlQuery data;
         data.exec(QString::fromStdString(strSql));
+
     }else{
         cout << db.lastError().text().toStdString() << endl;
  }

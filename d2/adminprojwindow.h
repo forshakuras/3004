@@ -8,6 +8,8 @@
 #include "ppidwindow.h"
 #include "project_control.h"
 #include "manageusercontrol.h"
+#include "ppidpart1.h"
+#include "ppidpart2.h"
 
 class AdminWIndow;
 

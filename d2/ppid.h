@@ -12,8 +12,6 @@ class PPID
 {
 public:
     PPID();
-
-private:
     virtual void runPPID(project_obj*, vector<int>*, vector<int>*) = 0;
 };
 

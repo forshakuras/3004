@@ -17,6 +17,7 @@ void PPIDpart2::runPPID(project_obj *project, vector<int> *teamsize, vector<int>
         tempList1->push_back(temp1);
     }
 
+    Loopteam(teamsize,tempList,tempList1,project);
 
 }
 
@@ -31,10 +32,12 @@ void PPIDpart2::Loopteam(vector<int> *teamsize, vector<student_obj *> *students,
             stringstream ss;
             ss << i;
             string teamnum = ss.str();
-            ss << project->getId();
-            string projnum = ss.str();
-            ss << team->at(j)->getStudent_number();
-            string stunum = ss.str();
+            stringstream sa;
+            sa << project->getId();
+            string projnum = sa.str();
+            stringstream sb;
+            sb << team->at(j)->getStudent_number();
+            string stunum = sb.str();
             pc->AddstudentlistToTeam(stunum,projnum,teamnum);
         }
     }
@@ -123,6 +126,8 @@ void PPIDpart2::buildTeam(int teamSize, vector<student_obj *> *newTeam, vector<s
     student_obj *fakeData = new student_obj();
     studentpre_obj *fakeDataPre = new studentpre_obj();
 
+    vector<studentpre_obj*>* teamPre = new vector<studentpre_obj*>();
+
     for(int i=0; i<students->size(); i++){
         float temp = compareSandP(students->at(i),project);
         if(highest <= temp){
@@ -133,6 +138,7 @@ void PPIDpart2::buildTeam(int teamSize, vector<student_obj *> *newTeam, vector<s
 
 
     newTeam->push_back(students->at(index));
+    teamPre->push_back(studentpres->at(index));
     fakeData = students->at(index);
     fakeDataPre = studentpres->at(index);
 
@@ -153,20 +159,21 @@ void PPIDpart2::buildTeam(int teamSize, vector<student_obj *> *newTeam, vector<s
         }
 
         newTeam->push_back(students->at(index));
+        teamPre->push_back(studentpres->at(index));
         fakeData = new student_obj();
+        fakeDataPre = new studentpre_obj();
 
+        calculateAvg(newTeam,fakeData);
+        calculateAvgPre(teamPre,fakeDataPre);
 
-
+        students->erase(students->begin()+index);
+        studentpres->erase(studentpres->begin()+index);
     }
-
-
 }
 
 
 void PPIDpart2::calculateAvg(vector<student_obj *> *team, student_obj* fakeData)
 {
-    student_obj* temp = new student_obj();
-
     float     gpa=0;
     float     objectDev=0;
     float     database=0;
@@ -211,3 +218,48 @@ void PPIDpart2::calculateAvg(vector<student_obj *> *team, student_obj* fakeData)
     fakeData->setAgileKnowledge(agileKnowledge/team->size());
 }
 
+void PPIDpart2::calculateAvgPre(vector<studentpre_obj *> * team, studentpre_obj * fakeData)
+{
+    float     gpa=0;
+    float     objectDev=0;
+    float     database=0;
+    float     webDev=0;
+    float     flexibility=0;
+    float     communication=0;
+    float     workExperience=0;
+    float     criticalThinking=0;
+    float     documentation=0;
+    float     teamwork=0;
+    float     multitasking=0;
+    float     leadership=0;
+    float     agileKnowledge=0;
+
+    for(int i=0; i<team->size(); i++){
+        gpa+=(team->at(i))->getGpa();
+        objectDev+=(team->at(i))->getObjectDev();
+        database+=(team->at(i))->getDatabase();
+        webDev+=(team->at(i))->getWebDev();
+        flexibility+=(team->at(i))->getFlexibility();
+        communication+=(team->at(i))->getCommunication();
+        workExperience+=(team->at(i))->getWorkExperience();
+        criticalThinking+=(team->at(i))->getCriticalThinking();
+        documentation+=(team->at(i))->getDocumentation();
+        teamwork+=(team->at(i))->getTeamWork();
+        multitasking+=(team->at(i))->getMultitasking();
+        leadership+=(team->at(i))->getLeadership();
+        agileKnowledge+=(team->at(i))->getAgileKnowledge();
+    }
+    fakeData->setGpa(gpa/team->size());
+    fakeData->setObjectDev(objectDev/team->size());
+    fakeData->setDatabase(database/team->size());
+    fakeData->setWebDev(webDev/team->size());
+    fakeData->setFlexibility(flexibility/team->size());
+    fakeData->setCommunication(communication/team->size());
+    fakeData->setWorkExperience(workExperience/team->size());
+    fakeData->setCriticalThinking(criticalThinking/team->size());
+    fakeData->setDocumentation(documentation/team->size());
+    fakeData->setTeamWork(teamwork/team->size());
+    fakeData->setMultitasking(multitasking/team->size());
+    fakeData->setLeadership(leadership/team->size());
+    fakeData->setAgileKnowledge(agileKnowledge/team->size());
+}

@@ -5,10 +5,10 @@
 
 using namespace std;
 
-class PPIDpart2 : PPID
+class PPIDpart2 : public PPID
 {
 public:
-    PPIDpart2(): PPID(){};
+    PPIDpart2(): PPID(){}
 
 private:
     student_obj *bestStudent;
@@ -20,7 +20,7 @@ private:
     void  buildTeam(int,vector<student_obj*>*,vector<student_obj*>*,vector<studentpre_obj*>*,project_obj*);
     void  calculateAvg(vector<student_obj*>*,student_obj*);
     void  Loopteam(vector<int> *, vector<student_obj *> *, vector<studentpre_obj *> *,project_obj *);
-
+    void  calculateAvgPre(vector<studentpre_obj*>*,studentpre_obj*);
 };
 
 #endif // PPIDPART2_H
