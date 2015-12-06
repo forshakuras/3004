@@ -28,12 +28,15 @@ private slots:
 
     void on_joinProj_clicked();
 
+    void on_leavebutton_clicked();
+
 private:
     Ui::projectWindow *ui;
     projectDesc *desc;
     student_obj *user;
     studentpre_obj *userpref;
     vector<project_obj*> data;
+    vector<project_obj*> registeredProj;
 };
 
 #endif // PROJECTWINDOW_H

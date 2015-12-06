@@ -51,7 +51,8 @@ void project_storagectrl::DBSearchAll_Projects(string tableName, vector<project_
 
 void project_storagectrl::DBSearch_Project(string tableName, string title, project_obj* newProject)
 {
-    string strSql = "select * from "+ tableName + " where title = "+ title;
+    cout<< title << endl;
+    string strSql = "select * from "+ tableName + " where projectId = " + title;
     if(db.open()){
         QSqlQuery data;
         if(data.exec(QString::fromStdString(strSql))){

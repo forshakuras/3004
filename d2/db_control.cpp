@@ -102,6 +102,7 @@ void db_control::projectstorage(string tag, string project_Id, project_obj *proj
 
     if(tag == "search"){
         pc->DBSearch_Project("projects",project_Id,project);
+        cout << project->getTitle()<< endl;
     }
 
     pc->DBClose();
