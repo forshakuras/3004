@@ -27,6 +27,7 @@ public:
     void DBModify_Studentpref(string ,studentpre_obj*);
     void DBSearch_Studentpref(string,string,studentpre_obj*);
     void DBSearchAll_Students(string, vector<student_obj*>*);
+    void DBSearch_StudentProject(string, vector<int>*);
     string floatToString(float);
     string intToString(int);
     void DBClose();

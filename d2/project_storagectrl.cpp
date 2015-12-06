@@ -176,7 +176,7 @@ void project_storagectrl::DBSearch_StudentFromProjectList(vector<int>* studentNu
 
     if(db.open()){
         QSqlQuery data;
-        student_obj *temp;
+//        student_obj *temp;
         int i=1;
         if(data.exec(QString::fromStdString(strSql))){
             while(data.next()){

@@ -33,6 +33,17 @@ void db_control::studentstorage(string tag, string student_number, student_obj *
     sc->DBClose();
 }
 
+void db_control::studentstorage(string tag, string student_number, vector<int> *projectIds)
+{
+    student_storagectrl* sc = new student_storagectrl();
+
+    if(tag == "searchProject"){
+        sc->DBSearch_StudentProject(student_number,projectIds);
+    }
+
+    sc->DBClose();
+}
+
 void db_control::studentstorage(string tag, studentpre_obj *studentpre)
 {
      student_storagectrl* sc = new student_storagectrl();

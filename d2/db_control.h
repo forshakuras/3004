@@ -22,6 +22,7 @@ public:
     void studentstorage(string, studentpre_obj*);
     void studentstorage(string, string, studentpre_obj *);
     void studentstorage(string, vector<student_obj*>*);
+    void studentstorage(string, string, vector<int>*);
     void projectstorage(string, project_obj*);
     void projectstorage(string, string, project_obj *);
     void projectstorage(string, vector<project_obj*>*);
