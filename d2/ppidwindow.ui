@@ -13,20 +13,10 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <widget class="QTableView" name="PPIDresult">
-   <property name="geometry">
-    <rect>
-     <x>30</x>
-     <y>40</y>
-     <width>491</width>
-     <height>451</height>
-    </rect>
-   </property>
-  </widget>
   <widget class="QPushButton" name="back">
    <property name="geometry">
     <rect>
-     <x>220</x>
+     <x>230</x>
      <y>500</y>
      <width>99</width>
      <height>27</height>
@@ -39,7 +29,7 @@
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>240</x>
+     <x>210</x>
      <y>10</y>
      <width>91</width>
      <height>17</height>
@@ -47,6 +37,16 @@
    </property>
    <property name="text">
     <string>PPID Team</string>
+   </property>
+  </widget>
+  <widget class="QTableWidget" name="tableWidget">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>50</y>
+     <width>501</width>
+     <height>441</height>
+    </rect>
    </property>
   </widget>
  </widget>

@@ -113,6 +113,6 @@ void AdminProjWindow::on_pushButton_clicked()
     PPID *secondpart = new PPIDpart2();
     secondpart->runPPID(projob,teamsize,studentIDlist);
 
-    ppid = new PPIDwindow();
+    ppid = new PPIDwindow(this,projob);
     ppid->show();
 }
