@@ -19,6 +19,7 @@ private:
 public:
     project_storagectrl();
     void DBAdd_Project(string,project_obj*);
+    void Search_StudentTeams(string,vector<int>*,vector<int>*,vector<int>*);
     void DBRemove_Project(string,project_obj*);
     void DBModify_Project(string,project_obj*);
     void DBSearchAll_Projects(string, vector<project_obj*>*);

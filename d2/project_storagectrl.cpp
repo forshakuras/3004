@@ -12,6 +12,19 @@ project_storagectrl::project_storagectrl()
     }
 }
 
+void project_storagectrl::Search_StudentTeams(string projectId, vector<int>* studentIdList,vector<int>* teamId,vector<int>* projectIdList){
+    string strSql="select * from studentTeamList where projectId= "+projectId;
+    if(db.open()){
+        QSqlQuery data;
+        if(data.exec(QString::fromStdString(strSql))){
+            while(data.next()){
+                studentIdList->push_back(data.value(3).toInt());
+                projectIdList->push_back(data.value(2).toInt());
+                teamId->push_back(data.value(1).toInt());
+            }
+        }
+    }
+}
 
 void project_storagectrl::DBSearchAll_Projects(string tableName, vector<project_obj*>* projectList)
 {
