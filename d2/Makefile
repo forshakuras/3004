@@ -648,6 +648,9 @@ moc_entrywindow.cpp: /usr/include/qt5/QtWidgets/QDialog \
 		/usr/include/qt5/QtWidgets/qmainwindow.h \
 		adminprojwindow.h \
 		ppidwindow.h \
+		ppidpart1.h \
+		ppid.h \
+		ppidpart2.h \
 		createproject.h \
 		entrywindow.h
 	/usr/lib/i386-linux-gnu/qt5/bin/moc $(DEFINES) $(INCPATH) -I/usr/include/c++/4.8 -I/usr/include/i386-linux-gnu/c++/4.8 -I/usr/include/c++/4.8/backward -I/usr/lib/gcc/i686-linux-gnu/4.8/include -I/usr/local/include -I/usr/lib/gcc/i686-linux-gnu/4.8/include-fixed -I/usr/include/i386-linux-gnu -I/usr/include entrywindow.h -o moc_entrywindow.cpp
@@ -931,6 +934,9 @@ moc_choosewindow.cpp: /usr/include/qt5/QtWidgets/QDialog \
 		/usr/include/qt5/QtWidgets/qmainwindow.h \
 		adminprojwindow.h \
 		ppidwindow.h \
+		ppidpart1.h \
+		ppid.h \
+		ppidpart2.h \
 		createproject.h \
 		choosewindow.h
 	/usr/lib/i386-linux-gnu/qt5/bin/moc $(DEFINES) $(INCPATH) -I/usr/include/c++/4.8 -I/usr/include/i386-linux-gnu/c++/4.8 -I/usr/include/c++/4.8/backward -I/usr/lib/gcc/i686-linux-gnu/4.8/include -I/usr/local/include -I/usr/lib/gcc/i686-linux-gnu/4.8/include-fixed -I/usr/include/i386-linux-gnu -I/usr/include choosewindow.h -o moc_choosewindow.cpp
@@ -2021,6 +2027,9 @@ moc_adminwindow.cpp: /usr/include/qt5/QtWidgets/QMainWindow \
 		adminwindow.h \
 		adminprojwindow.h \
 		ppidwindow.h \
+		ppidpart1.h \
+		ppid.h \
+		ppidpart2.h \
 		createproject.h \
 		adminwindow.h
 	/usr/lib/i386-linux-gnu/qt5/bin/moc $(DEFINES) $(INCPATH) -I/usr/include/c++/4.8 -I/usr/include/i386-linux-gnu/c++/4.8 -I/usr/include/c++/4.8/backward -I/usr/lib/gcc/i686-linux-gnu/4.8/include -I/usr/local/include -I/usr/lib/gcc/i686-linux-gnu/4.8/include-fixed -I/usr/include/i386-linux-gnu -I/usr/include adminwindow.h -o moc_adminwindow.cpp
@@ -2304,6 +2313,9 @@ moc_createproject.cpp: /usr/include/qt5/QtWidgets/QDialog \
 		manageusercontrol.h \
 		adminprojwindow.h \
 		ppidwindow.h \
+		ppidpart1.h \
+		ppid.h \
+		ppidpart2.h \
 		createproject.h \
 		createproject.h
 	/usr/lib/i386-linux-gnu/qt5/bin/moc $(DEFINES) $(INCPATH) -I/usr/include/c++/4.8 -I/usr/include/i386-linux-gnu/c++/4.8 -I/usr/include/c++/4.8/backward -I/usr/lib/gcc/i686-linux-gnu/4.8/include -I/usr/local/include -I/usr/lib/gcc/i686-linux-gnu/4.8/include-fixed -I/usr/include/i386-linux-gnu -I/usr/include createproject.h -o moc_createproject.cpp
@@ -2587,6 +2599,9 @@ moc_adminprojwindow.cpp: /usr/include/qt5/QtWidgets/QDialog \
 		manageusercontrol.h \
 		adminprojwindow.h \
 		ppidwindow.h \
+		ppidpart1.h \
+		ppid.h \
+		ppidpart2.h \
 		createproject.h \
 		adminprojwindow.h
 	/usr/lib/i386-linux-gnu/qt5/bin/moc $(DEFINES) $(INCPATH) -I/usr/include/c++/4.8 -I/usr/include/i386-linux-gnu/c++/4.8 -I/usr/include/c++/4.8/backward -I/usr/lib/gcc/i686-linux-gnu/4.8/include -I/usr/local/include -I/usr/lib/gcc/i686-linux-gnu/4.8/include-fixed -I/usr/include/i386-linux-gnu -I/usr/include adminprojwindow.h -o moc_adminprojwindow.cpp
@@ -3024,6 +3039,9 @@ main.o: main.cpp entrywindow.h \
 		/usr/include/qt5/QtWidgets/qmainwindow.h \
 		adminprojwindow.h \
 		ppidwindow.h \
+		ppidpart1.h \
+		ppid.h \
+		ppidpart2.h \
 		createproject.h \
 		/usr/include/qt5/QtWidgets/QApplication \
 		/usr/include/qt5/QtWidgets/qapplication.h \
@@ -3311,6 +3329,9 @@ choosewindow.o: choosewindow.cpp choosewindow.h \
 		/usr/include/qt5/QtWidgets/qmainwindow.h \
 		adminprojwindow.h \
 		ppidwindow.h \
+		ppidpart1.h \
+		ppid.h \
+		ppidpart2.h \
 		createproject.h \
 		ui_choosewindow.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o choosewindow.o choosewindow.cpp
@@ -4404,6 +4425,9 @@ adminwindow.o: adminwindow.cpp adminwindow.h \
 		manageusercontrol.h \
 		adminprojwindow.h \
 		ppidwindow.h \
+		ppidpart1.h \
+		ppid.h \
+		ppidpart2.h \
 		createproject.h \
 		ui_adminwindow.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o adminwindow.o adminwindow.cpp
@@ -4696,6 +4720,9 @@ entrywindow.o: entrywindow.cpp entrywindow.h \
 		/usr/include/qt5/QtWidgets/qmainwindow.h \
 		adminprojwindow.h \
 		ppidwindow.h \
+		ppidpart1.h \
+		ppid.h \
+		ppidpart2.h \
 		createproject.h \
 		ui_entrywindow.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o entrywindow.o entrywindow.cpp
@@ -4983,6 +5010,9 @@ createproject.o: createproject.cpp createproject.h \
 		manageusercontrol.h \
 		adminprojwindow.h \
 		ppidwindow.h \
+		ppidpart1.h \
+		ppid.h \
+		ppidpart2.h \
 		ui_createproject.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o createproject.o createproject.cpp
 
@@ -5266,6 +5296,9 @@ adminprojwindow.o: adminprojwindow.cpp adminprojwindow.h \
 		manageusercontrol.h \
 		createproject.h \
 		ppidwindow.h \
+		ppidpart1.h \
+		ppid.h \
+		ppidpart2.h \
 		ui_adminprojwindow.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o adminprojwindow.o adminprojwindow.cpp
 

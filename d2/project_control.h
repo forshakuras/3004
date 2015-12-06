@@ -23,7 +23,11 @@ public:
     void SearchProjectofstudent(string,vector<project_obj*> *);
     void SearchProjectTeams(string,vector<int>*,vector<int>*,vector<int>*);
     void AddstudentlistToTeam(string , string , string );
+
     string intToString(int);
+
+    void RemoveTeamFromProject(project_obj *);
+
 };
 
 #endif // PROJECT_CONTROL_H

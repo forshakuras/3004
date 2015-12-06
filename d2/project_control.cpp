@@ -82,9 +82,15 @@ void project_control::AddstudentlistToTeam(string studentid, string projectid, s
 }
 
 
+
 string project_control::intToString(int x)
 {
     stringstream ss;
     ss << x;
     return ss.str();
+}
+
+void project_control::RemoveTeamFromProject(project_obj *project){
+    db_control *dbc = new db_control();
+    dbc->projectstorage("removeteam",project);
 }
