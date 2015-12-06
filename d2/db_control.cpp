@@ -160,3 +160,24 @@ void db_control::userstorage(string tag, string admin_number, admin_obj *admin)
 
     uc->DBClose();
 }
+
+void db_control::projectstorage(string tag,string studentId,string projectId,string teamId){
+
+    project_storagectrl* pc = new project_storagectrl();
+
+    if(tag == "add"){
+        pc->DBAdd_StudentToTeam(studentId,projectId,teamId);
+    }
+
+    pc->DBClose();
+}
+
+void db_control::projectstorage(string tag, string projectId,vector<int>* studentIdList,vector<int>* teamId,vector<int>* projectIdList){
+    project_storagectrl* pc = new project_storagectrl();
+
+    if(tag == "searchTeam"){
+        pc->DBSearch_StudentTeams(projectId,studentIdList,teamId,projectIdList);
+    }
+
+    pc->DBClose();
+}

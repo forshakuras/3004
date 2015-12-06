@@ -21,6 +21,7 @@ public:
     void SearchAllProject(vector<project_obj*>*);
     void SearchStudentInProj(vector<int>*,project_obj*);
     void SearchProjectofstudent(string,vector<project_obj*> *);
+    void SearchProjectTeams(string,vector<int>*,vector<int>*,vector<int>*);
 };
 
 #endif // PROJECT_CONTROL_H

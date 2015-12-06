@@ -19,7 +19,7 @@ private:
 public:
     project_storagectrl();
     void DBAdd_Project(string,project_obj*);
-    void Search_StudentTeams(string,vector<int>*,vector<int>*,vector<int>*);
+    void DBSearch_StudentTeams(string,vector<int>*,vector<int>*,vector<int>*);
     void DBRemove_Project(string,project_obj*);
     void DBModify_Project(string,project_obj*);
     void DBSearchAll_Projects(string, vector<project_obj*>*);
@@ -27,6 +27,7 @@ public:
     bool DBAdd_StudentToProject(student_obj*, project_obj*);
     void DBSearch_StudentFromProjectList(vector<int>*,project_obj*);
     bool DBRemove_StudentFromProject(student_obj*, project_obj*);
+    void DBAdd_StudentToTeam(string,string,string);
     string floatToString(float);
     string intToString(int);
     void DBClose();

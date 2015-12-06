@@ -29,6 +29,8 @@ public:
     bool projectstorage(string, project_obj*, student_obj*);
     void projectstorage(string, vector<int>*,project_obj*);
     void userstorage(string, string, admin_obj*);
+    void projectstorage(string,string,vector<int>*,vector<int>*,vector<int>*);
+    void projectstorage(string,string,string,string);
 };
 
 #endif // DB_CONTROL_H
