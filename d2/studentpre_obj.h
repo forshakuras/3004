@@ -11,6 +11,8 @@
 
 #include <stdio.h>
 #include <string>
+#include <vector>
+
 using namespace std;
 
 class studentpre_obj
@@ -20,18 +22,6 @@ private:
     string  firstName;
     string  lastName;
     float   gpa;
-//    int     pmSkill;
-//    int     database;
-//    int     java;
-//    int     cCpp;
-//    int     jsHtml;
-//    int     python;
-//    int     debuggingTesting;
-//    int     documentation;
-//    int     mobile;
-//    int     networking;
-//    int     ui;
-//    int     algorithm;
     int     objectDev;
     int     database;
     int     webDev;
@@ -55,30 +45,6 @@ public:
     string  getLastName();
     void    setGpa(float);
     float   getGpa();
-//    void    setPmSkill(int);
-//    int     getPmSkill();
-//    void    setDatabase(int);
-//    int     getDatabase();
-//    void    setJava(int);
-//    int     getJava();
-//    void    setCCpp(int);
-//    int     getCCpp();
-//    void    setJsHtml(int);
-//    int     getJsHtml();
-//    void    setPython(int);
-//    int     getPython();
-//    void    setDebug(int);
-//    int     getDebug();
-//    void    setDocument(int);
-//    int     getDocument();
-//    void    setMobile(int);
-//    int     getMobile();
-//    void    setNetwork(int);
-//    int     getNetwork();
-//    void    setUi(int);
-//    int     getUi();
-//    void    setAlgor(int);
-//    int     getAlgor();
     void        setObjectDev(int);
     int         getObjectDev();
     void        setDatabase(int);
@@ -103,6 +69,8 @@ public:
     int         getLeadership();
     void        setAgileKnowledge(int);
     int         getAgileKnowledge();
+
+    void        toVector(vector<float>*);
 
 };
 

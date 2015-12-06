@@ -11,6 +11,8 @@
 
 #include <stdio.h>
 #include <string>
+#include <vector>
+
 using namespace std;
 
 class student_obj
@@ -69,6 +71,8 @@ public:
     int         getLeadership();
     void        setAgileKnowledge(int);
     int         getAgileKnowledge();
+
+    void        toVector(vector<float>*);
 
 };
 

@@ -114,7 +114,7 @@ void    project_obj::setObjectDev(int i){
 }
 
 int    project_obj::getObjectDev(){
-   return objectDev;
+    return objectDev;
 }
 
 void    project_obj::setDatabase(int i){
@@ -126,80 +126,98 @@ int     project_obj::getDatabase(){
 }
 
 void        project_obj::setWebDev(int i){
-        webDev=i;
+    webDev=i;
 }
 
 int         project_obj::getWebDev(){
-        return webDev;
+    return webDev;
 }
 void        project_obj::setFlexibility(int i){
-        flexibility =i;
+    flexibility =i;
 }
 int         project_obj::getFlexibility(){
-        return flexibility;
+    return flexibility;
 }
 void        project_obj::setCommunication(int i){
-        communication = i;
+    communication = i;
 }
 
 int         project_obj::getCommunication(){
-        return communication;
+    return communication;
 }
 
 void        project_obj::setWorkExperience(int i){
-        workExperience = i;
+    workExperience = i;
 }
 
 int         project_obj::getWorkExperience(){
-        return workExperience;
+    return workExperience;
 }
 
 void        project_obj::setCriticalThinking(int i){
-        criticalThinking = i;
+    criticalThinking = i;
 }
 
 int         project_obj::getCriticalThinking(){
-        return criticalThinking;
+    return criticalThinking;
 }
 
 void        project_obj::setDocumentation(int i){
-        documentation = i;
+    documentation = i;
 }
 
 int         project_obj::getDocumentation(){
-        return documentation;
+    return documentation;
 }
 
 void        project_obj::setTeamWork(int i){
-        teamwork=i;
+    teamwork=i;
 }
 
 int         project_obj::getTeamWork(){
-        return teamwork;
+    return teamwork;
 }
 
 void        project_obj::setMultitasking(int i){
-        multitasking=i;
+    multitasking=i;
 }
 
 int         project_obj::getMultitasking(){
-        return multitasking;
+    return multitasking;
 }
 
 void        project_obj::setLeadership(int i){
-        leadership =i;
+    leadership =i;
 }
 
 int         project_obj::getLeadership(){
-        return leadership;
+    return leadership;
 }
 
 void        project_obj::setAgileKnowledge(int i){
-        agileKnowledge = i;
+    agileKnowledge = i;
 }
 
 int         project_obj::getAgileKnowledge(){
-        return agileKnowledge;
+    return agileKnowledge;
+}
+
+void        project_obj::toVector(vector<float> *data){
+
+    data->push_back(gpa);
+    data->push_back(objectDev);
+    data->push_back(database);
+    data->push_back(webDev);
+    data->push_back(flexibility);
+    data->push_back(communication);
+    data->push_back(workExperience);
+    data->push_back(criticalThinking);
+    data->push_back(documentation);
+    data->push_back(teamwork);
+    data->push_back(multitasking);
+    data->push_back(leadership);
+    data->push_back(agileKnowledge);
+
 }
 
 

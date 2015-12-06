@@ -11,6 +11,8 @@
 
 #include <stdio.h>
 #include <string>
+#include <vector>
+
 using namespace std;
 
 class project_obj
@@ -78,6 +80,8 @@ public:
     int         getLeadership();
     void        setAgileKnowledge(int);
     int         getAgileKnowledge();
+
+    void        toVector(vector<float>*);
 
 };
 

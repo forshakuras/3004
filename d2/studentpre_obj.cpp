@@ -172,3 +172,21 @@ void    studentpre_obj::setAgileKnowledge(int i){
 int     studentpre_obj::getAgileKnowledge(){
     return agileKnowledge;
 }
+
+void    studentpre_obj::toVector(vector<float> *data){
+
+    data->push_back(gpa);
+    data->push_back(objectDev);
+    data->push_back(database);
+    data->push_back(webDev);
+    data->push_back(flexibility);
+    data->push_back(communication);
+    data->push_back(workExperience);
+    data->push_back(criticalThinking);
+    data->push_back(documentation);
+    data->push_back(teamwork);
+    data->push_back(multitasking);
+    data->push_back(leadership);
+    data->push_back(agileKnowledge);
+
+}
