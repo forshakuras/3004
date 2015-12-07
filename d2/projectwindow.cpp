@@ -87,6 +87,10 @@ void projectWindow::on_joinProj_clicked()
 
 void projectWindow::on_leavebutton_clicked()
 {
+    if (ui->registerproject->model()->rowCount() == 0){
+        QMessageBox::information(this, tr("Warning"), tr("No Registered Project Avaliable!"));
+        return;
+    }
     int row = ui->registerproject->currentIndex().row();
     ManageStudentControl *sc = new ManageStudentControl(user);
 

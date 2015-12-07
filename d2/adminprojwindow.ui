@@ -58,6 +58,9 @@
      <height>27</height>
     </rect>
    </property>
+   <property name="minimum">
+    <number>1</number>
+   </property>
   </widget>
   <widget class="QSpinBox" name="flexSpin">
    <property name="geometry">
@@ -384,6 +387,9 @@
      <width>48</width>
      <height>27</height>
     </rect>
+   </property>
+   <property name="minimum">
+    <number>1</number>
    </property>
   </widget>
   <widget class="QLabel" name="label_18">
