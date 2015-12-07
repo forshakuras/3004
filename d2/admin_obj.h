@@ -2,10 +2,11 @@
 #define ADMIN_OBJ_H
 #include <stdio.h>
 #include <string>
+#include "user.h"
 using namespace std;
 
 
-class admin_obj
+class admin_obj : public user
 {
 private:
     string firstName;

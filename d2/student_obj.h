@@ -12,10 +12,11 @@
 #include <stdio.h>
 #include <string>
 #include <vector>
+#include "user.h"
 
 using namespace std;
 
-class student_obj
+class student_obj : public user
 {
 private:
     int     student_number;

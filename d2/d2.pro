@@ -35,7 +35,8 @@ SOURCES += main.cpp\
     ppid.cpp \
     ppidpart1.cpp \
     ppidpart2.cpp \
-    ppidwindow.cpp
+    ppidwindow.cpp \
+    user.cpp
 
 
 HEADERS  += \
@@ -61,7 +62,8 @@ HEADERS  += \
     ppid.h \
     ppidpart1.h \
     ppidpart2.h \
-    ppidwindow.h
+    ppidwindow.h \
+    user.h
 
 FORMS    += \
     entrywindow.ui \

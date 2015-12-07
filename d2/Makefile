@@ -68,7 +68,8 @@ SOURCES       = main.cpp \
 		ppid.cpp \
 		ppidpart1.cpp \
 		ppidpart2.cpp \
-		ppidwindow.cpp moc_entrywindow.cpp \
+		ppidwindow.cpp \
+		user.cpp moc_entrywindow.cpp \
 		moc_choosewindow.cpp \
 		moc_profilewindow.cpp \
 		moc_projectwindow.cpp \
@@ -101,6 +102,7 @@ OBJECTS       = main.o \
 		ppidpart1.o \
 		ppidpart2.o \
 		ppidwindow.o \
+		user.o \
 		moc_entrywindow.o \
 		moc_choosewindow.o \
 		moc_profilewindow.o \
@@ -343,7 +345,7 @@ qmake_all: FORCE
 
 dist: 
 	@test -d .tmp/d21.0.0 || mkdir -p .tmp/d21.0.0
-	$(COPY_FILE) --parents $(SOURCES) $(DIST) .tmp/d21.0.0/ && $(COPY_FILE) --parents entrywindow.h choosewindow.h profilewindow.h projectwindow.h projectdesc.h adminwindow.h project_obj.h student_obj.h studentpre_obj.h admin_obj.h createproject.h adminprojwindow.h managestudentcontrol.h manageusercontrol.h project_storagectrl.h student_storagectrl.h user_storagectrl.h db_control.h project_control.h ppid.h ppidpart1.h ppidpart2.h ppidwindow.h .tmp/d21.0.0/ && $(COPY_FILE) --parents main.cpp choosewindow.cpp profilewindow.cpp projectwindow.cpp projectdesc.cpp adminwindow.cpp project_obj.cpp student_obj.cpp studentpre_obj.cpp entrywindow.cpp admin_obj.cpp createproject.cpp adminprojwindow.cpp managestudentcontrol.cpp manageusercontrol.cpp project_storagectrl.cpp student_storagectrl.cpp user_storagectrl.cpp db_control.cpp project_control.cpp ppid.cpp ppidpart1.cpp ppidpart2.cpp ppidwindow.cpp .tmp/d21.0.0/ && $(COPY_FILE) --parents entrywindow.ui choosewindow.ui profilewindow.ui projectwindow.ui projectdesc.ui adminwindow.ui createproject.ui adminprojwindow.ui ppidwindow.ui .tmp/d21.0.0/ && (cd `dirname .tmp/d21.0.0` && $(TAR) d21.0.0.tar d21.0.0 && $(COMPRESS) d21.0.0.tar) && $(MOVE) `dirname .tmp/d21.0.0`/d21.0.0.tar.gz . && $(DEL_FILE) -r .tmp/d21.0.0
+	$(COPY_FILE) --parents $(SOURCES) $(DIST) .tmp/d21.0.0/ && $(COPY_FILE) --parents entrywindow.h choosewindow.h profilewindow.h projectwindow.h projectdesc.h adminwindow.h project_obj.h student_obj.h studentpre_obj.h admin_obj.h createproject.h adminprojwindow.h managestudentcontrol.h manageusercontrol.h project_storagectrl.h student_storagectrl.h user_storagectrl.h db_control.h project_control.h ppid.h ppidpart1.h ppidpart2.h ppidwindow.h user.h .tmp/d21.0.0/ && $(COPY_FILE) --parents main.cpp choosewindow.cpp profilewindow.cpp projectwindow.cpp projectdesc.cpp adminwindow.cpp project_obj.cpp student_obj.cpp studentpre_obj.cpp entrywindow.cpp admin_obj.cpp createproject.cpp adminprojwindow.cpp managestudentcontrol.cpp manageusercontrol.cpp project_storagectrl.cpp student_storagectrl.cpp user_storagectrl.cpp db_control.cpp project_control.cpp ppid.cpp ppidpart1.cpp ppidpart2.cpp ppidwindow.cpp user.cpp .tmp/d21.0.0/ && $(COPY_FILE) --parents entrywindow.ui choosewindow.ui profilewindow.ui projectwindow.ui projectdesc.ui adminwindow.ui createproject.ui adminprojwindow.ui ppidwindow.ui .tmp/d21.0.0/ && (cd `dirname .tmp/d21.0.0` && $(TAR) d21.0.0.tar d21.0.0 && $(COMPRESS) d21.0.0.tar) && $(MOVE) `dirname .tmp/d21.0.0`/d21.0.0.tar.gz . && $(DEL_FILE) -r .tmp/d21.0.0
 
 
 clean:compiler_clean 
@@ -627,6 +629,7 @@ moc_entrywindow.cpp: /usr/include/qt5/QtWidgets/QDialog \
 		profilewindow.h \
 		studentpre_obj.h \
 		student_obj.h \
+		user.h \
 		managestudentcontrol.h \
 		project_obj.h \
 		db_control.h \
@@ -767,6 +770,7 @@ moc_choosewindow.cpp: /usr/include/qt5/QtWidgets/QDialog \
 		profilewindow.h \
 		studentpre_obj.h \
 		student_obj.h \
+		user.h \
 		managestudentcontrol.h \
 		project_obj.h \
 		db_control.h \
@@ -1052,6 +1056,7 @@ moc_profilewindow.cpp: /usr/include/qt5/QtWidgets/QDialog \
 		/usr/include/qt5/QtGui/qtouchdevice.h \
 		studentpre_obj.h \
 		student_obj.h \
+		user.h \
 		managestudentcontrol.h \
 		project_obj.h \
 		db_control.h \
@@ -1325,6 +1330,7 @@ moc_projectwindow.cpp: /usr/include/qt5/QtWidgets/QDialog \
 		projectdesc.h \
 		project_control.h \
 		student_obj.h \
+		user.h \
 		db_control.h \
 		student_storagectrl.h \
 		/usr/include/qt5/QtSql/QtSql \
@@ -1594,6 +1600,7 @@ moc_projectdesc.cpp: /usr/include/qt5/QtWidgets/QDialog \
 		/usr/include/qt5/QtGui/qicon.h \
 		project_control.h \
 		student_obj.h \
+		user.h \
 		db_control.h \
 		student_storagectrl.h \
 		studentpre_obj.h \
@@ -2009,6 +2016,7 @@ moc_adminwindow.cpp: /usr/include/qt5/QtWidgets/QMainWindow \
 		profilewindow.h \
 		studentpre_obj.h \
 		student_obj.h \
+		user.h \
 		managestudentcontrol.h \
 		project_obj.h \
 		db_control.h \
@@ -2297,6 +2305,7 @@ moc_createproject.cpp: /usr/include/qt5/QtWidgets/QDialog \
 		profilewindow.h \
 		studentpre_obj.h \
 		student_obj.h \
+		user.h \
 		managestudentcontrol.h \
 		db_control.h \
 		student_storagectrl.h \
@@ -2585,6 +2594,7 @@ moc_adminprojwindow.cpp: /usr/include/qt5/QtWidgets/QDialog \
 		profilewindow.h \
 		studentpre_obj.h \
 		student_obj.h \
+		user.h \
 		managestudentcontrol.h \
 		db_control.h \
 		student_storagectrl.h \
@@ -2717,6 +2727,7 @@ moc_ppidwindow.cpp: /usr/include/qt5/QtWidgets/QDialog \
 		/usr/include/qt5/QtGui/qtouchdevice.h \
 		project_control.h \
 		student_obj.h \
+		user.h \
 		project_obj.h \
 		db_control.h \
 		student_storagectrl.h \
@@ -3173,6 +3184,7 @@ main.o: main.cpp entrywindow.h \
 		profilewindow.h \
 		studentpre_obj.h \
 		student_obj.h \
+		user.h \
 		managestudentcontrol.h \
 		project_obj.h \
 		db_control.h \
@@ -3317,6 +3329,7 @@ choosewindow.o: choosewindow.cpp choosewindow.h \
 		profilewindow.h \
 		studentpre_obj.h \
 		student_obj.h \
+		user.h \
 		managestudentcontrol.h \
 		project_obj.h \
 		db_control.h \
@@ -3602,6 +3615,7 @@ profilewindow.o: profilewindow.cpp profilewindow.h \
 		/usr/include/qt5/QtGui/qtouchdevice.h \
 		studentpre_obj.h \
 		student_obj.h \
+		user.h \
 		managestudentcontrol.h \
 		project_obj.h \
 		db_control.h \
@@ -3876,6 +3890,7 @@ projectwindow.o: projectwindow.cpp projectwindow.h \
 		projectdesc.h \
 		project_control.h \
 		student_obj.h \
+		user.h \
 		db_control.h \
 		student_storagectrl.h \
 		/usr/include/qt5/QtSql/QtSql \
@@ -4146,6 +4161,7 @@ projectdesc.o: projectdesc.cpp projectdesc.h \
 		/usr/include/qt5/QtGui/qicon.h \
 		project_control.h \
 		student_obj.h \
+		user.h \
 		db_control.h \
 		student_storagectrl.h \
 		studentpre_obj.h \
@@ -4562,6 +4578,7 @@ adminwindow.o: adminwindow.cpp adminwindow.h \
 		profilewindow.h \
 		studentpre_obj.h \
 		student_obj.h \
+		user.h \
 		managestudentcontrol.h \
 		project_obj.h \
 		db_control.h \
@@ -4589,7 +4606,8 @@ adminwindow.o: adminwindow.cpp adminwindow.h \
 project_obj.o: project_obj.cpp project_obj.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o project_obj.o project_obj.cpp
 
-student_obj.o: student_obj.cpp student_obj.h
+student_obj.o: student_obj.cpp student_obj.h \
+		user.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o student_obj.o student_obj.cpp
 
 studentpre_obj.o: studentpre_obj.cpp studentpre_obj.h
@@ -4854,6 +4872,7 @@ entrywindow.o: entrywindow.cpp entrywindow.h \
 		profilewindow.h \
 		studentpre_obj.h \
 		student_obj.h \
+		user.h \
 		managestudentcontrol.h \
 		project_obj.h \
 		db_control.h \
@@ -4881,7 +4900,8 @@ entrywindow.o: entrywindow.cpp entrywindow.h \
 		ui_entrywindow.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o entrywindow.o entrywindow.cpp
 
-admin_obj.o: admin_obj.cpp admin_obj.h
+admin_obj.o: admin_obj.cpp admin_obj.h \
+		user.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o admin_obj.o admin_obj.cpp
 
 createproject.o: createproject.cpp createproject.h \
@@ -5148,6 +5168,7 @@ createproject.o: createproject.cpp createproject.h \
 		profilewindow.h \
 		studentpre_obj.h \
 		student_obj.h \
+		user.h \
 		managestudentcontrol.h \
 		db_control.h \
 		student_storagectrl.h \
@@ -5436,6 +5457,7 @@ adminprojwindow.o: adminprojwindow.cpp adminprojwindow.h \
 		profilewindow.h \
 		studentpre_obj.h \
 		student_obj.h \
+		user.h \
 		managestudentcontrol.h \
 		db_control.h \
 		student_storagectrl.h \
@@ -5458,6 +5480,7 @@ adminprojwindow.o: adminprojwindow.cpp adminprojwindow.h \
 
 managestudentcontrol.o: managestudentcontrol.cpp managestudentcontrol.h \
 		student_obj.h \
+		user.h \
 		studentpre_obj.h \
 		project_obj.h \
 		db_control.h \
@@ -5722,6 +5745,7 @@ managestudentcontrol.o: managestudentcontrol.cpp managestudentcontrol.h \
 
 manageusercontrol.o: manageusercontrol.cpp manageusercontrol.h \
 		student_obj.h \
+		user.h \
 		studentpre_obj.h \
 		admin_obj.h \
 		db_control.h \
@@ -5986,6 +6010,7 @@ manageusercontrol.o: manageusercontrol.cpp manageusercontrol.h \
 
 project_storagectrl.o: project_storagectrl.cpp project_storagectrl.h \
 		student_obj.h \
+		user.h \
 		studentpre_obj.h \
 		project_obj.h \
 		/usr/include/qt5/QtSql/QtSql \
@@ -6246,6 +6271,7 @@ project_storagectrl.o: project_storagectrl.cpp project_storagectrl.h \
 
 student_storagectrl.o: student_storagectrl.cpp student_storagectrl.h \
 		student_obj.h \
+		user.h \
 		studentpre_obj.h \
 		project_obj.h \
 		/usr/include/qt5/QtSql/QtSql \
@@ -6756,6 +6782,7 @@ user_storagectrl.o: user_storagectrl.cpp user_storagectrl.h \
 		/usr/include/qt5/QtSql/qsqltablemodel.h \
 		/usr/include/qt5/QtSql/qtsqlversion.h \
 		admin_obj.h \
+		user.h \
 		/usr/include/qt5/QtWidgets/QMessageBox \
 		/usr/include/qt5/QtWidgets/qmessagebox.h \
 		/usr/include/qt5/QtWidgets/qdialog.h \
@@ -6764,6 +6791,7 @@ user_storagectrl.o: user_storagectrl.cpp user_storagectrl.h \
 
 db_control.o: db_control.cpp db_control.h \
 		student_obj.h \
+		user.h \
 		student_storagectrl.h \
 		studentpre_obj.h \
 		project_obj.h \
@@ -7027,6 +7055,7 @@ db_control.o: db_control.cpp db_control.h \
 
 project_control.o: project_control.cpp project_control.h \
 		student_obj.h \
+		user.h \
 		project_obj.h \
 		db_control.h \
 		student_storagectrl.h \
@@ -7291,6 +7320,7 @@ project_control.o: project_control.cpp project_control.h \
 
 ppid.o: ppid.cpp ppid.h \
 		student_obj.h \
+		user.h \
 		studentpre_obj.h \
 		project_control.h \
 		project_obj.h \
@@ -7559,6 +7589,7 @@ ppid.o: ppid.cpp ppid.h \
 ppidpart1.o: ppidpart1.cpp ppidpart1.h \
 		ppid.h \
 		student_obj.h \
+		user.h \
 		studentpre_obj.h \
 		project_control.h \
 		project_obj.h \
@@ -7827,6 +7858,7 @@ ppidpart1.o: ppidpart1.cpp ppidpart1.h \
 ppidpart2.o: ppidpart2.cpp ppidpart2.h \
 		ppid.h \
 		student_obj.h \
+		user.h \
 		studentpre_obj.h \
 		project_control.h \
 		project_obj.h \
@@ -8204,6 +8236,7 @@ ppidwindow.o: ppidwindow.cpp ppidwindow.h \
 		/usr/include/qt5/QtGui/qtouchdevice.h \
 		project_control.h \
 		student_obj.h \
+		user.h \
 		project_obj.h \
 		db_control.h \
 		student_storagectrl.h \
@@ -8358,6 +8391,9 @@ ppidwindow.o: ppidwindow.cpp ppidwindow.h \
 		user_storagectrl.h \
 		ui_ppidwindow.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o ppidwindow.o ppidwindow.cpp
+
+user.o: user.cpp user.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o user.o user.cpp
 
 moc_entrywindow.o: moc_entrywindow.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_entrywindow.o moc_entrywindow.cpp
