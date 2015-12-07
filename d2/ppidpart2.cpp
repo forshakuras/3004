@@ -2,6 +2,10 @@
 
 void PPIDpart2::runPPID(project_obj *project, vector<int> *teamsize, vector<int>  *studentIDlist)
 {
+    if (studentIDlist->size() == 0){
+        return;
+    }
+
     student_obj *temp;
     studentpre_obj *temp1;
 
