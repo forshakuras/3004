@@ -54,6 +54,10 @@ AdminProjWindow::AdminProjWindow(QWidget *parent,project_obj *project) :
 }
 void AdminProjWindow::on_saveButton_clicked()
 {
+    if(ui->idealSpin->value() > ui->maxSpin->value()){
+        QMessageBox::information(this, tr("Warning"), tr("Please set the Max Members bigger then the Ideal Members!"));
+        return;
+    }
     projob->setObjectDev(ui->ooSpin->value());
     projob->setWebDev(ui->webSpin->value());
     projob->setGpa(ui->gpaSpin->value());

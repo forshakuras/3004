@@ -17,6 +17,10 @@ CreateProject::~CreateProject()
 
 void CreateProject::on_saveButton_clicked()
 {
+    if(ui->idealMem->value() > ui->maxMem->value()){
+        QMessageBox::information(this, tr("Warning"), tr("Please set the Max Members bigger then the Ideal Members!"));
+        return;
+    }
     newProject->setTitle(ui->projectTitle->text().toStdString());
     newProject->setMaxStudents(ui->maxMem->value());
     newProject->setIdealNumberStudents(ui->idealMem->value());
