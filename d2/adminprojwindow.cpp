@@ -109,11 +109,7 @@ void AdminProjWindow::on_pushButton_clicked()
     vector<int> *teamsize = new vector<int>();
     vector<int> *studentIDlist = new vector<int>();
     cout << projob->getIdealNumberStudents() << endl;
-    if(projob->getCurrentStudent() < projob->getIdealNumberStudents()){
-        QMessageBox::information(this, tr("Warning"), tr("This project has not enought students joined !"));
-        ppid = new PPIDwindow(this,projob);
-        ppid->show();
-    }else{
+
     PPID *firstpart = new PPIDpart1();
     //    if(firstpart->precheckPPID(projob)){
     firstpart->runPPID(projob,teamsize,studentIDlist);
@@ -125,5 +121,5 @@ void AdminProjWindow::on_pushButton_clicked()
 
     ppid = new PPIDwindow(this,projob);
     ppid->show();
-    }
+
 }

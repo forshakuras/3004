@@ -13,13 +13,17 @@ void PPIDpart1::runPPID(project_obj *project, vector<int> *teamsize, vector<int>
 
    int numofteam = (studentIDlist->size()-remainder)/(project->getIdealNumberStudents());
 
-
-   for (int i = 0; i < (numofteam-remainder); i++){
-       teamsize->push_back(size);
+   if(studentIDlist->size()<project->getIdealNumberStudents()){
+       teamsize->push_back(studentIDlist->size());
    }
+   else{
+       for (int i = 0; i < (numofteam-remainder); i++){
+           teamsize->push_back(size);
+       }
 
-   for (int j = 0; j< remainder; j++){
-       teamsize->push_back(size+1);
+       for (int j = 0; j< remainder; j++){
+           teamsize->push_back(size+1);
+       }
    }
 }
 
