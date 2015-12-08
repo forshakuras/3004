@@ -18,6 +18,10 @@ void PPIDpart1::runPPID(project_obj *project, vector<int> *teamsize, vector<int>
    if(studentIDlist->size()<project->getIdealNumberStudents()){
        teamsize->push_back(studentIDlist->size());
    }
+   else if(studentIDlist->size()>project->getMaxStudents()&&studentIDlist->size()<(project->getIdealNumberStudents()*2)){
+       cout << "343"<<endl;
+       teamsize->push_back(studentIDlist->size());
+   }
    else{
        for (int i = 0; i < (numofteam-remainder); i++){
            teamsize->push_back(size);
